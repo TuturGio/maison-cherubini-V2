@@ -32,10 +32,11 @@ export default function ScrollToTopButton() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-gray-900 text-white p-4 rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300 hover:scale-110 z-50 group"
+          className="fixed bottom-8 right-8 bg-[var(--moka)] text-[var(--linen)] p-3 shadow-lg hover:bg-[var(--primary)] transition-all duration-300 hover:scale-105 z-50 group border border-[var(--pale)]"
           aria-label="Retour en haut"
+          style={{ width: '48px', height: '48px' }}
         >
-          <ArrowUp className="w-6 h-6 group-hover:transform group-hover:-translate-y-1 transition-transform duration-300" />
+          <ArrowUp className="w-5 h-5 group-hover:transform group-hover:-translate-y-0.5 transition-transform duration-300" />
         </button>
       )}
     </>
