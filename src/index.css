@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,400;1,700&family=Lato:wght@100;300;400&family=Jost:wght@200;300;400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --moka: #3D2314;
+  --primary: #A0726A;
+  --deep: #7A4F49;
+  --pale: #EAD9D5;
+  --grege-p: #EDE6DE;
+  --grege-l: #D4C9BE;
+  --linen: #F8F4F0;
+  --charcoal: #2A2320;
+  --warm: #6B5E59;
+  --muted: #9E9089;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: white;
+  color: var(--charcoal);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
