@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import Home from './pages/Home';
 import Rideaux from './pages/Rideaux';
 import Voilages from './pages/Voilages';
@@ -40,6 +41,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <ScrollToTopButton />
       </div>
     </BrowserRouter>
   );
