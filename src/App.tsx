@@ -23,8 +23,10 @@ function ScrollToTop() {
 }
 
 function App() {
+  const basename = import.meta.env.MODE === 'production' ? '/maison-cherubini-V2' : '';
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Navigation />
