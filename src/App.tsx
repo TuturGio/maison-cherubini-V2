@@ -23,7 +23,7 @@ function ScrollToTop() {
 }
 
 function App() {
-  const basename = import.meta.env.MODE === 'production' ? '/maison-cherubini-V2' : '';
+  const basename = import.meta.env.BASE_URL;
 
   return (
     <BrowserRouter basename={basename}>
