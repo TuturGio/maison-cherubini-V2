@@ -42,7 +42,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <section className="bg-[var(--grege-p)] px-12 pb-12 animate-[fadeUp_0.6s_0.1s_ease_both]">
+      <section className="bg-[var(--grege-p)] px-12 pb-12 animate-[fadeUp_0.6s_0.1s_ease_both] hidden md:block">
         <div className="relative overflow-hidden">
           <div
             className="flex transition-transform duration-[600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
@@ -82,6 +82,59 @@ export default function Home() {
             >
               →
             </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[var(--grege-p)] pt-4 pb-8 animate-[fadeUp_0.6s_0.1s_ease_both] md:hidden">
+        <div className="flex gap-2 px-4 mb-4 overflow-x-auto scrollbar-hide">
+          {slides.map((s, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentSlide(i)}
+              className={`px-4 py-2 rounded-full font-['Lato'] font-light text-[10px] tracking-[1.5px] uppercase whitespace-nowrap transition-all border ${
+                currentSlide === i
+                  ? 'bg-[var(--moka)] text-[var(--linen)] border-[var(--moka)]'
+                  : 'bg-transparent text-[var(--warm)] border-[var(--warm)] hover:border-[var(--moka)] hover:text-[var(--moka)]'
+              }`}
+            >
+              {s.title}
+            </button>
+          ))}
+        </div>
+
+        <div className="relative px-4">
+          <Link
+            to={slides[currentSlide].link}
+            className="block relative overflow-hidden rounded-lg no-underline"
+          >
+            <div className="w-full aspect-[4/5] relative after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-t after:from-[rgba(40,20,10,0.7)] after:via-[rgba(40,20,10,0.1)] after:to-transparent after:pointer-events-none">
+              <img
+                src={slides[currentSlide].image}
+                alt={slides[currentSlide].title}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute bottom-6 left-6 right-6 z-[2]">
+                <h3 className="font-['Playfair_Display'] font-black text-[28px] text-[var(--linen)] leading-none mb-2 uppercase">
+                  {slides[currentSlide].title}
+                </h3>
+              </div>
+            </div>
+          </Link>
+
+          <div className="flex justify-center gap-2 mt-4">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentSlide(i)}
+                className={`h-2 rounded-full transition-all ${
+                  currentSlide === i
+                    ? 'w-8 bg-[var(--moka)]'
+                    : 'w-2 bg-[var(--warm)] opacity-40'
+                }`}
+                aria-label={`Aller à la slide ${i + 1}`}
+              />
+            ))}
           </div>
         </div>
       </section>
