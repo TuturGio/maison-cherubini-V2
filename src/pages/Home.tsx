@@ -139,9 +139,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-[88px] px-12 bg-white text-center border-t border-b border-[var(--pale)] animate-[fadeUp_0.7s_0.2s_ease_both]">
+      <section className="py-12 md:py-[88px] px-4 md:px-12 bg-white text-center border-t border-b border-[var(--pale)] animate-[fadeUp_0.7s_0.2s_ease_both]">
         <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-8"></div>
-        <p className="font-['Playfair_Display'] italic font-normal text-[30px] text-[var(--moka)] leading-[1.5] max-w-[680px] mx-auto mb-7">
+        <p className="font-['Playfair_Display'] italic font-normal text-[20px] md:text-[30px] text-[var(--moka)] leading-[1.5] max-w-[680px] mx-auto mb-7 px-4">
           Chaque espace est une histoire unique,
           <br />
           façonnée dans la matière et la lumière.
@@ -164,13 +164,13 @@ export default function Home() {
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.6)] to-transparent transition-opacity group-hover:opacity-85"></div>
-          <div className="absolute bottom-8 left-8 right-8">
-            <div className="font-['Playfair_Display'] font-black text-[32px] text-[var(--linen)] leading-[1.05]">
+          <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 right-4 md:right-8">
+            <div className="font-['Playfair_Display'] font-black text-[24px] md:text-[32px] text-[var(--linen)] leading-[1.05]">
               Nos
               <br />
               réalisations
             </div>
-            <span className="inline-block mt-3 font-['Lato'] font-thin text-[9px] tracking-[3px] uppercase text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
+            <span className="inline-block mt-2 md:mt-3 font-['Lato'] font-thin text-[9px] tracking-[3px] uppercase text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
               Découvrir →
             </span>
           </div>
@@ -188,32 +188,32 @@ export default function Home() {
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.6)] to-transparent transition-opacity group-hover:opacity-85"></div>
-          <div className="absolute bottom-8 left-8 right-8">
-            <div className="font-['Playfair_Display'] font-black text-[32px] text-[var(--linen)] leading-[1.05]">
+          <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 right-4 md:right-8">
+            <div className="font-['Playfair_Display'] font-black text-[24px] md:text-[32px] text-[var(--linen)] leading-[1.05]">
               Notre
               <br />
               showroom
             </div>
-            <span className="inline-block mt-3 font-['Lato'] font-thin text-[9px] tracking-[3px] uppercase text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
+            <span className="inline-block mt-2 md:mt-3 font-['Lato'] font-thin text-[9px] tracking-[3px] uppercase text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
               Nous trouver →
             </span>
           </div>
         </Link>
       </section>
 
-      <section className="grid grid-cols-2 bg-[var(--linen)]">
-        <div className="aspect-square relative overflow-hidden">
+      <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--linen)]">
+        <div className="aspect-square md:aspect-auto relative overflow-hidden">
           <img
             src="https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?auto=compress&cs=tinysrgb&w=1200"
             alt="Notre histoire"
             className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
-        <div className="px-14 py-16 flex flex-col justify-center">
+        <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center">
           <span className="font-['Lato'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-5 block">
             Notre histoire
           </span>
-          <h2 className="font-['Playfair_Display'] font-black text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
+          <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
             Un savoir-faire
             <br />
             transmis avec soin

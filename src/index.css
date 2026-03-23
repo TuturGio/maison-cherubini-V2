@@ -25,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -32,6 +33,9 @@ body {
   color: var(--charcoal);
   font-family: 'Jost', sans-serif;
   font-weight: 300;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 @keyframes fadeUp {
