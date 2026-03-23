@@ -179,7 +179,7 @@ export default function Home() {
           <br />
           façonnée dans la matière et la lumière.
         </p>
-        <span className="font-['Lato'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] block">
+        <span className="font-['Lato'] font-normal text-[9px] tracking-[4px] uppercase text-[var(--primary)] block">
           Rideaux · Voilages · Stores · Revêtements · Yachting
         </span>
       </section>
