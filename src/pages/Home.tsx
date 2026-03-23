@@ -16,13 +16,13 @@ export default function Home() {
     {
       title: 'Rideaux',
       subtitle: 'Collections sur mesure',
-      image: '/rideau-a-oeillets-dores_NINO_009911_J19F_4.webp',
+      image: `${import.meta.env.BASE_URL}rideau-a-oeillets-dores_NINO_009911_J19F_4.webp`,
       link: '/realisations/rideaux',
     },
     {
       title: 'Voilages',
       subtitle: 'Légèreté & transparence',
-      image: '/voilage-a-galon-fronceur_SHADOW_000475_W_4.webp',
+      image: `${import.meta.env.BASE_URL}voilage-a-galon-fronceur_SHADOW_000475_W_4.webp`,
       link: '/realisations/voilages',
     },
     {
