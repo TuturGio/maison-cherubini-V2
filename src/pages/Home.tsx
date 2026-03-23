@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, TouchEvent } from 'react';
 import { Link } from 'react-router-dom';
 import InstagramFeed from '../components/InstagramFeed';
 
@@ -6,10 +6,35 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const visible = 3;
   const total = 4;
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   const slide = (dir: number) => {
     const max = total - visible;
     setCurrentSlide((prev) => Math.max(0, Math.min(prev + dir, max)));
+  };
+
+  const handleTouchStart = (e: TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const swipeThreshold = 50;
+    const diff = touchStartX.current - touchEndX.current;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        // Swipe left - next slide
+        setCurrentSlide((prev) => Math.min(prev + 1, total - 1));
+      } else {
+        // Swipe right - previous slide
+        setCurrentSlide((prev) => Math.max(prev - 1, 0));
+      }
+    }
   };
 
   const slides = [
@@ -103,7 +128,12 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="relative px-4">
+        <div
+          className="relative px-4"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           <Link
             to={slides[currentSlide].link}
             className="block relative overflow-hidden rounded-lg no-underline"
@@ -118,6 +148,9 @@ export default function Home() {
                 <h3 className="font-['Playfair_Display'] font-black text-[28px] text-[var(--linen)] leading-none mb-2 uppercase">
                   {slides[currentSlide].title}
                 </h3>
+                <p className="font-['Lato'] font-normal text-[11px] tracking-[2.5px] uppercase text-[rgba(248,244,240,0.85)]">
+                  {slides[currentSlide].subtitle}
+                </p>
               </div>
             </div>
           </Link>
@@ -170,7 +203,7 @@ export default function Home() {
               <br />
               réalisations
             </div>
-            <span className="inline-block mt-2 md:mt-3 font-['Lato'] font-thin text-[9px] tracking-[3px] uppercase text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
+            <span className="inline-block mt-2 md:mt-3 font-['Lato'] font-thin text-[11px] md:text-[9px] tracking-[2.5px] md:tracking-[3px] uppercase text-[rgba(248,244,240,0.75)] md:text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
               Découvrir →
             </span>
           </div>
@@ -194,7 +227,7 @@ export default function Home() {
               <br />
               showroom
             </div>
-            <span className="inline-block mt-2 md:mt-3 font-['Lato'] font-thin text-[9px] tracking-[3px] uppercase text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
+            <span className="inline-block mt-2 md:mt-3 font-['Lato'] font-thin text-[11px] md:text-[9px] tracking-[2.5px] md:tracking-[3px] uppercase text-[rgba(248,244,240,0.75)] md:text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
               Nous trouver →
             </span>
           </div>
