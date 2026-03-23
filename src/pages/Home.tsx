@@ -237,7 +237,7 @@ export default function Home() {
       <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--linen)]">
         <div className="aspect-square md:aspect-auto relative overflow-hidden">
           <img
-            src="https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            src={`${import.meta.env.BASE_URL}tapis_de_sol_ANDREI_009531_Z5_2.webp`}
             alt="Notre histoire"
             className="absolute inset-0 w-full h-full object-cover"
           />
