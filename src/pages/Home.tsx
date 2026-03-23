@@ -16,13 +16,13 @@ export default function Home() {
     {
       title: 'Rideaux',
       subtitle: 'Collections sur mesure',
-      image: 'https://images.pexels.com/photos/6969831/pexels-photo-6969831.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/rideau-a-oeillets-dores_NINO_009911_J19F_4.webp',
       link: '/realisations/rideaux',
     },
     {
       title: 'Voilages',
       subtitle: 'Légèreté & transparence',
-      image: 'https://images.pexels.com/photos/6969796/pexels-photo-6969796.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/voilage-a-galon-fronceur_SHADOW_000475_W_4.webp',
       link: '/realisations/voilages',
     },
     {
