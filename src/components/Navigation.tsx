@@ -13,7 +13,7 @@ export default function Navigation() {
         <Link to="/" className="no-underline" onClick={() => setShowMobileMenu(false)}>
           <div className="font-['Playfair_Display'] font-black text-[24px] md:text-[32px] text-[var(--moka)] tracking-[-0.5px] leading-none flex flex-col items-start">
             nuance
-            <span className="font-['Lato'] font-thin text-[8px] md:text-[10px] tracking-[3px] md:tracking-[4px] uppercase text-[var(--warm)] mt-[2px]">
+            <span className="font-['Lato'] font-normal text-[8px] md:text-[10px] tracking-[3px] md:tracking-[4px] uppercase text-[var(--warm)] mt-[2px]">
               décoration sur mesure
             </span>
           </div>
