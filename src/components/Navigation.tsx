@@ -77,6 +77,15 @@ export default function Navigation() {
               Notre histoire
             </Link>
           </li>
+
+          <li>
+            <Link
+              to="/contact"
+              className="font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
+            >
+              Contact
+            </Link>
+          </li>
         </ul>
 
         <Link
@@ -157,6 +166,16 @@ export default function Navigation() {
                 className="block py-2 font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
               >
                 Notre histoire
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/contact"
+                onClick={() => setShowMobileMenu(false)}
+                className="block py-2 font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
+              >
+                Contact
               </Link>
             </li>
 
