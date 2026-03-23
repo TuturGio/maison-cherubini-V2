@@ -57,9 +57,9 @@ export default function Home() {
       link: '/realisations/banquettes',
     },
     {
-      title: 'Bateaux',
+      title: 'Yachting',
       subtitle: 'Sellerie nautique',
-      image: 'https://images.pexels.com/photos/163236/luxury-yacht-boat-speed-water-163236.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: `${import.meta.env.BASE_URL}yachting.jpg`,
       link: '/realisations/bateaux',
     },
   ];
