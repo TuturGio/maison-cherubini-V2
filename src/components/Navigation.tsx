@@ -10,7 +10,7 @@ export default function Navigation() {
       <Link to="/" className="no-underline">
         <div className="font-['Playfair_Display'] font-black text-[32px] text-[var(--moka)] tracking-[-0.5px] leading-none flex flex-col items-start">
           nuance
-          <span className="font-['Lato'] font-thin text-[8px] tracking-[4px] uppercase text-[var(--primary)] mt-[2px]">
+          <span className="font-['Lato'] font-thin text-[8px] tracking-[4px] uppercase text-[var(--warm)] mt-[2px]">
             décoration sur mesure
           </span>
         </div>
@@ -22,7 +22,7 @@ export default function Navigation() {
           onMouseEnter={() => setShowDropdown(true)}
           onMouseLeave={() => setShowDropdown(false)}
         >
-          <button className="font-['Lato'] font-light text-[10px] tracking-[2.5px] uppercase text-[var(--warm)] no-underline transition-colors hover:text-[var(--moka)] flex items-center gap-1 bg-transparent border-none cursor-pointer py-2">
+          <button className="font-['Lato'] font-light text-[10px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] flex items-center gap-1 bg-transparent border-none cursor-pointer py-2">
             Nos réalisations
             <ChevronDown size={12} className={`transition-transform ${showDropdown ? 'rotate-180' : ''}`} />
           </button>
@@ -31,25 +31,25 @@ export default function Navigation() {
             <div className="absolute top-full left-0 mt-0 bg-white border border-[var(--pale)] shadow-lg min-w-[200px] py-2">
               <Link
                 to="/realisations/rideaux"
-                className="block px-6 py-3 font-['Lato'] font-light text-[10px] tracking-[2.5px] uppercase text-[var(--warm)] no-underline transition-colors hover:text-[var(--moka)] hover:bg-[var(--linen)]"
+                className="block px-6 py-3 font-['Lato'] font-light text-[10px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] hover:bg-[var(--linen)]"
               >
                 Rideaux
               </Link>
               <Link
                 to="/realisations/voilages"
-                className="block px-6 py-3 font-['Lato'] font-light text-[10px] tracking-[2.5px] uppercase text-[var(--warm)] no-underline transition-colors hover:text-[var(--moka)] hover:bg-[var(--linen)]"
+                className="block px-6 py-3 font-['Lato'] font-light text-[10px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] hover:bg-[var(--linen)]"
               >
                 Voilages
               </Link>
               <Link
                 to="/realisations/banquettes"
-                className="block px-6 py-3 font-['Lato'] font-light text-[10px] tracking-[2.5px] uppercase text-[var(--warm)] no-underline transition-colors hover:text-[var(--moka)] hover:bg-[var(--linen)]"
+                className="block px-6 py-3 font-['Lato'] font-light text-[10px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] hover:bg-[var(--linen)]"
               >
                 Banquettes
               </Link>
               <Link
                 to="/realisations/bateaux"
-                className="block px-6 py-3 font-['Lato'] font-light text-[10px] tracking-[2.5px] uppercase text-[var(--warm)] no-underline transition-colors hover:text-[var(--moka)] hover:bg-[var(--linen)]"
+                className="block px-6 py-3 font-['Lato'] font-light text-[10px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] hover:bg-[var(--linen)]"
               >
                 Bateaux
               </Link>
@@ -60,7 +60,7 @@ export default function Navigation() {
         <li>
           <Link
             to="/showroom"
-            className="font-['Lato'] font-light text-[10px] tracking-[2.5px] uppercase text-[var(--warm)] no-underline transition-colors hover:text-[var(--moka)]"
+            className="font-['Lato'] font-light text-[10px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
           >
             Notre showroom
           </Link>
@@ -69,7 +69,7 @@ export default function Navigation() {
         <li>
           <Link
             to="/histoire"
-            className="font-['Lato'] font-light text-[10px] tracking-[2.5px] uppercase text-[var(--warm)] no-underline transition-colors hover:text-[var(--moka)]"
+            className="font-['Lato'] font-light text-[10px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
           >
             Notre histoire
           </Link>
