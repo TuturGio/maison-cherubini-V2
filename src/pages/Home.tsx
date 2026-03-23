@@ -60,7 +60,7 @@ export default function Home() {
                     <h3 className="font-['Playfair_Display'] font-black text-[30px] text-[var(--linen)] leading-none mb-[5px]">
                       {s.title}
                     </h3>
-                    <p className="font-['Lato'] font-thin text-[8px] tracking-[3px] uppercase text-[rgba(248,244,240,0.65)]">
+                    <p className="font-['Lato'] font-normal text-[8px] tracking-[3px] uppercase text-[var(--linen)]">
                       {s.subtitle}
                     </p>
                   </div>
