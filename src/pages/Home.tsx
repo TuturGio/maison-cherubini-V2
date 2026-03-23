@@ -16,19 +16,19 @@ export default function Home() {
     {
       title: 'Rideaux',
       subtitle: 'Collections sur mesure',
-      image: 'https://images.pexels.com/photos/6782436/pexels-photo-6782436.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/6969831/pexels-photo-6969831.jpeg?auto=compress&cs=tinysrgb&w=800',
       link: '/realisations/rideaux',
     },
     {
       title: 'Voilages',
       subtitle: 'Légèreté & transparence',
-      image: 'https://images.pexels.com/photos/1912868/pexels-photo-1912868.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/6969796/pexels-photo-6969796.jpeg?auto=compress&cs=tinysrgb&w=800',
       link: '/realisations/voilages',
     },
     {
       title: 'Banquettes',
       subtitle: 'Assises & mobilier',
-      image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=800',
       link: '/realisations/banquettes',
     },
     {
@@ -52,10 +52,10 @@ export default function Home() {
               <Link
                 key={i}
                 to={s.link}
-                className="min-w-[33.333%] pr-[6px] last:pr-0 cursor-pointer no-underline"
+                className="min-w-[33.333%] pr-[6px] last:pr-0 cursor-pointer no-underline group"
               >
                 <div className="w-full aspect-[3/4] block relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-t after:from-[rgba(40,20,10,0.65)] after:via-[rgba(40,20,10,0.1)] after:to-transparent after:pointer-events-none">
-                  <img src={s.image} alt={s.title} className="absolute inset-0 w-full h-full object-cover" />
+                  <img src={s.image} alt={s.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110" />
                   <div className="absolute bottom-7 left-7 right-7 z-[2]">
                     <h3 className="font-['Playfair_Display'] font-black text-[30px] text-[var(--linen)] leading-none mb-[5px]">
                       {s.title}
