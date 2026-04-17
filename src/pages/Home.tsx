@@ -5,7 +5,7 @@ import InstagramFeed from '../components/InstagramFeed';
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const visible = 3;
-  const total = 4;
+  const total = 3;
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
 
@@ -39,18 +39,6 @@ export default function Home() {
 
   const slides = [
     {
-      title: 'Rideaux',
-      subtitle: 'Collections sur mesure',
-      image: `${import.meta.env.BASE_URL}rideau-a-oeillets-dores_NINO_009911_J19F_4.webp`,
-      link: '/realisations/rideaux',
-    },
-    {
-      title: 'Voilages',
-      subtitle: 'Légèreté & transparence',
-      image: `${import.meta.env.BASE_URL}voilage-a-galon-fronceur_SHADOW_000475_W_4.webp`,
-      link: '/realisations/voilages',
-    },
-    {
       title: 'Banquettes',
       subtitle: 'Assises & mobilier',
       image: 'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -61,6 +49,12 @@ export default function Home() {
       subtitle: 'Sellerie nautique',
       image: `${import.meta.env.BASE_URL}yachting.jpg`,
       link: '/realisations/bateaux',
+    },
+    {
+      title: 'Linge de maison',
+      subtitle: 'Textiles & art de vivre',
+      image: `${import.meta.env.BASE_URL}tapis_de_sol_ANDREI_009531_Z5_2.webp`,
+      link: '/realisations/linge-de-maison',
     },
   ];
 
