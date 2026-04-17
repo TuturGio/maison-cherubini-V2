@@ -1,6 +1,6 @@
 import { Instagram } from 'lucide-react';
 
-const INSTAGRAM_HANDLE = 'maison_cherubini';
+const INSTAGRAM_HANDLE = 'nuancedecoration_';
 const INSTAGRAM_URL = `https://www.instagram.com/${INSTAGRAM_HANDLE}/`;
 
 export default function InstagramFeed() {
