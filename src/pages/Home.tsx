@@ -266,6 +266,32 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-16 md:py-24 px-6 md:px-12 bg-[var(--grege-p)] text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
+        <div className="max-w-xl mx-auto">
+          <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-8"></div>
+          <h2 className="font-['Playfair_Display'] italic font-normal text-[24px] md:text-[32px] text-[var(--moka)] leading-[1.5] mb-4">
+            Concrétisons votre projet ensemble
+          </h2>
+          <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-10">
+            Notre équipe vous accueille sur rendez-vous dans notre showroom ou vous répond par message.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="inline-block font-['Lato'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-[var(--charcoal)]"
+            >
+              Prendre RDV
+            </a>
+            <a
+              href="/contact"
+              className="inline-block font-['Lato'] font-light text-[10px] tracking-[3px] uppercase bg-transparent text-[var(--moka)] border border-[var(--moka)] py-4 px-10 no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
+            >
+              Nous contacter
+            </a>
+          </div>
+        </div>
+      </section>
+
       <InstagramFeed />
     </div>
   );

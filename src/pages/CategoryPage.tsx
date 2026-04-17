@@ -20,57 +20,57 @@ export default function CategoryPage({
 }: CategoryPageProps) {
   return (
     <div className="min-h-screen">
-      <section className="relative h-[60vh] overflow-hidden">
-        <CanvasImage draw={heroDraw} className="absolute inset-0 w-full h-full block" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.7)] via-[rgba(40,20,10,0.3)] to-transparent"></div>
-        <div className="absolute inset-0 flex items-end">
-          <div className="px-12 pb-16 max-w-5xl">
-            <span className="font-['Lato'] font-thin text-[9px] tracking-[4px] uppercase text-[rgba(248,244,240,0.7)] mb-4 block">
-              {subtitle}
-            </span>
-            <h1 className="font-['Playfair_Display'] font-black text-[56px] text-[var(--linen)] leading-[1.05] mb-4">
-              {title}
-            </h1>
-            <div className="w-16 h-[2px] bg-[var(--primary)]"></div>
-          </div>
+      <section className="grid grid-cols-1 md:grid-cols-2 min-h-[60vh] bg-[var(--grege-p)]">
+        <div className="flex flex-col justify-center px-8 py-16 md:px-16 md:py-20 order-2 md:order-1">
+          <span className="font-['Lato'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-5 block">
+            {subtitle}
+          </span>
+          <h1 className="font-['Playfair_Display'] font-black text-[44px] md:text-[60px] text-[var(--moka)] leading-[1.05] mb-6">
+            {title}
+          </h1>
+          <div className="w-16 h-[2px] bg-[var(--primary)] mb-8"></div>
+          <p className="font-['Jost'] font-light text-[14px] text-[var(--warm)] leading-[1.9] max-w-md">
+            {description}
+          </p>
+        </div>
+        <div className="relative overflow-hidden aspect-[4/3] md:aspect-auto order-1 md:order-2">
+          <CanvasImage draw={heroDraw} className="absolute inset-0 w-full h-full block" />
         </div>
       </section>
 
-      <section className="px-12 py-20 bg-white max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 gap-16">
-          <div>
-            <h2 className="font-['Playfair_Display'] font-black text-[36px] text-[var(--moka)] leading-[1.1] mb-6">
-              Un savoir-faire
-              <br />
-              d'exception
-            </h2>
-            <div className="w-12 h-[1px] bg-[var(--primary)] mb-6"></div>
-            <p className="font-['Jost'] font-light text-[14px] text-[var(--warm)] leading-[1.9] mb-8">
-              {description}
-            </p>
-            <Link
-              to="/contact"
-              className="inline-block font-['Lato'] font-light text-[10px] tracking-[3px] uppercase text-[var(--moka)] border-b border-[var(--primary)] pb-[3px] no-underline transition-colors hover:text-[var(--primary)]"
-            >
-              Demander un devis
-            </Link>
-          </div>
-
-          <div>
-            <h3 className="font-['Lato'] font-light text-[11px] tracking-[3px] uppercase text-[var(--primary)] mb-6">
-              Nos prestations
-            </h3>
-            <ul className="space-y-4">
-              {features.map((feature, i) => (
-                <li
-                  key={i}
-                  className="font-['Jost'] font-light text-[14px] text-[var(--warm)] leading-[1.7] flex items-start gap-3"
-                >
-                  <span className="text-[var(--primary)] mt-1">•</span>
-                  {feature}
-                </li>
-              ))}
-            </ul>
+      <section className="px-8 md:px-12 py-16 md:py-20 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-start">
+            <div className="flex-1">
+              <h3 className="font-['Lato'] font-light text-[11px] tracking-[3px] uppercase text-[var(--primary)] mb-6">
+                Nos prestations
+              </h3>
+              <ul className="space-y-4">
+                {features.map((feature, i) => (
+                  <li
+                    key={i}
+                    className="font-['Jost'] font-light text-[14px] text-[var(--warm)] leading-[1.7] flex items-start gap-3"
+                  >
+                    <span className="text-[var(--primary)] mt-1">•</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex-none md:w-64 flex flex-col gap-4 md:pt-10">
+              <Link
+                to="/contact"
+                className="text-center font-['Lato'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-8 no-underline transition-colors hover:bg-[var(--charcoal)]"
+              >
+                Prendre RDV
+              </Link>
+              <Link
+                to="/contact"
+                className="text-center font-['Lato'] font-light text-[10px] tracking-[3px] uppercase border border-[var(--moka)] text-[var(--moka)] py-4 px-8 no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
+              >
+                Nous contacter
+              </Link>
+            </div>
           </div>
         </div>
       </section>
