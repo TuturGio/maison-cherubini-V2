@@ -8,20 +8,20 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen">
-      <section className="px-12 py-20 bg-[var(--linen)]">
+      <section className="px-6 md:px-12 py-16 md:py-20 bg-[var(--linen)]">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <span className="font-['Lato'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-4 block">
               Contact
             </span>
-            <h1 className="font-['Playfair_Display'] font-black text-[52px] text-[var(--moka)] leading-[1.05] mb-6">
+            <h1 className="font-['Playfair_Display'] font-black text-[38px] md:text-[52px] text-[var(--moka)] leading-[1.05] mb-6">
               Donnons vie
               <br />à votre projet
             </h1>
             <div className="w-16 h-[1px] bg-[var(--primary)] mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
             <div>
               <h2 className="font-['Playfair_Display'] font-black text-[32px] text-[var(--moka)] leading-[1.1] mb-8">
                 Prenez rendez-vous
@@ -173,8 +173,8 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="px-12 py-16 bg-[var(--moka)] text-center">
-        <p className="font-['Playfair_Display'] italic font-normal text-[26px] text-[var(--linen)] leading-[1.6] max-w-3xl mx-auto">
+      <section className="px-6 md:px-12 py-14 md:py-16 bg-[var(--moka)] text-center">
+        <p className="font-['Playfair_Display'] italic font-normal text-[20px] md:text-[26px] text-[var(--linen)] leading-[1.6] max-w-3xl mx-auto">
           Nous répondons généralement dans les 24 heures. Pour une demande urgente, n'hésitez pas à nous
           appeler directement.
         </p>
