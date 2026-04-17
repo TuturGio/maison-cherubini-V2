@@ -11,6 +11,7 @@ import Bateaux from './pages/Bateaux';
 import Histoire from './pages/Histoire';
 import Contact from './pages/Contact';
 import Showroom from './pages/Showroom';
+import LingedeMaison from './pages/LingedeMaison';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,7 +31,7 @@ function App() {
       <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Navigation />
-        <main className="flex-1">
+        <main className="flex-1 pt-[73px] md:pt-[89px]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/realisations/rideaux" element={<Rideaux />} />
@@ -40,6 +41,7 @@ function App() {
             <Route path="/histoire" element={<Histoire />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/showroom" element={<Showroom />} />
+            <Route path="/realisations/linge-de-maison" element={<LingedeMaison />} />
           </Routes>
         </main>
         <Footer />

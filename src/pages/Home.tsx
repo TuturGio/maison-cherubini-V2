@@ -247,9 +247,7 @@ export default function Home() {
             Notre histoire
           </span>
           <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
-            Un savoir-faire
-            <br />
-            transmis avec soin
+            Notre Histoire
           </h2>
           <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
           <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-8">

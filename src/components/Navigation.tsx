@@ -8,7 +8,7 @@ export default function Navigation() {
   const [showMobileDropdown, setShowMobileDropdown] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-[100] bg-white border-b border-[var(--pale)] animate-[fadeUp_0.5s_ease_both]">
+    <nav className="fixed top-0 left-0 right-0 z-[100] bg-white border-b border-[var(--pale)] animate-[fadeUp_0.5s_ease_both]">
       <div className="flex items-center justify-between px-4 md:px-12 py-4 md:py-6">
         <Link to="/" className="no-underline" onClick={() => setShowMobileMenu(false)}>
           <div className="font-['Playfair_Display'] font-black text-[24px] md:text-[32px] text-[var(--moka)] tracking-[-0.5px] leading-none flex flex-col items-start">
@@ -33,18 +33,6 @@ export default function Navigation() {
             {showDropdown && (
               <div className="absolute top-full left-0 mt-0 bg-white border border-[var(--pale)] shadow-lg min-w-[200px] py-2">
                 <Link
-                  to="/realisations/rideaux"
-                  className="block px-6 py-3 font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] hover:bg-[var(--linen)]"
-                >
-                  Rideaux
-                </Link>
-                <Link
-                  to="/realisations/voilages"
-                  className="block px-6 py-3 font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] hover:bg-[var(--linen)]"
-                >
-                  Voilages
-                </Link>
-                <Link
                   to="/realisations/banquettes"
                   className="block px-6 py-3 font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] hover:bg-[var(--linen)]"
                 >
@@ -54,7 +42,13 @@ export default function Navigation() {
                   to="/realisations/bateaux"
                   className="block px-6 py-3 font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] hover:bg-[var(--linen)]"
                 >
-                  Bateaux
+                  Yachting
+                </Link>
+                <Link
+                  to="/realisations/linge-de-maison"
+                  className="block px-6 py-3 font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] hover:bg-[var(--linen)]"
+                >
+                  Linge de maison
                 </Link>
               </div>
             )}
@@ -118,20 +112,6 @@ export default function Navigation() {
               {showMobileDropdown && (
                 <div className="pl-4 mt-2 space-y-2">
                   <Link
-                    to="/realisations/rideaux"
-                    onClick={() => setShowMobileMenu(false)}
-                    className="block py-2 font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--warm)] no-underline transition-colors"
-                  >
-                    Rideaux
-                  </Link>
-                  <Link
-                    to="/realisations/voilages"
-                    onClick={() => setShowMobileMenu(false)}
-                    className="block py-2 font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--warm)] no-underline transition-colors"
-                  >
-                    Voilages
-                  </Link>
-                  <Link
                     to="/realisations/banquettes"
                     onClick={() => setShowMobileMenu(false)}
                     className="block py-2 font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--warm)] no-underline transition-colors"
@@ -143,7 +123,14 @@ export default function Navigation() {
                     onClick={() => setShowMobileMenu(false)}
                     className="block py-2 font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--warm)] no-underline transition-colors"
                   >
-                    Bateaux
+                    Yachting
+                  </Link>
+                  <Link
+                    to="/realisations/linge-de-maison"
+                    onClick={() => setShowMobileMenu(false)}
+                    className="block py-2 font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--warm)] no-underline transition-colors"
+                  >
+                    Linge de maison
                   </Link>
                 </div>
               )}
