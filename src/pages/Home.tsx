@@ -73,7 +73,7 @@ export default function Home() {
                 to={s.link}
                 className="min-w-[33.333%] pr-[6px] last:pr-0 cursor-pointer no-underline group"
               >
-                <div className="w-full aspect-[3/4] block relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-t after:from-[rgba(40,20,10,0.65)] after:via-[rgba(40,20,10,0.1)] after:to-transparent after:pointer-events-none">
+                <div className="w-full h-[520px] block relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-t after:from-[rgba(40,20,10,0.65)] after:via-[rgba(40,20,10,0.1)] after:to-transparent after:pointer-events-none">
                   <img src={s.image} alt={s.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110" />
                   <div className="absolute bottom-7 left-7 right-7 z-[2]">
                     <h3 className="font-['Playfair_Display'] font-black text-[30px] text-[var(--linen)] leading-none mb-[5px]">
@@ -89,18 +89,22 @@ export default function Home() {
           </div>
 
           <div className="absolute bottom-7 right-[6px] flex gap-[6px] z-10">
-            <button
-              onClick={() => slide(-1)}
-              className="w-[42px] h-[42px] bg-[rgba(248,244,240,0.15)] border border-[rgba(248,244,240,0.45)] cursor-pointer flex items-center justify-center transition-all text-[var(--linen)] text-[15px] hover:bg-[var(--moka)] hover:border-[var(--moka)]"
-            >
-              ←
-            </button>
-            <button
-              onClick={() => slide(1)}
-              className="w-[42px] h-[42px] bg-[rgba(248,244,240,0.15)] border border-[rgba(248,244,240,0.45)] cursor-pointer flex items-center justify-center transition-all text-[var(--linen)] text-[15px] hover:bg-[var(--moka)] hover:border-[var(--moka)]"
-            >
-              →
-            </button>
+            {currentSlide > 0 && (
+              <button
+                onClick={() => slide(-1)}
+                className="w-[42px] h-[42px] bg-[rgba(248,244,240,0.15)] border border-[rgba(248,244,240,0.45)] cursor-pointer flex items-center justify-center transition-all text-[var(--linen)] text-[15px] hover:bg-[var(--moka)] hover:border-[var(--moka)]"
+              >
+                ←
+              </button>
+            )}
+            {currentSlide < total - visible && (
+              <button
+                onClick={() => slide(1)}
+                className="w-[42px] h-[42px] bg-[rgba(248,244,240,0.15)] border border-[rgba(248,244,240,0.45)] cursor-pointer flex items-center justify-center transition-all text-[var(--linen)] text-[15px] hover:bg-[var(--moka)] hover:border-[var(--moka)]"
+              >
+                →
+              </button>
+            )}
           </div>
         </div>
       </section>
