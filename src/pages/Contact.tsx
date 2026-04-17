@@ -1,8 +1,11 @@
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { useState } from 'react';
+import { MapPin, Phone, Mail, Clock, Info } from 'lucide-react';
 import CanvasImage from '../components/CanvasImage';
 import { drawShowroom } from '../utils/canvasDrawing';
 
 export default function Contact() {
+  const [appointmentType, setAppointmentType] = useState('');
+
   return (
     <div className="min-h-screen">
       <section className="px-12 py-20 bg-[var(--linen)]">
@@ -60,15 +63,25 @@ export default function Contact() {
 
                 <div>
                   <label className="block font-['Lato'] font-light text-[10px] tracking-[2px] uppercase text-[var(--warm)] mb-2">
-                    Type de projet
+                    Type de rendez-vous
                   </label>
-                  <select className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['Jost'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)]">
-                    <option>Rideaux sur mesure</option>
-                    <option>Voilages</option>
-                    <option>Banquettes & assises</option>
-                    <option>Sellerie nautique</option>
-                    <option>Autre</option>
+                  <select
+                    value={appointmentType}
+                    onChange={(e) => setAppointmentType(e.target.value)}
+                    className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['Jost'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)]"
+                  >
+                    <option value="">Choisir un type de rendez-vous</option>
+                    <option value="showroom">Au showroom</option>
+                    <option value="domicile">À domicile</option>
                   </select>
+                  {appointmentType === 'domicile' && (
+                    <div className="mt-3 flex gap-3 bg-[var(--grege-p)] border border-[var(--pale)] px-4 py-3">
+                      <Info size={16} className="text-[var(--primary)] flex-shrink-0 mt-[2px]" />
+                      <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.7]">
+                        Le déplacement à domicile est un service payant. Des frais de déplacement vous seront communiqués lors de la confirmation de votre rendez-vous.
+                      </p>
+                    </div>
+                  )}
                 </div>
 
                 <div>
