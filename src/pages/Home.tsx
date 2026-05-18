@@ -413,9 +413,6 @@ export default function Home() {
           />
         </div>
         <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center">
-          <span className="font-['Lato'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-5 block">
-            Notre histoire
-          </span>
           <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
             Notre Histoire
           </h2>
@@ -446,18 +443,18 @@ export default function Home() {
             Notre équipe vous accueille sur rendez-vous dans notre showroom ou vous répond par message.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block font-['Lato'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-[var(--charcoal)]"
             >
               Prendre RDV
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="inline-block font-['Lato'] font-light text-[10px] tracking-[3px] uppercase bg-transparent text-[var(--moka)] border border-[var(--moka)] py-4 px-10 no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
             >
               Nous contacter
-            </a>
+            </Link>
           </div>
         </div>
       </section>
