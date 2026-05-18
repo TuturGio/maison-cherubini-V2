@@ -7,25 +7,25 @@ const steps = [
     number: '01',
     label: 'Rendez-vous',
     description: 'Nous vous accueillons dans notre showroom pour découvrir vos envies, votre style et vos contraintes. Un échange sur mesure pour poser les bases de votre projet.',
-    icon: '◇',
+    image: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     number: '02',
     label: 'Prise des mesures',
     description: 'Nos experts se déplacent à domicile pour relever les cotes avec précision. Chaque détail est consigné pour garantir un résultat parfait à la pose.',
-    icon: '◈',
+    image: 'https://images.pexels.com/photos/5691626/pexels-photo-5691626.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     number: '03',
     label: 'Fabrication',
     description: 'Vos créations prennent vie dans notre atelier. Coupe, assemblage, finitions — chaque pièce est réalisée avec soin par nos artisans qualifiés.',
-    icon: '◉',
+    image: 'https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     number: '04',
     label: 'Pose',
-    description: 'Notre équipe assure l\'installation chez vous avec minutie. Nous veillons à ce que chaque détail soit impeccable avant de vous remettre les clés de votre nouvel intérieur.',
-    icon: '◎',
+    description: "Notre équipe assure l'installation chez vous avec minutie. Nous veillons à ce que chaque détail soit impeccable avant de vous remettre les clés de votre nouvel intérieur.",
+    image: 'https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
 ];
 
@@ -72,17 +72,27 @@ function StepsCarousel() {
       {/* Desktop: 4 cards static */}
       <div className="hidden md:grid md:grid-cols-4 gap-[2px] px-0">
         {steps.map((step, i) => (
-          <div key={i} className="bg-white px-8 py-10 flex flex-col">
-            <span className="font-['Playfair_Display'] font-black text-[48px] text-[var(--pale)] leading-none mb-4 select-none">
-              {step.number}
-            </span>
-            <div className="w-6 h-[1px] bg-[var(--primary)] mb-5"></div>
-            <h3 className="font-['Playfair_Display'] font-black text-[18px] text-[var(--moka)] mb-3 leading-tight">
-              {step.label}
-            </h3>
-            <p className="font-['Jost'] font-light text-[12px] text-[var(--warm)] leading-[1.85] flex-1">
-              {step.description}
-            </p>
+          <div key={i} className="bg-white flex flex-col">
+            <div className="relative overflow-hidden aspect-[4/3]">
+              <img
+                src={step.image}
+                alt={step.label}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.45)] to-transparent" />
+              <span className="absolute bottom-4 left-5 font-['Playfair_Display'] font-black text-[52px] text-white leading-none select-none opacity-90">
+                {step.number}
+              </span>
+            </div>
+            <div className="px-8 py-8 flex flex-col flex-1">
+              <div className="w-6 h-[1px] bg-[var(--primary)] mb-4"></div>
+              <h3 className="font-['Playfair_Display'] font-black text-[18px] text-[var(--moka)] mb-3 leading-tight">
+                {step.label}
+              </h3>
+              <p className="font-['Jost'] font-light text-[12px] text-[var(--warm)] leading-[1.85] flex-1">
+                {step.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>
@@ -100,17 +110,27 @@ function StepsCarousel() {
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
             {steps.map((step, i) => (
-              <div key={i} className="min-w-full bg-white px-7 py-9 flex flex-col">
-                <span className="font-['Playfair_Display'] font-black text-[56px] text-[var(--pale)] leading-none mb-3 select-none">
-                  {step.number}
-                </span>
-                <div className="w-6 h-[1px] bg-[var(--primary)] mb-5"></div>
-                <h3 className="font-['Playfair_Display'] font-black text-[22px] text-[var(--moka)] mb-3 leading-tight">
-                  {step.label}
-                </h3>
-                <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
-                  {step.description}
-                </p>
+              <div key={i} className="min-w-full bg-white flex flex-col">
+                <div className="relative overflow-hidden aspect-[4/3]">
+                  <img
+                    src={step.image}
+                    alt={step.label}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.45)] to-transparent" />
+                  <span className="absolute bottom-4 left-5 font-['Playfair_Display'] font-black text-[60px] text-white leading-none select-none opacity-90">
+                    {step.number}
+                  </span>
+                </div>
+                <div className="px-7 py-8 flex flex-col">
+                  <div className="w-6 h-[1px] bg-[var(--primary)] mb-4"></div>
+                  <h3 className="font-['Playfair_Display'] font-black text-[22px] text-[var(--moka)] mb-3 leading-tight">
+                    {step.label}
+                  </h3>
+                  <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
+                    {step.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
