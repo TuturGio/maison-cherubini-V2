@@ -13,13 +13,13 @@ const steps = [
     number: '02',
     label: 'Prise des mesures',
     description: 'Nos experts se déplacent à domicile pour relever les cotes avec précision. Chaque détail est consigné pour garantir un résultat parfait à la pose.',
-    image: 'https://images.pexels.com/photos/5691626/pexels-photo-5691626.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/8527706/pexels-photo-8527706.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     number: '03',
     label: 'Fabrication',
     description: 'Vos créations prennent vie dans notre atelier. Coupe, assemblage, finitions — chaque pièce est réalisée avec soin par nos artisans qualifiés.',
-    image: 'https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/6461089/pexels-photo-6461089.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     number: '04',
@@ -44,14 +44,17 @@ function StepsCarousel() {
     return () => window.removeEventListener('resize', check);
   }, []);
 
-  const mobileVisible = 1;
-  const maxMobile = total - mobileVisible;
+  // each card = 47% wide, gap = 2%, so ~2.6 cards peek = 2 full + ~60% of 3rd
+  const mobileCardWidth = 47; // percent of container
+  const mobileGap = 2; // percent
+  const mobileStep = mobileCardWidth + mobileGap;
+  const maxMobile = total - 1;
 
   const handleTouchStart = (e: TouchEvent) => { touchStartX.current = e.touches[0].clientX; };
   const handleTouchMove = (e: TouchEvent) => { touchEndX.current = e.touches[0].clientX; };
   const handleTouchEnd = () => {
     const diff = touchStartX.current - touchEndX.current;
-    if (Math.abs(diff) > 50) {
+    if (Math.abs(diff) > 40) {
       if (diff > 0) setCurrent((p) => Math.min(p + 1, maxMobile));
       else setCurrent((p) => Math.max(p - 1, 0));
     }
@@ -97,46 +100,44 @@ function StepsCarousel() {
         ))}
       </div>
 
-      {/* Mobile: swipeable */}
+      {/* Mobile: swipeable — 2 full cards + peek of 3rd */}
       <div
-        className="md:hidden px-4"
+        className="md:hidden pl-4 overflow-hidden"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <div className="overflow-hidden">
-          <div
-            className="flex transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
-            style={{ transform: `translateX(-${current * 100}%)` }}
-          >
-            {steps.map((step, i) => (
-              <div key={i} className="min-w-full bg-white flex flex-col">
-                <div className="relative overflow-hidden aspect-[4/3]">
-                  <img
-                    src={step.image}
-                    alt={step.label}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.45)] to-transparent" />
-                  <span className="absolute bottom-4 left-5 font-['Playfair_Display'] font-black text-[60px] text-white leading-none select-none opacity-90">
-                    {step.number}
-                  </span>
-                </div>
-                <div className="px-7 py-8 flex flex-col">
-                  <div className="w-6 h-[1px] bg-[var(--primary)] mb-4"></div>
-                  <h3 className="font-['Playfair_Display'] font-black text-[22px] text-[var(--moka)] mb-3 leading-tight">
-                    {step.label}
-                  </h3>
-                  <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
-                    {step.description}
-                  </p>
-                </div>
+        <div
+          className="flex gap-[2%] transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+          style={{ transform: `translateX(-${current * mobileStep}%)` }}
+        >
+          {steps.map((step, i) => (
+            <div key={i} className="min-w-[47%] bg-white flex flex-col flex-shrink-0">
+              <div className="relative overflow-hidden aspect-[3/2]">
+                <img
+                  src={step.image}
+                  alt={step.label}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.5)] to-transparent" />
+                <span className="absolute bottom-2 left-3 font-['Playfair_Display'] font-black text-[38px] text-white leading-none select-none opacity-90">
+                  {step.number}
+                </span>
               </div>
-            ))}
-          </div>
+              <div className="px-4 py-5 flex flex-col">
+                <div className="w-5 h-[1px] bg-[var(--primary)] mb-3"></div>
+                <h3 className="font-['Playfair_Display'] font-black text-[14px] text-[var(--moka)] mb-2 leading-tight">
+                  {step.label}
+                </h3>
+                <p className="font-['Jost'] font-light text-[11px] text-[var(--warm)] leading-[1.8]">
+                  {step.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
 
-        <div className="flex justify-center gap-2 mt-5">
+        <div className="flex justify-center gap-2 mt-5 pr-4">
           {steps.map((_, i) => (
             <button
               key={i}
