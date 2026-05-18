@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Info } from 'lucide-react';
-import CanvasImage from '../components/CanvasImage';
-import { drawShowroom } from '../utils/canvasDrawing';
 
 export default function Contact() {
   const [appointmentType, setAppointmentType] = useState('');
@@ -104,19 +102,20 @@ export default function Contact() {
               </form>
             </div>
 
-            <div>
+            <div className="flex flex-col">
               <h2 className="font-['Playfair_Display'] font-black text-[32px] text-[var(--moka)] leading-[1.1] mb-8">
                 Nos coordonnées
               </h2>
 
-              <div className="space-y-8 mb-12">
-                <div className="flex gap-4">
-                  <MapPin size={20} className="text-[var(--primary)] flex-shrink-0 mt-1" />
+              {/* Coordonnées en 2 colonnes */}
+              <div className="grid grid-cols-2 gap-x-8 gap-y-7 mb-8">
+                <div className="flex gap-3">
+                  <MapPin size={18} className="text-[var(--primary)] flex-shrink-0 mt-[3px]" />
                   <div>
-                    <p className="font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--primary)] mb-2">
+                    <p className="font-['Lato'] font-light text-[10px] tracking-[2px] uppercase text-[var(--primary)] mb-1">
                       Adresse
                     </p>
-                    <p className="font-['Jost'] font-light text-[14px] text-[var(--warm)] leading-[1.7]">
+                    <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.7]">
                       15 Rue de la République
                       <br />
                       13001 Marseille, France
@@ -124,49 +123,57 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="flex gap-4">
-                  <Phone size={20} className="text-[var(--primary)] flex-shrink-0 mt-1" />
+                <div className="flex gap-3">
+                  <Clock size={18} className="text-[var(--primary)] flex-shrink-0 mt-[3px]" />
                   <div>
-                    <p className="font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--primary)] mb-2">
-                      Téléphone
-                    </p>
-                    <p className="font-['Jost'] font-light text-[14px] text-[var(--warm)] leading-[1.7]">
-                      04 91 XX XX XX
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <Mail size={20} className="text-[var(--primary)] flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--primary)] mb-2">
-                      Email
-                    </p>
-                    <p className="font-['Jost'] font-light text-[14px] text-[var(--warm)] leading-[1.7]">
-                      contact@nuance-decoration.fr
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <Clock size={20} className="text-[var(--primary)] flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--primary)] mb-2">
+                    <p className="font-['Lato'] font-light text-[10px] tracking-[2px] uppercase text-[var(--primary)] mb-1">
                       Horaires
                     </p>
-                    <p className="font-['Jost'] font-light text-[14px] text-[var(--warm)] leading-[1.7]">
-                      Lundi - Vendredi : 9h00 - 18h00
+                    <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.7]">
+                      Lun – Ven : 9h00 – 18h00
                       <br />
-                      Samedi : 10h00 - 17h00
+                      Samedi : 10h00 – 17h00
                       <br />
                       Dimanche : Fermé
                     </p>
                   </div>
                 </div>
+
+                <div className="flex gap-3">
+                  <Phone size={18} className="text-[var(--primary)] flex-shrink-0 mt-[3px]" />
+                  <div>
+                    <p className="font-['Lato'] font-light text-[10px] tracking-[2px] uppercase text-[var(--primary)] mb-1">
+                      Téléphone
+                    </p>
+                    <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.7]">
+                      04 91 XX XX XX
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-3">
+                  <Mail size={18} className="text-[var(--primary)] flex-shrink-0 mt-[3px]" />
+                  <div>
+                    <p className="font-['Lato'] font-light text-[10px] tracking-[2px] uppercase text-[var(--primary)] mb-1">
+                      Email
+                    </p>
+                    <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.7]">
+                      contact@nuance-decoration.fr
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              <div className="aspect-[4/3] relative overflow-hidden">
-                <CanvasImage draw={drawShowroom} className="absolute inset-0 w-full h-full block" />
+              {/* Carte — flex-1 pour remplir la hauteur restante jusqu'au bas du formulaire */}
+              <div className="flex-1 relative overflow-hidden min-h-[220px]">
+                <iframe
+                  title="Localisation Nuance Décoration"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.5!2d5.3705!3d43.2965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9c0b7c4e7b5b5%3A0x0!2s15%20Rue%20de%20la%20R%C3%A9publique%2C%2013001%20Marseille!5e0!3m2!1sfr!2sfr!4v1699000000000!5m2!1sfr!2sfr"
+                  className="absolute inset-0 w-full h-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
               </div>
             </div>
           </div>

@@ -69,13 +69,7 @@ function StepsCarousel() {
   return (
     <section className="bg-[var(--grege-p)] py-14 md:py-20 animate-[fadeUp_0.7s_0.15s_ease_both]">
       <div className="px-4 md:px-12 mb-10 md:mb-12 text-center">
-        <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-6"></div>
-        <h2 className="font-['Playfair_Display'] font-black text-[22px] md:text-[28px] text-[var(--moka)] mb-2">
-          Notre processus
-        </h2>
-        <p className="font-['Lato'] font-light text-[10px] tracking-[3px] uppercase text-[var(--warm)]">
-          De l'idée à la réalisation
-        </p>
+        <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto"></div>
       </div>
 
       {/* Desktop: 4 cards static */}
