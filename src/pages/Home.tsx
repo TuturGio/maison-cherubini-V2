@@ -1,6 +1,137 @@
-import { useState, useRef, TouchEvent } from 'react';
+import { useState, useRef, TouchEvent, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import InstagramFeed from '../components/InstagramFeed';
+
+const steps = [
+  {
+    number: '01',
+    label: 'Rendez-vous',
+    description: 'Nous vous accueillons dans notre showroom pour découvrir vos envies, votre style et vos contraintes. Un échange sur mesure pour poser les bases de votre projet.',
+    icon: '◇',
+  },
+  {
+    number: '02',
+    label: 'Prise des mesures',
+    description: 'Nos experts se déplacent à domicile pour relever les cotes avec précision. Chaque détail est consigné pour garantir un résultat parfait à la pose.',
+    icon: '◈',
+  },
+  {
+    number: '03',
+    label: 'Fabrication',
+    description: 'Vos créations prennent vie dans notre atelier. Coupe, assemblage, finitions — chaque pièce est réalisée avec soin par nos artisans qualifiés.',
+    icon: '◉',
+  },
+  {
+    number: '04',
+    label: 'Pose',
+    description: 'Notre équipe assure l\'installation chez vous avec minutie. Nous veillons à ce que chaque détail soit impeccable avant de vous remettre les clés de votre nouvel intérieur.',
+    icon: '◎',
+  },
+];
+
+function StepsCarousel() {
+  const [current, setCurrent] = useState(0);
+  const visibleCount = 4;
+  const total = steps.length;
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
+  const mobileVisible = 1;
+  const maxMobile = total - mobileVisible;
+
+  const handleTouchStart = (e: TouchEvent) => { touchStartX.current = e.touches[0].clientX; };
+  const handleTouchMove = (e: TouchEvent) => { touchEndX.current = e.touches[0].clientX; };
+  const handleTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) setCurrent((p) => Math.min(p + 1, maxMobile));
+      else setCurrent((p) => Math.max(p - 1, 0));
+    }
+  };
+
+  return (
+    <section className="bg-[var(--grege-p)] py-14 md:py-20 animate-[fadeUp_0.7s_0.15s_ease_both]">
+      <div className="px-4 md:px-12 mb-10 md:mb-12 text-center">
+        <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-6"></div>
+        <h2 className="font-['Playfair_Display'] font-black text-[22px] md:text-[28px] text-[var(--moka)] mb-2">
+          Notre processus
+        </h2>
+        <p className="font-['Lato'] font-light text-[10px] tracking-[3px] uppercase text-[var(--warm)]">
+          De l'idée à la réalisation
+        </p>
+      </div>
+
+      {/* Desktop: 4 cards static */}
+      <div className="hidden md:grid md:grid-cols-4 gap-[2px] px-0">
+        {steps.map((step, i) => (
+          <div key={i} className="bg-white px-8 py-10 flex flex-col">
+            <span className="font-['Playfair_Display'] font-black text-[48px] text-[var(--pale)] leading-none mb-4 select-none">
+              {step.number}
+            </span>
+            <div className="w-6 h-[1px] bg-[var(--primary)] mb-5"></div>
+            <h3 className="font-['Playfair_Display'] font-black text-[18px] text-[var(--moka)] mb-3 leading-tight">
+              {step.label}
+            </h3>
+            <p className="font-['Jost'] font-light text-[12px] text-[var(--warm)] leading-[1.85] flex-1">
+              {step.description}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* Mobile: swipeable */}
+      <div
+        className="md:hidden px-4"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        <div className="overflow-hidden">
+          <div
+            className="flex transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+            style={{ transform: `translateX(-${current * 100}%)` }}
+          >
+            {steps.map((step, i) => (
+              <div key={i} className="min-w-full bg-white px-7 py-9 flex flex-col">
+                <span className="font-['Playfair_Display'] font-black text-[56px] text-[var(--pale)] leading-none mb-3 select-none">
+                  {step.number}
+                </span>
+                <div className="w-6 h-[1px] bg-[var(--primary)] mb-5"></div>
+                <h3 className="font-['Playfair_Display'] font-black text-[22px] text-[var(--moka)] mb-3 leading-tight">
+                  {step.label}
+                </h3>
+                <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex justify-center gap-2 mt-5">
+          {steps.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`h-[3px] rounded-full transition-all ${
+                current === i ? 'w-8 bg-[var(--moka)]' : 'w-3 bg-[var(--warm)] opacity-30'
+              }`}
+              aria-label={`Étape ${i + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -198,10 +329,9 @@ export default function Home() {
           <br />
           façonnée dans la matière et la lumière.
         </p>
-        <span className="font-['Lato'] font-normal text-[9px] tracking-[4px] uppercase text-[var(--primary)] block">
-          Rideaux · Voilages · Stores · Revêtements · Yachting
-        </span>
       </section>
+
+      <StepsCarousel />
 
       <section className="grid grid-cols-2 gap-[2px] bg-[var(--pale)]">
         <Link
