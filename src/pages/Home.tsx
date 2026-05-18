@@ -29,26 +29,32 @@ const steps = [
   },
 ];
 
+const GAP = 8; // px between cards
+const PEEK = 16; // px of left padding so first card doesn't touch edge
+
 function StepsCarousel() {
   const [current, setCurrent] = useState(0);
-  const visibleCount = 4;
   const total = steps.length;
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
-  const [isMobile, setIsMobile] = useState(false);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [cardWidth, setCardWidth] = useState(0);
 
   useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener('resize', check);
-    return () => window.removeEventListener('resize', check);
+    const measure = () => {
+      if (trackRef.current) {
+        // container width - left padding, show 2 cards + peek of 3rd (~30px)
+        const containerW = trackRef.current.offsetWidth - PEEK;
+        setCardWidth(Math.floor((containerW - GAP - 30) / 2));
+      }
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
   }, []);
 
-  // each card = 47% wide, gap = 2%, so ~2.6 cards peek = 2 full + ~60% of 3rd
-  const mobileCardWidth = 47; // percent of container
-  const mobileGap = 2; // percent
-  const mobileStep = mobileCardWidth + mobileGap;
   const maxMobile = total - 1;
+  const offset = current * (cardWidth + GAP);
 
   const handleTouchStart = (e: TouchEvent) => { touchStartX.current = e.touches[0].clientX; };
   const handleTouchMove = (e: TouchEvent) => { touchEndX.current = e.touches[0].clientX; };
@@ -102,17 +108,26 @@ function StepsCarousel() {
 
       {/* Mobile: swipeable — 2 full cards + peek of 3rd */}
       <div
-        className="md:hidden pl-4 overflow-hidden"
+        ref={trackRef}
+        className="md:hidden overflow-hidden"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
         <div
-          className="flex gap-[2%] transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
-          style={{ transform: `translateX(-${current * mobileStep}%)` }}
+          className="flex transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+          style={{
+            paddingLeft: PEEK,
+            gap: GAP,
+            transform: `translateX(-${offset}px)`,
+          }}
         >
           {steps.map((step, i) => (
-            <div key={i} className="min-w-[47%] bg-white flex flex-col flex-shrink-0">
+            <div
+              key={i}
+              className="bg-white flex flex-col flex-shrink-0"
+              style={{ width: cardWidth || 'calc(50% - 20px)' }}
+            >
               <div className="relative overflow-hidden aspect-[3/2]">
                 <img
                   src={step.image}
@@ -137,7 +152,7 @@ function StepsCarousel() {
           ))}
         </div>
 
-        <div className="flex justify-center gap-2 mt-5 pr-4">
+        <div className="flex justify-center gap-2 mt-5">
           {steps.map((_, i) => (
             <button
               key={i}
