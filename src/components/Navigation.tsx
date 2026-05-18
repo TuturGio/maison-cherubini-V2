@@ -2,6 +2,16 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
+const categories = [
+  { label: 'Rideaux', link: '/realisations/rideaux' },
+  { label: 'Voilages', link: '/realisations/voilages' },
+  { label: 'Stores', link: '/realisations/stores' },
+  { label: 'Revêtement intérieur', link: '/realisations/revetement-interieur' },
+  { label: 'Revêtement extérieur', link: '/realisations/revetement-exterieur' },
+  { label: 'Bateaux', link: '/realisations/bateaux' },
+  { label: 'Linge de maison', link: '/realisations/linge-de-maison' },
+];
+
 export default function Navigation() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -31,25 +41,16 @@ export default function Navigation() {
             </button>
 
             {showDropdown && (
-              <div className="absolute top-full left-0 mt-0 bg-white border border-[var(--pale)] shadow-lg min-w-[200px] py-2">
-                <Link
-                  to="/realisations/banquettes"
-                  className="block px-6 py-3 font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] hover:bg-[var(--linen)]"
-                >
-                  Banquettes
-                </Link>
-                <Link
-                  to="/realisations/bateaux"
-                  className="block px-6 py-3 font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] hover:bg-[var(--linen)]"
-                >
-                  Yachting
-                </Link>
-                <Link
-                  to="/realisations/linge-de-maison"
-                  className="block px-6 py-3 font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] hover:bg-[var(--linen)]"
-                >
-                  Linge de maison
-                </Link>
+              <div className="absolute top-full left-0 mt-0 bg-white border border-[var(--pale)] shadow-lg min-w-[220px] py-2">
+                {categories.map((cat) => (
+                  <Link
+                    key={cat.link}
+                    to={cat.link}
+                    className="block px-6 py-3 font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] hover:bg-[var(--linen)]"
+                  >
+                    {cat.label}
+                  </Link>
+                ))}
               </div>
             )}
           </li>
@@ -111,27 +112,16 @@ export default function Navigation() {
               </button>
               {showMobileDropdown && (
                 <div className="pl-4 mt-2 space-y-2">
-                  <Link
-                    to="/realisations/banquettes"
-                    onClick={() => setShowMobileMenu(false)}
-                    className="block py-2 font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--warm)] no-underline transition-colors"
-                  >
-                    Banquettes
-                  </Link>
-                  <Link
-                    to="/realisations/bateaux"
-                    onClick={() => setShowMobileMenu(false)}
-                    className="block py-2 font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--warm)] no-underline transition-colors"
-                  >
-                    Yachting
-                  </Link>
-                  <Link
-                    to="/realisations/linge-de-maison"
-                    onClick={() => setShowMobileMenu(false)}
-                    className="block py-2 font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--warm)] no-underline transition-colors"
-                  >
-                    Linge de maison
-                  </Link>
+                  {categories.map((cat) => (
+                    <Link
+                      key={cat.link}
+                      to={cat.link}
+                      onClick={() => setShowMobileMenu(false)}
+                      className="block py-2 font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--warm)] no-underline transition-colors"
+                    >
+                      {cat.label}
+                    </Link>
+                  ))}
                 </div>
               )}
             </li>

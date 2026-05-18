@@ -6,6 +6,9 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 import Home from './pages/Home';
 import Rideaux from './pages/Rideaux';
 import Voilages from './pages/Voilages';
+import Stores from './pages/Stores';
+import RevetementInterieur from './pages/RevetementInterieur';
+import RevetementExterieur from './pages/RevetementExterieur';
 import Banquettes from './pages/Banquettes';
 import Bateaux from './pages/Bateaux';
 import Histoire from './pages/Histoire';
@@ -36,6 +39,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/realisations/rideaux" element={<Rideaux />} />
             <Route path="/realisations/voilages" element={<Voilages />} />
+            <Route path="/realisations/stores" element={<Stores />} />
+            <Route path="/realisations/revetement-interieur" element={<RevetementInterieur />} />
+            <Route path="/realisations/revetement-exterieur" element={<RevetementExterieur />} />
             <Route path="/realisations/banquettes" element={<Banquettes />} />
             <Route path="/realisations/bateaux" element={<Bateaux />} />
             <Route path="/histoire" element={<Histoire />} />

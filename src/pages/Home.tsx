@@ -5,7 +5,51 @@ import InstagramFeed from '../components/InstagramFeed';
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const visible = 3;
-  const total = 3;
+  const slides = [
+    {
+      title: 'Rideaux',
+      subtitle: 'Collections sur mesure',
+      image: `${import.meta.env.BASE_URL}rideau-a-oeillets-dores_NINO_009911_J19F_4.webp`,
+      link: '/realisations/rideaux',
+    },
+    {
+      title: 'Voilages',
+      subtitle: 'Légèreté & lumière',
+      image: `${import.meta.env.BASE_URL}voilage-a-galon-fronceur_SHADOW_000475_W_4.webp`,
+      link: '/realisations/voilages',
+    },
+    {
+      title: 'Stores',
+      subtitle: 'Occultation & lumière',
+      image: 'https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=800',
+      link: '/realisations/stores',
+    },
+    {
+      title: 'Revêtement intérieur',
+      subtitle: 'Murs & sols d\'exception',
+      image: 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800',
+      link: '/realisations/revetement-interieur',
+    },
+    {
+      title: 'Revêtement extérieur',
+      subtitle: 'Terrasses & outdoor',
+      image: 'https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=800',
+      link: '/realisations/revetement-exterieur',
+    },
+    {
+      title: 'Bateaux',
+      subtitle: 'Sellerie nautique',
+      image: `${import.meta.env.BASE_URL}yachting.jpg`,
+      link: '/realisations/bateaux',
+    },
+    {
+      title: 'Linge de maison',
+      subtitle: 'Textiles & art de vivre',
+      image: `${import.meta.env.BASE_URL}tapis_de_sol_ANDREI_009531_Z5_2.webp`,
+      link: '/realisations/linge-de-maison',
+    },
+  ];
+  const total = slides.length;
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
 
@@ -28,40 +72,17 @@ export default function Home() {
 
     if (Math.abs(diff) > swipeThreshold) {
       if (diff > 0) {
-        // Swipe left - next slide
         setCurrentSlide((prev) => Math.min(prev + 1, total - 1));
       } else {
-        // Swipe right - previous slide
         setCurrentSlide((prev) => Math.max(prev - 1, 0));
       }
     }
   };
 
-  const slides = [
-    {
-      title: 'Banquettes',
-      subtitle: 'Assises & mobilier',
-      image: 'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=800',
-      link: '/realisations/banquettes',
-    },
-    {
-      title: 'Yachting',
-      subtitle: 'Sellerie nautique',
-      image: `${import.meta.env.BASE_URL}yachting.jpg`,
-      link: '/realisations/bateaux',
-    },
-    {
-      title: 'Linge de maison',
-      subtitle: 'Textiles & art de vivre',
-      image: `${import.meta.env.BASE_URL}tapis_de_sol_ANDREI_009531_Z5_2.webp`,
-      link: '/realisations/linge-de-maison',
-    },
-  ];
-
 
   return (
     <div className="min-h-screen">
-      <section className="bg-[var(--grege-p)] px-12 pb-12 animate-[fadeUp_0.6s_0.1s_ease_both] hidden md:block">
+      <section className="animate-[fadeUp_0.6s_0.1s_ease_both] hidden md:block">
         <div className="relative overflow-hidden">
           <div
             className="flex transition-transform duration-[600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
@@ -71,7 +92,7 @@ export default function Home() {
               <Link
                 key={i}
                 to={s.link}
-                className="min-w-[33.333%] pr-[6px] last:pr-0 cursor-pointer no-underline group"
+                className="min-w-[33.333%] pr-[2px] last:pr-0 cursor-pointer no-underline group"
               >
                 <div className="w-full h-[520px] block relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-t after:from-[rgba(40,20,10,0.65)] after:via-[rgba(40,20,10,0.1)] after:to-transparent after:pointer-events-none">
                   <img src={s.image} alt={s.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110" />
@@ -109,7 +130,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[var(--grege-p)] pt-4 pb-8 animate-[fadeUp_0.6s_0.1s_ease_both] md:hidden">
+      <section className="pt-4 pb-8 animate-[fadeUp_0.6s_0.1s_ease_both] md:hidden">
         <div className="flex gap-2 px-4 mb-4 overflow-x-auto scrollbar-hide">
           {slides.map((s, i) => (
             <button
@@ -134,7 +155,7 @@ export default function Home() {
         >
           <Link
             to={slides[currentSlide].link}
-            className="block relative overflow-hidden rounded-lg no-underline"
+            className="block relative overflow-hidden no-underline"
           >
             <div className="w-full aspect-[4/5] relative after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-t after:from-[rgba(40,20,10,0.7)] after:via-[rgba(40,20,10,0.1)] after:to-transparent after:pointer-events-none">
               <img
