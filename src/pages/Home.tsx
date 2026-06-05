@@ -170,31 +170,31 @@ export default function Home() {
     {
       title: 'Rideaux',
       subtitle: 'Collections sur mesure',
-      image: `${import.meta.env.BASE_URL}rideau-a-oeillets-dores_NINO_009911_J19F_4.webp`,
+      image: `${import.meta.env.BASE_URL}nos_rideaux.jpg`,
       link: '/realisations/rideaux',
     },
     {
       title: 'Voilages',
       subtitle: 'Légèreté & lumière',
-      image: `${import.meta.env.BASE_URL}voilage-a-galon-fronceur_SHADOW_000475_W_4.webp`,
+      image: `${import.meta.env.BASE_URL}nos_voilages_-_177.jpg`,
       link: '/realisations/voilages',
     },
     {
       title: 'Stores',
       subtitle: 'Occultation & lumière',
-      image: 'https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: `${import.meta.env.BASE_URL}nos_stores.jpg`,
       link: '/realisations/stores',
     },
     {
       title: 'Revêtement intérieur',
       subtitle: 'Murs & sols d\'exception',
-      image: 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: `${import.meta.env.BASE_URL}revetement_interieur.jpg`,
       link: '/realisations/revetement-interieur',
     },
     {
       title: 'Revêtement extérieur',
       subtitle: 'Terrasses & outdoor',
-      image: 'https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: `${import.meta.env.BASE_URL}revetement_exterieur.jpg`,
       link: '/realisations/revetement-exterieur',
     },
     {
@@ -206,7 +206,7 @@ export default function Home() {
     {
       title: 'Linge de maison',
       subtitle: 'Textiles & art de vivre',
-      image: `${import.meta.env.BASE_URL}tapis_de_sol_ANDREI_009531_Z5_2.webp`,
+      image: `${import.meta.env.BASE_URL}linge_maison.jpg`,
       link: '/realisations/linge-de-maison',
     },
   ];
