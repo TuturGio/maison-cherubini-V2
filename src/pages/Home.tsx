@@ -165,7 +165,7 @@ function StepsCarousel() {
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const visible = 3;
+  const visible = 4;
   const slides = [
     {
       title: 'Rideaux',
@@ -253,7 +253,7 @@ export default function Home() {
               <Link
                 key={i}
                 to={s.link}
-                className="min-w-[33.333%] pr-[2px] last:pr-0 cursor-pointer no-underline group"
+                className="min-w-[25%] pr-[2px] last:pr-0 cursor-pointer no-underline group"
               >
                 <div className="w-full h-[520px] block relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-t after:from-[rgba(40,20,10,0.65)] after:via-[rgba(40,20,10,0.1)] after:to-transparent after:pointer-events-none">
                   <img src={s.image} alt={s.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110" />
