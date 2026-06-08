@@ -476,7 +476,7 @@ export default function Home() {
           </h2>
           <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
           <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
-            Chaque pièce sort de notre atelier avec le soin d'un travail bien fait. Ourlets droits, coutures invisibles, pinces ajustées — nos artisans apportent le même niveau d'exigence à chaque détail, quelle que soit la complexité du projet. La qualité ne se voit pas toujours, mais elle se ressent toujours.
+            Chaque pièce sort de notre atelier avec le soin d'un travail bien fait. Ourlets droits, coutures invisibles, pinces ajustées — notre équipe apporte le même niveau d'exigence à chaque détail, quelle que soit la complexité du projet. La qualité ne se voit pas forcément, mais elle se ressent toujours.
           </p>
         </div>
         <div className="aspect-[4/3] md:aspect-auto relative overflow-hidden order-1 md:order-2">
