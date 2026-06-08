@@ -24,7 +24,7 @@ export default function Navigation() {
           <img
             src={`${import.meta.env.BASE_URL}nuances_logo-V2.jpg`}
             alt="Nuances"
-            className="h-10 md:h-12 w-auto"
+            className="h-14 md:h-16 w-auto"
           />
         </Link>
 
