@@ -5,27 +5,27 @@ import InstagramFeed from '../components/InstagramFeed';
 const steps = [
   {
     number: '01',
-    label: 'Rendez-vous',
+    label: 'Conseils à domicile',
     description: 'Nous vous accueillons dans notre showroom pour découvrir vos envies, votre style et vos contraintes. Un échange sur mesure pour poser les bases de votre projet.',
-    image: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: `${import.meta.env.BASE_URL}conseil-domicile.jpg`,
   },
   {
     number: '02',
     label: 'Prise des mesures',
     description: 'Nos experts se déplacent à domicile pour relever les cotes avec précision. Chaque détail est consigné pour garantir un résultat parfait à la pose.',
-    image: 'https://images.pexels.com/photos/8527706/pexels-photo-8527706.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: `${import.meta.env.BASE_URL}prise-mesure.jpg`,
   },
   {
     number: '03',
-    label: 'Fabrication',
+    label: 'Fabrication locale',
     description: 'Vos créations prennent vie dans notre atelier. Coupe, assemblage, finitions — chaque pièce est réalisée avec soin par nos artisans qualifiés.',
-    image: 'https://images.pexels.com/photos/6461089/pexels-photo-6461089.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: `${import.meta.env.BASE_URL}fabrication-locale.jpg`,
   },
   {
     number: '04',
-    label: 'Pose',
+    label: 'Pose & Installation',
     description: "Notre équipe assure l'installation chez vous avec minutie. Nous veillons à ce que chaque détail soit impeccable avant de vous remettre les clés de votre nouvel intérieur.",
-    image: 'https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: `${import.meta.env.BASE_URL}pose-installation.jpg`,
   },
 ];
 
@@ -76,7 +76,7 @@ function StepsCarousel() {
       <div className="hidden md:grid md:grid-cols-4 gap-[2px] px-0">
         {steps.map((step, i) => (
           <div key={i} className="bg-white flex flex-col">
-            <div className="relative overflow-hidden aspect-[4/3]">
+            <div className="relative overflow-hidden aspect-[3/4]">
               <img
                 src={step.image}
                 alt={step.label}
@@ -122,7 +122,7 @@ function StepsCarousel() {
               className="bg-white flex flex-col flex-shrink-0"
               style={{ width: cardWidth || 'calc(50% - 20px)' }}
             >
-              <div className="relative overflow-hidden aspect-[3/2]">
+              <div className="relative overflow-hidden aspect-[2/3]">
                 <img
                   src={step.image}
                   alt={step.label}
