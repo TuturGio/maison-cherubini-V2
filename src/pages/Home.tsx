@@ -442,6 +442,12 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="bg-[var(--grege-p)] py-12 md:py-16 flex flex-col items-center gap-4">
+        <div className="w-[1px] h-10 bg-[var(--primary)] opacity-40"></div>
+        <div className="w-16 h-[1px] bg-[var(--primary)]"></div>
+        <div className="w-[1px] h-10 bg-[var(--primary)] opacity-40"></div>
+      </div>
+
       {/* 500 références — image gauche, texte droite */}
       <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--linen)]">
         <div className="aspect-[4/3] md:aspect-auto relative overflow-hidden">
