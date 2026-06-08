@@ -370,7 +370,7 @@ export default function Home() {
         >
           <div className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105">
             <img
-              src="https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              src={`${import.meta.env.BASE_URL}nos-realisation.jpg`}
               alt="Nos réalisations"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -394,7 +394,7 @@ export default function Home() {
         >
           <div className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105">
             <img
-              src="https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              src={`${import.meta.env.BASE_URL}notre-showroom.jpg`}
               alt="Notre showroom"
               className="absolute inset-0 w-full h-full object-cover"
             />
