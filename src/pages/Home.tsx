@@ -442,6 +442,66 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 500 références — image gauche, texte droite */}
+      <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--linen)]">
+        <div className="aspect-[4/3] md:aspect-auto relative overflow-hidden">
+          <img
+            src={`${import.meta.env.BASE_URL}500-references.jpg`}
+            alt="500 références"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+        <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center">
+          <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
+            Plus de 500 références
+          </h2>
+          <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
+          <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
+            Notre showroom présente une sélection rigoureuse de plus de 500 références de tissus, réunis chez les meilleurs éditeurs européens. Lin, velours, soie, chenille — chaque matière est choisie pour sa qualité, sa tenue et son caractère. Venez toucher, comparer, et trouver le tissu qui donnera vie à votre projet.
+          </p>
+        </div>
+      </section>
+
+      {/* Finitions — texte gauche, image droite */}
+      <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--grege-p)]">
+        <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center order-2 md:order-1">
+          <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
+            Des finitions soignées
+          </h2>
+          <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
+          <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
+            Chaque pièce sort de notre atelier avec le soin d'un travail bien fait. Ourlets droits, coutures invisibles, pinces ajustées — nos artisans apportent le même niveau d'exigence à chaque détail, quelle que soit la complexité du projet. La qualité ne se voit pas toujours, mais elle se ressent toujours.
+          </p>
+        </div>
+        <div className="aspect-[4/3] md:aspect-auto relative overflow-hidden order-1 md:order-2">
+          <img
+            src={`${import.meta.env.BASE_URL}finissions.jpg`}
+            alt="Finitions soignées"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+      </section>
+
+      {/* Supports & accessoires — image gauche, texte droite */}
+      <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--linen)]">
+        <div className="aspect-[4/3] md:aspect-auto relative overflow-hidden">
+          <img
+            src={`${import.meta.env.BASE_URL}supports.jpg`}
+            alt="Supports et accessoires"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+        <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center">
+          <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
+            Supports & accessoires
+          </h2>
+          <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
+          <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
+            Tringle, œillets, anneaux, embouts — chaque support est sélectionné pour sa robustesse et son harmonie avec le tissu choisi. Nous proposons une gamme complète d'accessoires en laiton, nickel satiné, noir mat ou bois, pour un résultat cohérent du sol au plafond. Le détail qui fait toute la différence.
+          </p>
+        </div>
+      </section>
+
       <section className="py-16 md:py-24 px-6 md:px-12 bg-[var(--grege-p)] text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
         <div className="max-w-xl mx-auto">
           <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-8"></div>
