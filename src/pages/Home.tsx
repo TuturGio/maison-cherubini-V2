@@ -463,7 +463,7 @@ export default function Home() {
           </h2>
           <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
           <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
-            Notre showroom présente une sélection rigoureuse de plus de 500 références de tissus, réunis chez les meilleurs éditeurs européens. Lin, velours, soie, chenille — chaque matière est choisie pour sa qualité, sa tenue et son caractère. Venez toucher, comparer, et trouver le tissu qui donnera vie à votre projet.
+            Lin, velours, tweed, coton, doublures thermiques et occultantes... Trouvez la matière qui saura répondre à vos envies !
           </p>
         </div>
       </section>
@@ -472,7 +472,7 @@ export default function Home() {
       <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--grege-p)]">
         <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center order-2 md:order-1">
           <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
-            Des finitions soignées
+            De nombreuses finitions disponibles
           </h2>
           <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
           <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
@@ -499,7 +499,7 @@ export default function Home() {
         </div>
         <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center">
           <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
-            Supports & accessoires
+            Supports
           </h2>
           <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
           <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
