@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
 const categories = [
-  { label: 'Rideaux', link: '/realisations/rideaux' },
-  { label: 'Voilages', link: '/realisations/voilages' },
-  { label: 'Stores', link: '/realisations/stores' },
-  { label: 'Revêtement intérieur', link: '/realisations/revetement-interieur' },
-  { label: 'Revêtement extérieur', link: '/realisations/revetement-exterieur' },
-  { label: 'Bateaux', link: '/realisations/bateaux' },
-  { label: 'Linge de maison', link: '/realisations/linge-de-maison' },
+  { label: 'Rideaux', subtitle: 'Décoratifs & occultants', link: '/realisations/rideaux' },
+  { label: 'Voilages', subtitle: 'Transparents & légers', link: '/realisations/voilages' },
+  { label: 'Stores', subtitle: 'Bateau, romain & californien', link: '/realisations/stores' },
+  { label: 'Ameublement intérieur', subtitle: 'Banquettes, assises & dossiers', link: '/realisations/banquettes' },
+  { label: 'Outdoor & bateaux', subtitle: 'Banquettes, transats', link: '/realisations/bateaux' },
+  { label: 'Linge de maison', subtitle: 'Coussins & édredon', link: '/realisations/linge-de-maison' },
 ];
 
 export default function Navigation() {
@@ -40,14 +39,19 @@ export default function Navigation() {
             </button>
 
             {showDropdown && (
-              <div className="absolute top-full left-0 mt-0 bg-white border border-[var(--pale)] shadow-lg min-w-[220px] py-2">
+              <div className="absolute top-full left-0 mt-0 bg-white border border-[var(--pale)] shadow-lg min-w-[280px] py-2">
                 {categories.map((cat) => (
                   <Link
                     key={cat.link}
                     to={cat.link}
-                    className="block px-6 py-3 font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] hover:bg-[var(--linen)]"
+                    className="block px-6 py-3 no-underline transition-colors hover:bg-[var(--linen)] group"
                   >
-                    {cat.label}
+                    <span className="block font-['Lato'] font-light text-[11px] tracking-[2.5px] uppercase text-[var(--moka)] group-hover:text-[var(--charcoal)]">
+                      {cat.label}
+                    </span>
+                    <span className="block font-['Jost'] font-light text-[10px] tracking-[1px] uppercase text-[var(--warm)] mt-[2px] opacity-70">
+                      {cat.subtitle}
+                    </span>
                   </Link>
                 ))}
               </div>
@@ -116,9 +120,14 @@ export default function Navigation() {
                       key={cat.link}
                       to={cat.link}
                       onClick={() => setShowMobileMenu(false)}
-                      className="block py-2 font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--warm)] no-underline transition-colors"
+                      className="block py-2 no-underline transition-colors"
                     >
-                      {cat.label}
+                      <span className="block font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--warm)]">
+                        {cat.label}
+                      </span>
+                      <span className="block font-['Jost'] font-light text-[10px] tracking-[0.5px] uppercase text-[var(--warm)] opacity-55 mt-[1px]">
+                        {cat.subtitle}
+                      </span>
                     </Link>
                   ))}
                 </div>
