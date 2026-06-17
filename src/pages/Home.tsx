@@ -285,8 +285,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pt-4 pb-8 animate-[fadeUp_0.6s_0.1s_ease_both] md:hidden">
-        <div className="flex gap-2 px-4 mb-4 overflow-x-auto scrollbar-hide">
+      <section className="pt-4 pb-8 animate-[fadeUp_0.6s_0.1s_ease_both] md:hidden">        <div className="flex gap-2 px-4 mb-4 overflow-x-auto scrollbar-hide">
           {slides.map((s, i) => (
             <button
               key={i}
@@ -342,6 +341,32 @@ export default function Home() {
                 aria-label={`Aller à la slide ${i + 1}`}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 px-6 md:px-12 bg-[var(--grege-p)] text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
+        <div className="max-w-xl mx-auto">
+          <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-8"></div>
+          <h2 className="font-['Playfair_Display'] italic font-normal text-[24px] md:text-[32px] text-[var(--moka)] leading-[1.5] mb-4">
+            Concrétisons votre projet ensemble
+          </h2>
+          <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-10">
+            Notre équipe vous accueille sur rendez-vous dans notre showroom ou vous répond par message.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-block font-['Lato'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-[var(--charcoal)]"
+            >
+              Prendre RDV
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-block font-['Lato'] font-light text-[10px] tracking-[3px] uppercase bg-transparent text-[var(--moka)] border border-[var(--moka)] py-4 px-10 no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
+            >
+              Nous contacter
+            </Link>
           </div>
         </div>
       </section>
@@ -499,32 +524,6 @@ export default function Home() {
           <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
             Tringle, œillets, anneaux, embouts — chaque support est sélectionné pour sa robustesse et son harmonie avec le tissu choisi. Nous proposons une gamme complète d'accessoires en laiton, nickel satiné, noir mat ou bois, pour un résultat cohérent du sol au plafond. Le détail qui fait toute la différence.
           </p>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24 px-6 md:px-12 bg-[var(--grege-p)] text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
-        <div className="max-w-xl mx-auto">
-          <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-8"></div>
-          <h2 className="font-['Playfair_Display'] italic font-normal text-[24px] md:text-[32px] text-[var(--moka)] leading-[1.5] mb-4">
-            Concrétisons votre projet ensemble
-          </h2>
-          <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-10">
-            Notre équipe vous accueille sur rendez-vous dans notre showroom ou vous répond par message.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-block font-['Lato'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-[var(--charcoal)]"
-            >
-              Prendre RDV
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-block font-['Lato'] font-light text-[10px] tracking-[3px] uppercase bg-transparent text-[var(--moka)] border border-[var(--moka)] py-4 px-10 no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
-            >
-              Nous contacter
-            </Link>
-          </div>
         </div>
       </section>
 
