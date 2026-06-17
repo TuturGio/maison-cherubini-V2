@@ -8,6 +8,7 @@ const categories = [
   { label: 'Stores', link: '/realisations/stores' },
   { label: 'Revêtement intérieur', link: '/realisations/revetement-interieur' },
   { label: 'Revêtement extérieur', link: '/realisations/revetement-exterieur' },
+  { label: 'Bateaux', link: '/realisations/bateaux' },
   { label: 'Linge de maison', link: '/realisations/linge-de-maison' },
 ];
 
