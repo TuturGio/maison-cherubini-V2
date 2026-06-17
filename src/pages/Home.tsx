@@ -439,14 +439,7 @@ export default function Home() {
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--linen)]">
-        <div className="aspect-square md:aspect-auto relative overflow-hidden">
-          <img
-            src={`${import.meta.env.BASE_URL}tapis_de_sol_ANDREI_009531_Z5_2.webp`}
-            alt="Notre histoire"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-        <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center">
+        <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center order-2 md:order-1">
           <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
             Notre Histoire
           </h2>
@@ -465,13 +458,14 @@ export default function Home() {
             Découvrir notre histoire
           </Link>
         </div>
+        <div className="aspect-square md:aspect-auto relative overflow-hidden order-1 md:order-2">
+          <img
+            src={`${import.meta.env.BASE_URL}tapis_de_sol_ANDREI_009531_Z5_2.webp`}
+            alt="Notre histoire"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
       </section>
-
-      <div className="bg-[var(--grege-p)] py-12 md:py-16 flex flex-col items-center gap-4">
-        <div className="w-[1px] h-10 bg-[var(--primary)] opacity-40"></div>
-        <div className="w-16 h-[1px] bg-[var(--primary)]"></div>
-        <div className="w-[1px] h-10 bg-[var(--primary)] opacity-40"></div>
-      </div>
 
       {/* 500 références — image gauche, texte droite */}
       <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--linen)]">
