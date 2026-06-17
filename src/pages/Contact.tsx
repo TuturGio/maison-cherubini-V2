@@ -32,6 +32,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
+                    required
                     className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['Jost'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)]"
                     placeholder="Jean Dupont"
                   />
@@ -43,6 +44,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="email"
+                    required
                     className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['Jost'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)]"
                     placeholder="jean.dupont@email.com"
                   />
@@ -54,6 +56,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="tel"
+                    required
                     className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['Jost'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)]"
                     placeholder="06 12 34 56 78"
                   />
@@ -66,6 +69,7 @@ export default function Contact() {
                   <select
                     value={appointmentType}
                     onChange={(e) => setAppointmentType(e.target.value)}
+                    required
                     className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['Jost'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)]"
                   >
                     <option value="">Choisir un type de rendez-vous</option>
@@ -76,7 +80,7 @@ export default function Contact() {
                     <div className="mt-3 flex gap-3 bg-[var(--grege-p)] border border-[var(--pale)] px-4 py-3">
                       <Info size={16} className="text-[var(--primary)] flex-shrink-0 mt-[2px]" />
                       <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.7]">
-                        Le déplacement à domicile est un service payant. Des frais de déplacement vous seront communiqués lors de la confirmation de votre rendez-vous.
+                        Le déplacement à domicile est un service payant. Des frais de déplacement vous seront communiqués lors de la confirmation de votre rendez-vous. Ils seront déduits d'un devis signé.
                       </p>
                     </div>
                   )}
@@ -88,6 +92,7 @@ export default function Contact() {
                   </label>
                   <textarea
                     rows={5}
+                    required
                     className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['Jost'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)] resize-none"
                     placeholder="Décrivez-nous votre projet..."
                   />
@@ -116,9 +121,9 @@ export default function Contact() {
                       Adresse
                     </p>
                     <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.7]">
-                      15 Rue de la République
+                      63 Av. de Montredon
                       <br />
-                      13001 Marseille, France
+                      13008 Marseille, France
                     </p>
                   </div>
                 </div>
@@ -146,7 +151,7 @@ export default function Contact() {
                       Téléphone
                     </p>
                     <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.7]">
-                      04 91 XX XX XX
+                      06 43 58 51 62
                     </p>
                   </div>
                 </div>
@@ -158,7 +163,7 @@ export default function Contact() {
                       Email
                     </p>
                     <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.7]">
-                      contact@nuance-decoration.fr
+                      contact@nuances.com
                     </p>
                   </div>
                 </div>
