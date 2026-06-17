@@ -5,26 +5,26 @@ import InstagramFeed from '../components/InstagramFeed';
 const steps = [
   {
     number: '01',
-    label: 'Conseils à domicile',
-    description: 'Nous vous accueillons dans notre showroom pour découvrir vos envies, votre style et vos contraintes. Un échange sur mesure pour poser les bases de votre projet.',
+    label: 'Conseil & Expertise',
+    description: 'En showroom ou à domicile, venez découvrir nos collections, parcourir nos échantillons et échanger sur votre projet. Sur rendez-vous ou en visite libre, nous vous guidons pour définir vos envies, votre style et les meilleures solutions pour votre intérieur.',
     image: `${import.meta.env.BASE_URL}conseil-domicile.jpg`,
   },
   {
     number: '02',
     label: 'Prise des mesures',
-    description: 'Nos experts se déplacent à domicile pour relever les cotes avec précision. Chaque détail est consigné pour garantir un résultat parfait à la pose.',
+    description: 'Nous nous déplaçons à domicile pour relever vos cotes avec précision. Chaque détail est consigné pour garantir un résultat parfait à la pose.',
     image: `${import.meta.env.BASE_URL}prise-mesure.jpg`,
   },
   {
     number: '03',
     label: 'Fabrication locale',
-    description: 'Vos créations prennent vie dans notre atelier. Coupe, assemblage, finitions — chaque pièce est réalisée avec soin par nos artisans qualifiés.',
+    description: 'Vos créations prennent vie dans notre atelier. Coupe, assemblage, finitions — chaque pièce est réalisée avec soin par notre équipe.',
     image: `${import.meta.env.BASE_URL}fabrication-locale.jpg`,
   },
   {
     number: '04',
     label: 'Pose & Installation',
-    description: "Notre équipe assure l'installation chez vous avec minutie. Nous veillons à ce que chaque détail soit impeccable avant de vous remettre les clés de votre nouvel intérieur.",
+    description: 'Notre équipe assure l\'installation chez vous avec minutie. Nous veillons à ce que chaque détail soit impeccable, pour un résultat à la hauteur de votre projet.',
     image: `${import.meta.env.BASE_URL}pose-installation.jpg`,
   },
 ];
