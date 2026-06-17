@@ -69,7 +69,10 @@ function StepsCarousel() {
   return (
     <section className="bg-[var(--grege-p)] py-14 md:py-20 animate-[fadeUp_0.7s_0.15s_ease_both]">
       <div className="px-4 md:px-12 mb-10 md:mb-12 text-center">
-        <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto"></div>
+        <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-6"></div>
+        <h2 className="font-['Playfair_Display'] italic font-normal text-[22px] md:text-[30px] text-[var(--moka)] leading-[1.4]">
+          Un service sur mesure
+        </h2>
       </div>
 
       {/* Desktop: 4 cards static */}
@@ -83,9 +86,6 @@ function StepsCarousel() {
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.45)] to-transparent" />
-              <span className="absolute bottom-4 left-5 font-['Playfair_Display'] font-black text-[52px] text-white leading-none select-none opacity-90">
-                {step.number}
-              </span>
             </div>
             <div className="px-8 py-8 flex flex-col flex-1">
               <div className="w-6 h-[1px] bg-[var(--primary)] mb-4"></div>
@@ -129,9 +129,6 @@ function StepsCarousel() {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.5)] to-transparent" />
-                <span className="absolute bottom-2 left-3 font-['Playfair_Display'] font-black text-[38px] text-white leading-none select-none opacity-90">
-                  {step.number}
-                </span>
               </div>
               <div className="px-4 py-5 flex flex-col">
                 <div className="w-5 h-[1px] bg-[var(--primary)] mb-3"></div>
@@ -381,6 +378,15 @@ export default function Home() {
       </section>
 
       <StepsCarousel />
+
+      <div className="bg-[var(--grege-p)] py-10 flex justify-center border-t border-[var(--pale)]">
+        <Link
+          to="/contact"
+          className="inline-block font-['Lato'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-12 no-underline transition-colors hover:bg-[var(--charcoal)]"
+        >
+          Prendre RDV
+        </Link>
+      </div>
 
       <section className="grid grid-cols-2 gap-[2px] bg-[var(--pale)]">
         <Link
