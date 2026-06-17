@@ -8,6 +8,7 @@ interface CategoryPageProps {
   features: string[];
   heroDraw: (canvas: HTMLCanvasElement) => void;
   galleryDraws: Array<(canvas: HTMLCanvasElement) => void>;
+  extraContent?: React.ReactNode;
 }
 
 export default function CategoryPage({
@@ -17,6 +18,7 @@ export default function CategoryPage({
   features,
   heroDraw,
   galleryDraws,
+  extraContent,
 }: CategoryPageProps) {
   return (
     <div className="min-h-screen">
@@ -74,6 +76,8 @@ export default function CategoryPage({
           </div>
         </div>
       </section>
+
+      {extraContent}
 
       <section className="bg-[var(--linen)] px-6 md:px-12 py-16 md:py-24">
         <div className="max-w-7xl mx-auto">
