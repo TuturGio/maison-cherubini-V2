@@ -67,7 +67,7 @@ function StepsCarousel() {
   };
 
   return (
-    <section className="bg-[var(--grege-p)] py-14 md:py-20 animate-[fadeUp_0.7s_0.15s_ease_both]">
+    <section className="bg-[var(--grege-p)] pt-14 md:pt-20 animate-[fadeUp_0.7s_0.15s_ease_both]">
       <div className="px-4 md:px-12 mb-10 md:mb-12 text-center">
         <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-6"></div>
         <h2 className="font-['Playfair_Display'] italic font-normal text-[22px] md:text-[30px] text-[var(--moka)] leading-[1.4]">
