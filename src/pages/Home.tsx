@@ -345,14 +345,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 px-6 md:px-12 bg-[var(--grege-p)] text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
+      <section className="py-16 md:py-24 px-6 md:px-12 bg-white text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
         <div className="max-w-xl mx-auto">
           <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-8"></div>
-          <p className="font-['Playfair_Display'] italic font-normal text-[20px] md:text-[28px] text-[var(--moka)] leading-[1.5] mb-8">
-            Chaque espace est une histoire unique,
-            <br />
-            façonnée dans la matière et la lumière.
-          </p>
           <h2 className="font-['Playfair_Display'] italic font-normal text-[24px] md:text-[32px] text-[var(--moka)] leading-[1.5] mb-4">
             Concrétisons votre projet ensemble
           </h2>
@@ -374,6 +369,15 @@ export default function Home() {
             </Link>
           </div>
         </div>
+      </section>
+
+      <section className="py-12 md:py-[88px] px-4 md:px-12 bg-[var(--grege-p)] text-center border-t border-b border-[var(--pale)] animate-[fadeUp_0.7s_0.2s_ease_both]">
+        <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-8"></div>
+        <p className="font-['Playfair_Display'] italic font-normal text-[20px] md:text-[30px] text-[var(--moka)] leading-[1.5] max-w-[680px] mx-auto mb-7 px-4">
+          Chaque espace est une histoire unique,
+          <br />
+          façonnée dans la matière et la lumière.
+        </p>
       </section>
 
       <StepsCarousel />
