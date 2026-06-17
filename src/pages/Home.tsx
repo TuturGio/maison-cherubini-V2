@@ -198,12 +198,6 @@ export default function Home() {
       link: '/realisations/revetement-exterieur',
     },
     {
-      title: 'Bateaux',
-      subtitle: 'Sellerie nautique',
-      image: `${import.meta.env.BASE_URL}yachting.jpg`,
-      link: '/realisations/bateaux',
-    },
-    {
       title: 'Linge de maison',
       subtitle: 'Textiles & art de vivre',
       image: `${import.meta.env.BASE_URL}linge_maison.jpg`,
