@@ -156,15 +156,6 @@ function StepsCarousel() {
           ))}
         </div>
       </div>
-
-      <div className="pt-10 pb-2 flex justify-center">
-        <Link
-          to="/contact"
-          className="inline-block font-['Lato'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-12 no-underline transition-colors hover:bg-[var(--charcoal)]"
-        >
-          Prendre RDV
-        </Link>
-      </div>
     </section>
   );
 }
