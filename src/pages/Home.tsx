@@ -460,46 +460,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 500 références — image gauche, texte droite */}
-      <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--linen)]">
-        <div className="aspect-[4/3] md:aspect-auto relative overflow-hidden">
-          <img
-            src={`${import.meta.env.BASE_URL}500-references.jpg`}
-            alt="500 références"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-        <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center">
-          <h2 className="font-['FreeSerif'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
-            Plus de 500 références
-          </h2>
-          <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
-          <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
-            Lin, velours, tweed, coton, doublures thermiques et occultantes... Trouvez la matière qui saura répondre à vos envies !
-          </p>
-        </div>
-      </section>
-
-      {/* Finitions — texte gauche, image droite */}
-      <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--grege-p)]">
-        <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center order-2 md:order-1">
-          <h2 className="font-['FreeSerif'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
-            De nombreuses finitions disponibles
-          </h2>
-          <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
-          <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
-            Chaque pièce sort de notre atelier avec le soin d'un travail bien fait. Ourlets droits, coutures invisibles, pinces ajustées — notre équipe apporte le même niveau d'exigence à chaque détail, quelle que soit la complexité du projet. La qualité ne se voit pas forcément, mais elle se ressent toujours.
-          </p>
-        </div>
-        <div className="aspect-[4/3] md:aspect-auto relative overflow-hidden order-1 md:order-2">
-          <img
-            src={`${import.meta.env.BASE_URL}finissions.jpg`}
-            alt="Finitions soignées"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-      </section>
-
       {/* Supports & accessoires — image gauche, texte droite */}
       <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--linen)]">
         <div className="aspect-[4/3] md:aspect-auto relative overflow-hidden">
