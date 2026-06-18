@@ -427,9 +427,7 @@ export default function Home() {
       <section className="py-12 md:py-[88px] px-4 md:px-12 bg-[var(--grege-p)] text-center border-t border-b border-[var(--pale)]">
         <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-8"></div>
         <p className="font-['FreeSerif'] italic font-normal text-[20px] md:text-[30px] text-[var(--moka)] leading-[1.5] max-w-[680px] mx-auto px-4">
-          Chaque espace est une histoire unique,
-          <br />
-          façonnée dans la matière et la lumière.
+          L'art du sur-mesure, au fil du détail.
         </p>
       </section>
 
