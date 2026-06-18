@@ -105,6 +105,28 @@ export default function Rideaux() {
               </ul>
             </div>
           </section>
+          {/* Supports & accessoires */}
+          <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--linen)]">
+            <div className="aspect-[4/3] md:aspect-auto relative overflow-hidden">
+              <img
+                src={`${import.meta.env.BASE_URL}supports.jpg`}
+                alt="Supports et accessoires"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+            <div className="px-8 py-10 md:px-14 md:py-16 flex flex-col justify-center">
+              <span className="font-['MaisonNeue'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-4 block">
+                Accessoires
+              </span>
+              <h2 className="font-['FreeSerif'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
+                Supports
+              </h2>
+              <div className="w-8 h-[1px] bg-[var(--primary)] mb-6"></div>
+              <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
+                Tringle, œillets, anneaux, embouts — chaque support est sélectionné pour sa robustesse et son harmonie avec le tissu choisi. Nous proposons une gamme complète d'accessoires en laiton, nickel satiné, noir mat ou bois, pour un résultat cohérent du sol au plafond. Le détail qui fait toute la différence.
+              </p>
+            </div>
+          </section>
         </div>
       }
     />

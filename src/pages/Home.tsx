@@ -460,26 +460,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Supports & accessoires — image gauche, texte droite */}
-      <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--linen)]">
-        <div className="aspect-[4/3] md:aspect-auto relative overflow-hidden">
-          <img
-            src={`${import.meta.env.BASE_URL}supports.jpg`}
-            alt="Supports et accessoires"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-        <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center">
-          <h2 className="font-['FreeSerif'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
-            Supports
-          </h2>
-          <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
-          <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
-            Tringle, œillets, anneaux, embouts — chaque support est sélectionné pour sa robustesse et son harmonie avec le tissu choisi. Nous proposons une gamme complète d'accessoires en laiton, nickel satiné, noir mat ou bois, pour un résultat cohérent du sol au plafond. Le détail qui fait toute la différence.
-          </p>
-        </div>
-      </section>
-
       <section className="py-10 px-6 md:px-12 bg-white text-center">
         <Link
           to="/contact"
