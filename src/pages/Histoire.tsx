@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import CanvasImage from '../components/CanvasImage';
-import { drawFolds, drawWeave } from '../utils/canvasDrawing';
+import { drawFolds } from '../utils/canvasDrawing';
 
 export default function Histoire() {
   return (
@@ -23,14 +23,12 @@ export default function Histoire() {
       <section className="px-8 md:px-16 py-24 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-28">
-            <div className="aspect-[4/5] relative overflow-hidden bg-[var(--linen)]">
-              <CanvasImage
-                draw={(c) => drawFolds(c, '#C8B4A4', '#DCCCC0', '#B0988A', 7)}
-                className="absolute inset-0 w-full h-full block"
+            <div className="aspect-[4/5] relative overflow-hidden">
+              <img
+                src={`${import.meta.env.BASE_URL}jeanne-portrait.jpg`}
+                alt="Jeanne"
+                className="absolute inset-0 w-full h-full object-cover object-top"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase text-[var(--muted)]">Photo</span>
-              </div>
             </div>
 
             <div>
@@ -86,14 +84,12 @@ export default function Histoire() {
               </div>
             </div>
 
-            <div className="aspect-[4/5] relative overflow-hidden bg-[var(--linen)] order-1 md:order-2">
-              <CanvasImage
-                draw={(c) => drawWeave(c, '#C0B4A4', '#90786A')}
-                className="absolute inset-0 w-full h-full block"
+            <div className="aspect-[4/5] relative overflow-hidden order-1 md:order-2">
+              <img
+                src={`${import.meta.env.BASE_URL}chloe-portrait.jpg`}
+                alt="Chloé"
+                className="absolute inset-0 w-full h-full object-cover object-top"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase text-[var(--muted)]">Photo</span>
-              </div>
             </div>
           </div>
         </div>
