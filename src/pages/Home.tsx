@@ -522,6 +522,15 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-10 px-6 md:px-12 bg-white text-center">
+        <Link
+          to="/contact"
+          className="inline-block font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-[var(--charcoal)]"
+        >
+          Prendre rendez-vous
+        </Link>
+      </section>
+
       <InstagramFeed />
     </div>
   );
