@@ -343,7 +343,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 px-6 md:px-12 bg-white text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
+      <section className="py-10 md:py-14 px-6 md:px-12 bg-white text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
         <div className="max-w-xl mx-auto">
           <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-8"></div>
           <h2 className="font-['FreeSerif'] italic font-normal text-[24px] md:text-[32px] text-[var(--moka)] leading-[1.5] mb-4">
