@@ -16,17 +16,6 @@ export default function CGV() {
       <section className="px-8 md:px-16 pb-28 bg-white">
         <div className="max-w-3xl mx-auto pt-16">
 
-          <div className="flex justify-end mb-12">
-            <a
-              href={`${import.meta.env.BASE_URL}cgv.pdf`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 font-['Lato'] font-light text-[9px] tracking-[3px] uppercase text-[var(--primary)] border border-[var(--primary)] py-3 px-7 no-underline transition-colors hover:bg-[var(--primary)] hover:text-white"
-            >
-              Télécharger le PDF
-            </a>
-          </div>
-
           <Article title="Article 1 – Objet et champ d'application">
             <p>Les présentes Conditions Générales de Vente (CGV) s'appliquent à toute Commande passée par un Client particulier ou professionnel pour la confection de décoration textile, tels que rideaux, voilages, stores, têtes de lit, banquettes intérieures et extérieures, coussins, housses, ou tout autre article textile, confectionné sur mesure par Nuances Décoration. Sauf accord contraire, les CGV s'appliquent à l'exclusion de tout autre conditions d'achat ou conditions particulières du Client.</p>
             <p>Avant toute commande passée auprès de Nuances Décoration, le Client reconnaît avoir lu attentivement les présentes CGV et les avoir acceptées.</p>
