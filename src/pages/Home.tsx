@@ -331,10 +331,10 @@ export default function Home() {
               <button
                 key={i}
                 onClick={() => setCurrentSlide(i)}
-                className={`h-2 rounded-full transition-all ${
+                className={`h-2 w-2 rounded-full transition-all ${
                   currentSlide === i
-                    ? 'w-8 bg-[var(--moka)]'
-                    : 'w-2 bg-[var(--warm)] opacity-40'
+                    ? 'bg-[var(--moka)]'
+                    : 'bg-[var(--warm)] opacity-40'
                 }`}
                 aria-label={`Aller à la slide ${i + 1}`}
               />
