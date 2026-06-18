@@ -7,7 +7,7 @@ export default function Footer() {
         <img
           src={`${import.meta.env.BASE_URL}logo.svg`}
           alt="Nuances"
-          className="h-10 w-auto brightness-0 invert"
+          className="h-10 w-auto"
         />
       </div>
 
