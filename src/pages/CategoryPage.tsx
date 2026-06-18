@@ -64,7 +64,7 @@ export default function CategoryPage({
                 to="/contact"
                 className="text-center font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-8 no-underline transition-colors hover:bg-[var(--charcoal)]"
               >
-                Prendre RDV
+                Prendre rendez-vous
               </Link>
               <Link
                 to="/contact"

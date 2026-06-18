@@ -357,7 +357,7 @@ export default function Home() {
               to="/contact"
               className="inline-block font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-[var(--charcoal)]"
             >
-              Prendre RDV
+              Prendre rendez-vous
             </Link>
             <Link
               to="/contact"
@@ -376,7 +376,7 @@ export default function Home() {
           to="/contact"
           className="inline-block font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-12 no-underline transition-colors hover:bg-[var(--charcoal)]"
         >
-          Prendre RDV
+          Prendre rendez-vous
         </Link>
       </div>
 
