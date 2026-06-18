@@ -71,7 +71,7 @@ function StepsCarousel() {
       <div className="px-4 md:px-12 mb-10 md:mb-12 text-center">
         <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-6"></div>
         <h2 className="font-['FreeSerif'] font-normal text-[22px] md:text-[30px] text-[var(--moka)] leading-[1.4]">
-          Un service sur mesure
+          Un service <em>sur mesure</em>
         </h2>
       </div>
 
