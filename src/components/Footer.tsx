@@ -44,6 +44,14 @@ export default function Footer() {
             Contact
           </Link>
         </li>
+        <li>
+          <Link
+            to="/cgv"
+            className="font-['Lato'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-[var(--grege-l)] no-underline transition-colors hover:text-[var(--primary)]"
+          >
+            CGV
+          </Link>
+        </li>
       </ul>
 
       <span className="font-['Lato'] font-thin text-[10px] md:text-[8px] tracking-[1.5px] text-[var(--muted)]">
