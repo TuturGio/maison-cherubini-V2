@@ -346,12 +346,6 @@ export default function Home() {
       <section className="py-10 md:py-14 px-6 md:px-12 bg-white text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
         <div className="max-w-xl mx-auto">
           <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-8"></div>
-          <h2 className="font-['FreeSerif'] italic font-normal text-[24px] md:text-[32px] text-[var(--moka)] leading-[1.5] mb-4">
-            Concrétisons votre projet ensemble
-          </h2>
-          <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-10">
-            Notre équipe vous accueille sur rendez-vous dans notre showroom ou vous répond par message.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
