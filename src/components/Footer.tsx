@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 export default function Footer() {
   return (
     <footer className="bg-[var(--charcoal)] px-4 md:px-12 py-8 md:py-12 flex flex-col md:flex-row gap-8 md:gap-0 justify-between items-center border-t-[3px] border-[var(--primary)]">
-      <div>
+      <div className="bg-[var(--linen)] px-4 py-2">
         <img
-          src={`${import.meta.env.BASE_URL}logo.svg`}
+          src={`${import.meta.env.BASE_URL}logo.png`}
           alt="Nuances"
-          className="h-10 w-auto"
+          className="h-9 w-auto"
         />
       </div>
 
