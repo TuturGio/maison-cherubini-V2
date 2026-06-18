@@ -1,4 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,400;1,700&family=Lato:wght@100;300;400&family=Jost:wght@200;300;400&display=swap');
+/* FreeSerif — titres et headings */
+@font-face {
+  font-family: 'FreeSerif';
+  src: url('/fonts/FreeSerifBold.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FreeSerif';
+  src: url('/fonts/FreeSerifItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FreeSerif';
+  src: url('/fonts/FreeSerifBoldItalic.ttf') format('truetype');
+  font-weight: 700 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* MaisonNeue — textes, boutons, menus */
+@font-face {
+  font-family: 'MaisonNeue';
+  src: url('/fonts/MaisonNeue-Light.ttf') format('truetype');
+  font-weight: 100 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MaisonNeue';
+  src: url('/fonts/MaisonNeue-LightItalic.ttf') format('truetype');
+  font-weight: 100 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MaisonNeue';
+  src: url('/fonts/MaisonNeue-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MaisonNeue';
+  src: url('/fonts/MaisonNeue-BookItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MaisonNeue';
+  src: url('/fonts/MaisonNeue-Demi.ttf') format('truetype');
+  font-weight: 600 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MaisonNeue';
+  src: url('/fonts/MaisonNeue-DemiItalic.ttf') format('truetype');
+  font-weight: 600 900;
+  font-style: italic;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -31,7 +96,7 @@ html {
 body {
   background: white;
   color: var(--charcoal);
-  font-family: 'Jost', sans-serif;
+  font-family: 'MaisonNeue', sans-serif;
   font-weight: 300;
   overflow-x: hidden;
   width: 100%;

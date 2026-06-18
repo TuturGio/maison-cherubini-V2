@@ -3,10 +3,10 @@ export default function CGV() {
     <div className="min-h-screen bg-[var(--linen)]">
       <section className="px-8 md:px-16 py-20 bg-[var(--linen)]">
         <div className="max-w-3xl mx-auto text-center">
-          <span className="font-['Lato'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-6 block">
+          <span className="font-['MaisonNeue'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-6 block">
             Nuances Décoration
           </span>
-          <h1 className="font-['Playfair_Display'] italic font-normal text-[30px] md:text-[38px] text-[var(--moka)] leading-[1.4]">
+          <h1 className="font-['FreeSerif'] italic font-normal text-[30px] md:text-[38px] text-[var(--moka)] leading-[1.4]">
             Conditions Générales de Vente
           </h1>
           <div className="w-16 h-[1px] bg-[var(--primary)] mx-auto mt-10"></div>
@@ -93,10 +93,10 @@ export default function CGV() {
 function Article({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="mb-12 pb-12 border-b border-[var(--pale)] last:border-0 last:pb-0">
-      <h2 className="font-['Lato'] font-normal text-[11px] tracking-[3px] uppercase text-[var(--primary)] mb-6">
+      <h2 className="font-['MaisonNeue'] font-normal text-[11px] tracking-[3px] uppercase text-[var(--primary)] mb-6">
         {title}
       </h2>
-      <div className="space-y-4 font-['Jost'] font-light text-[14px] text-[var(--warm)] leading-[1.9] [&_ul]:mt-4 [&_ul]:ml-6 [&_ul]:space-y-2 [&_ul]:list-disc [&_strong]:font-normal [&_strong]:text-[var(--moka)]">
+      <div className="space-y-4 font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.9] [&_ul]:mt-4 [&_ul]:ml-6 [&_ul]:space-y-2 [&_ul]:list-disc [&_strong]:font-normal [&_strong]:text-[var(--moka)]">
         {children}
       </div>
     </div>

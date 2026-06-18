@@ -8,7 +8,7 @@ export default function InstagramFeed() {
     <section className="bg-white border-t border-[var(--pale)] px-12 py-14">
       <div className="flex items-center justify-center gap-3 mb-6">
         <Instagram size={24} className="text-[var(--primary)]" />
-        <h3 className="font-['Lora'] text-[22px] font-normal text-[var(--moka)]">
+        <h3 className="font-['FreeSerif'] text-[22px] font-normal text-[var(--moka)]">
           Suivez-nous sur Instagram
         </h3>
       </div>
@@ -18,7 +18,7 @@ export default function InstagramFeed() {
           href={INSTAGRAM_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-['Lato'] text-[14px] font-light tracking-[1px] text-[var(--primary)] no-underline transition-colors hover:text-[var(--moka)]"
+          className="font-['MaisonNeue'] text-[14px] font-light tracking-[1px] text-[var(--primary)] no-underline transition-colors hover:text-[var(--moka)]"
         >
           @{INSTAGRAM_HANDLE}
         </a>

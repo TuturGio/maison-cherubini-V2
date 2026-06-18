@@ -54,21 +54,21 @@ export default function Rideaux() {
               />
             </div>
             <div className="px-8 py-10 md:px-14 md:py-16 flex flex-col justify-center">
-              <span className="font-['Lato'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-4 block">
+              <span className="font-['MaisonNeue'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-4 block">
                 Sélection
               </span>
-              <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
+              <h2 className="font-['FreeSerif'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
                 Plus de 500 références de tissus
               </h2>
               <div className="w-8 h-[1px] bg-[var(--primary)] mb-6"></div>
-              <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-8">
+              <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-8">
                 Lin, velours, tweed, coton, doublures thermiques et occultantes... Trouvez la matière qui saura répondre à vos envies !
               </p>
               <ul className="space-y-4">
                 {matieres.map((m) => (
                   <li key={m.name} className="border-b border-[var(--pale)] pb-4 last:border-0 last:pb-0">
-                    <p className="font-['Playfair_Display'] font-bold text-[14px] text-[var(--moka)] mb-1">{m.name}</p>
-                    <p className="font-['Jost'] font-light text-[12px] text-[var(--warm)] leading-[1.8]">{m.detail}</p>
+                    <p className="font-['FreeSerif'] font-bold text-[14px] text-[var(--moka)] mb-1">{m.name}</p>
+                    <p className="font-['MaisonNeue'] font-light text-[12px] text-[var(--warm)] leading-[1.8]">{m.detail}</p>
                   </li>
                 ))}
               </ul>
@@ -85,21 +85,21 @@ export default function Rideaux() {
               />
             </div>
             <div className="px-8 py-10 md:px-14 md:py-16 flex flex-col justify-center md:order-1">
-              <span className="font-['Lato'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-4 block">
+              <span className="font-['MaisonNeue'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-4 block">
                 Savoir-faire
               </span>
-              <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
+              <h2 className="font-['FreeSerif'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
                 De nombreuses finitions disponibles
               </h2>
               <div className="w-8 h-[1px] bg-[var(--primary)] mb-6"></div>
-              <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-8">
+              <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-8">
                 Wave, œillets, plis flamands, pince plate, galon fronceur... Chaque finition est réalisée avec soin dans notre atelier marseillais.
               </p>
               <ul className="space-y-4">
                 {finitions.map((f) => (
                   <li key={f.name} className="border-b border-[var(--pale)] pb-4 last:border-0 last:pb-0">
-                    <p className="font-['Playfair_Display'] font-bold text-[14px] text-[var(--moka)] mb-1">{f.name}</p>
-                    <p className="font-['Jost'] font-light text-[12px] text-[var(--warm)] leading-[1.8]">{f.detail}</p>
+                    <p className="font-['FreeSerif'] font-bold text-[14px] text-[var(--moka)] mb-1">{f.name}</p>
+                    <p className="font-['MaisonNeue'] font-light text-[12px] text-[var(--warm)] leading-[1.8]">{f.detail}</p>
                   </li>
                 ))}
               </ul>

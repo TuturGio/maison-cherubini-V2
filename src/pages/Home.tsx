@@ -70,7 +70,7 @@ function StepsCarousel() {
     <section className="bg-[var(--grege-p)] pt-14 md:pt-20 animate-[fadeUp_0.7s_0.15s_ease_both]">
       <div className="px-4 md:px-12 mb-10 md:mb-12 text-center">
         <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-6"></div>
-        <h2 className="font-['Playfair_Display'] italic font-normal text-[22px] md:text-[30px] text-[var(--moka)] leading-[1.4]">
+        <h2 className="font-['FreeSerif'] italic font-normal text-[22px] md:text-[30px] text-[var(--moka)] leading-[1.4]">
           Un service sur mesure
         </h2>
       </div>
@@ -89,10 +89,10 @@ function StepsCarousel() {
             </div>
             <div className="px-8 py-8 flex flex-col flex-1">
               <div className="w-6 h-[1px] bg-[var(--primary)] mb-4"></div>
-              <h3 className="font-['Playfair_Display'] font-black text-[18px] text-[var(--moka)] mb-3 leading-tight">
+              <h3 className="font-['FreeSerif'] font-black text-[18px] text-[var(--moka)] mb-3 leading-tight">
                 {step.label}
               </h3>
-              <p className="font-['Jost'] font-light text-[12px] text-[var(--warm)] leading-[1.85] flex-1">
+              <p className="font-['MaisonNeue'] font-light text-[12px] text-[var(--warm)] leading-[1.85] flex-1">
                 {step.description}
               </p>
             </div>
@@ -132,10 +132,10 @@ function StepsCarousel() {
               </div>
               <div className="px-4 py-5 flex flex-col">
                 <div className="w-5 h-[1px] bg-[var(--primary)] mb-3"></div>
-                <h3 className="font-['Playfair_Display'] font-black text-[14px] text-[var(--moka)] mb-2 leading-tight">
+                <h3 className="font-['FreeSerif'] font-black text-[14px] text-[var(--moka)] mb-2 leading-tight">
                   {step.label}
                 </h3>
-                <p className="font-['Jost'] font-light text-[11px] text-[var(--warm)] leading-[1.8]">
+                <p className="font-['MaisonNeue'] font-light text-[11px] text-[var(--warm)] leading-[1.8]">
                   {step.description}
                 </p>
               </div>
@@ -250,10 +250,10 @@ export default function Home() {
                 <div className="w-full h-[520px] block relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-t after:from-[rgba(40,20,10,0.65)] after:via-[rgba(40,20,10,0.1)] after:to-transparent after:pointer-events-none">
                   <img src={s.image} alt={s.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110" />
                   <div className="absolute bottom-7 left-7 right-7 z-[2]">
-                    <h3 className="font-['Playfair_Display'] font-black text-[30px] text-[var(--linen)] leading-none mb-[5px]">
+                    <h3 className="font-['FreeSerif'] font-black text-[30px] text-[var(--linen)] leading-none mb-[5px]">
                       {s.title}
                     </h3>
-                    <p className="font-['Lato'] font-normal text-[8px] tracking-[3px] uppercase text-[var(--linen)]">
+                    <p className="font-['MaisonNeue'] font-normal text-[8px] tracking-[3px] uppercase text-[var(--linen)]">
                       {s.subtitle}
                     </p>
                   </div>
@@ -288,7 +288,7 @@ export default function Home() {
             <button
               key={i}
               onClick={() => setCurrentSlide(i)}
-              className={`px-4 py-2 rounded-full font-['Lato'] font-light text-[10px] tracking-[1.5px] uppercase whitespace-nowrap transition-all border ${
+              className={`px-4 py-2 rounded-full font-['MaisonNeue'] font-light text-[10px] tracking-[1.5px] uppercase whitespace-nowrap transition-all border ${
                 currentSlide === i
                   ? 'bg-[var(--moka)] text-[var(--linen)] border-[var(--moka)]'
                   : 'bg-transparent text-[var(--warm)] border-[var(--warm)] hover:border-[var(--moka)] hover:text-[var(--moka)]'
@@ -316,10 +316,10 @@ export default function Home() {
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute bottom-6 left-6 right-6 z-[2]">
-                <h3 className="font-['Playfair_Display'] font-black text-[28px] text-[var(--linen)] leading-none mb-2 uppercase">
+                <h3 className="font-['FreeSerif'] font-black text-[28px] text-[var(--linen)] leading-none mb-2 uppercase">
                   {slides[currentSlide].title}
                 </h3>
-                <p className="font-['Lato'] font-normal text-[11px] tracking-[2.5px] uppercase text-[rgba(248,244,240,0.85)]">
+                <p className="font-['MaisonNeue'] font-normal text-[11px] tracking-[2.5px] uppercase text-[rgba(248,244,240,0.85)]">
                   {slides[currentSlide].subtitle}
                 </p>
               </div>
@@ -346,22 +346,22 @@ export default function Home() {
       <section className="py-16 md:py-24 px-6 md:px-12 bg-white text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
         <div className="max-w-xl mx-auto">
           <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-8"></div>
-          <h2 className="font-['Playfair_Display'] italic font-normal text-[24px] md:text-[32px] text-[var(--moka)] leading-[1.5] mb-4">
+          <h2 className="font-['FreeSerif'] italic font-normal text-[24px] md:text-[32px] text-[var(--moka)] leading-[1.5] mb-4">
             Concrétisons votre projet ensemble
           </h2>
-          <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-10">
+          <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-10">
             Notre équipe vous accueille sur rendez-vous dans notre showroom ou vous répond par message.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-block font-['Lato'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-[var(--charcoal)]"
+              className="inline-block font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-[var(--charcoal)]"
             >
               Prendre RDV
             </Link>
             <Link
               to="/contact"
-              className="inline-block font-['Lato'] font-light text-[10px] tracking-[3px] uppercase bg-transparent text-[var(--moka)] border border-[var(--moka)] py-4 px-10 no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
+              className="inline-block font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase bg-transparent text-[var(--moka)] border border-[var(--moka)] py-4 px-10 no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
             >
               Nous contacter
             </Link>
@@ -374,7 +374,7 @@ export default function Home() {
       <div className="bg-white py-10 flex justify-center">
         <Link
           to="/contact"
-          className="inline-block font-['Lato'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-12 no-underline transition-colors hover:bg-[var(--charcoal)]"
+          className="inline-block font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-12 no-underline transition-colors hover:bg-[var(--charcoal)]"
         >
           Prendre RDV
         </Link>
@@ -394,12 +394,12 @@ export default function Home() {
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.6)] to-transparent transition-opacity group-hover:opacity-85"></div>
           <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 right-4 md:right-8">
-            <div className="font-['Playfair_Display'] font-black text-[24px] md:text-[32px] text-[var(--linen)] leading-[1.05]">
+            <div className="font-['FreeSerif'] font-black text-[24px] md:text-[32px] text-[var(--linen)] leading-[1.05]">
               Nos
               <br />
               réalisations
             </div>
-            <span className="inline-block mt-2 md:mt-3 font-['Lato'] font-thin text-[11px] md:text-[9px] tracking-[2.5px] md:tracking-[3px] uppercase text-[rgba(248,244,240,0.75)] md:text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
+            <span className="inline-block mt-2 md:mt-3 font-['MaisonNeue'] font-thin text-[11px] md:text-[9px] tracking-[2.5px] md:tracking-[3px] uppercase text-[rgba(248,244,240,0.75)] md:text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
               Découvrir →
             </span>
           </div>
@@ -418,12 +418,12 @@ export default function Home() {
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.6)] to-transparent transition-opacity group-hover:opacity-85"></div>
           <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 right-4 md:right-8">
-            <div className="font-['Playfair_Display'] font-black text-[24px] md:text-[32px] text-[var(--linen)] leading-[1.05]">
+            <div className="font-['FreeSerif'] font-black text-[24px] md:text-[32px] text-[var(--linen)] leading-[1.05]">
               Notre
               <br />
               showroom
             </div>
-            <span className="inline-block mt-2 md:mt-3 font-['Lato'] font-thin text-[11px] md:text-[9px] tracking-[2.5px] md:tracking-[3px] uppercase text-[rgba(248,244,240,0.75)] md:text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
+            <span className="inline-block mt-2 md:mt-3 font-['MaisonNeue'] font-thin text-[11px] md:text-[9px] tracking-[2.5px] md:tracking-[3px] uppercase text-[rgba(248,244,240,0.75)] md:text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
               Nous trouver →
             </span>
           </div>
@@ -432,7 +432,7 @@ export default function Home() {
 
       <section className="py-12 md:py-[88px] px-4 md:px-12 bg-[var(--grege-p)] text-center border-t border-b border-[var(--pale)]">
         <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-8"></div>
-        <p className="font-['Playfair_Display'] italic font-normal text-[20px] md:text-[30px] text-[var(--moka)] leading-[1.5] max-w-[680px] mx-auto px-4">
+        <p className="font-['FreeSerif'] italic font-normal text-[20px] md:text-[30px] text-[var(--moka)] leading-[1.5] max-w-[680px] mx-auto px-4">
           Chaque espace est une histoire unique,
           <br />
           façonnée dans la matière et la lumière.
@@ -441,11 +441,11 @@ export default function Home() {
 
       <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--linen)]">
         <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center order-2 md:order-1">
-          <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
+          <h2 className="font-['FreeSerif'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
             Notre Histoire
           </h2>
           <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
-          <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-8">
+          <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-8">
             Depuis plus de vingt ans, Nuance façonne des intérieurs d'exception. Chaque création naît
             d'une écoute attentive, d'un choix minutieux des matières et d'un artisanat ancré dans la
             tradition. Rideaux, voilages, banquettes, revêtements — chaque pièce est pensée pour vous,
@@ -454,7 +454,7 @@ export default function Home() {
           </p>
           <Link
             to="/histoire"
-            className="inline-block font-['Lato'] font-light text-[9px] tracking-[3px] uppercase text-[var(--moka)] border-b border-[var(--primary)] pb-[3px] no-underline transition-colors hover:text-[var(--primary)] w-fit"
+            className="inline-block font-['MaisonNeue'] font-light text-[9px] tracking-[3px] uppercase text-[var(--moka)] border-b border-[var(--primary)] pb-[3px] no-underline transition-colors hover:text-[var(--primary)] w-fit"
           >
             Découvrir notre histoire
           </Link>
@@ -478,11 +478,11 @@ export default function Home() {
           />
         </div>
         <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center">
-          <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
+          <h2 className="font-['FreeSerif'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
             Plus de 500 références
           </h2>
           <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
-          <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
+          <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
             Lin, velours, tweed, coton, doublures thermiques et occultantes... Trouvez la matière qui saura répondre à vos envies !
           </p>
         </div>
@@ -491,11 +491,11 @@ export default function Home() {
       {/* Finitions — texte gauche, image droite */}
       <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--grege-p)]">
         <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center order-2 md:order-1">
-          <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
+          <h2 className="font-['FreeSerif'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
             De nombreuses finitions disponibles
           </h2>
           <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
-          <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
+          <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
             Chaque pièce sort de notre atelier avec le soin d'un travail bien fait. Ourlets droits, coutures invisibles, pinces ajustées — notre équipe apporte le même niveau d'exigence à chaque détail, quelle que soit la complexité du projet. La qualité ne se voit pas forcément, mais elle se ressent toujours.
           </p>
         </div>
@@ -518,11 +518,11 @@ export default function Home() {
           />
         </div>
         <div className="px-6 py-10 md:px-14 md:py-16 flex flex-col justify-center">
-          <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
+          <h2 className="font-['FreeSerif'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
             Supports
           </h2>
           <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
-          <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
+          <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.9]">
             Tringle, œillets, anneaux, embouts — chaque support est sélectionné pour sa robustesse et son harmonie avec le tissu choisi. Nous proposons une gamme complète d'accessoires en laiton, nickel satiné, noir mat ou bois, pour un résultat cohérent du sol au plafond. Le détail qui fait toute la différence.
           </p>
         </div>

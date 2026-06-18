@@ -33,7 +33,7 @@ export default function Navigation() {
             onMouseEnter={() => setShowDropdown(true)}
             onMouseLeave={() => setShowDropdown(false)}
           >
-            <button className="font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] flex items-center gap-1 bg-transparent border-none cursor-pointer py-2">
+            <button className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] flex items-center gap-1 bg-transparent border-none cursor-pointer py-2">
               Nos réalisations
               <ChevronDown size={12} className={`transition-transform ${showDropdown ? 'rotate-180' : ''}`} />
             </button>
@@ -46,10 +46,10 @@ export default function Navigation() {
                     to={cat.link}
                     className="block px-6 py-3 no-underline transition-colors hover:bg-[var(--linen)] group"
                   >
-                    <span className="block font-['Lato'] font-light text-[11px] tracking-[2.5px] uppercase text-[var(--moka)] group-hover:text-[var(--charcoal)]">
+                    <span className="block font-['MaisonNeue'] font-light text-[11px] tracking-[2.5px] uppercase text-[var(--moka)] group-hover:text-[var(--charcoal)]">
                       {cat.label}
                     </span>
-                    <span className="block font-['Jost'] font-light text-[10px] tracking-[1px] uppercase text-[var(--warm)] mt-[2px] opacity-70">
+                    <span className="block font-['MaisonNeue'] font-light text-[10px] tracking-[1px] uppercase text-[var(--warm)] mt-[2px] opacity-70">
                       {cat.subtitle}
                     </span>
                   </Link>
@@ -61,7 +61,7 @@ export default function Navigation() {
           <li>
             <Link
               to="/showroom"
-              className="font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
+              className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
             >
               Notre showroom
             </Link>
@@ -70,7 +70,7 @@ export default function Navigation() {
           <li>
             <Link
               to="/histoire"
-              className="font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
+              className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
             >
               Notre histoire
             </Link>
@@ -79,7 +79,7 @@ export default function Navigation() {
           <li>
             <Link
               to="/contact"
-              className="font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
+              className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
             >
               Contact
             </Link>
@@ -88,7 +88,7 @@ export default function Navigation() {
 
         <Link
           to="/contact"
-          className="hidden md:inline-block font-['Lato'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--linen)] bg-[var(--moka)] border-none py-3 px-6 cursor-pointer no-underline transition-colors hover:bg-[var(--charcoal)]"
+          className="hidden md:inline-block font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--linen)] bg-[var(--moka)] border-none py-3 px-6 cursor-pointer no-underline transition-colors hover:bg-[var(--charcoal)]"
         >
           Prendre rendez-vous
         </Link>
@@ -108,7 +108,7 @@ export default function Navigation() {
             <li>
               <button
                 onClick={() => setShowMobileDropdown(!showMobileDropdown)}
-                className="w-full text-left font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors flex items-center justify-between bg-transparent border-none cursor-pointer py-2"
+                className="w-full text-left font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors flex items-center justify-between bg-transparent border-none cursor-pointer py-2"
               >
                 Nos réalisations
                 <ChevronDown size={14} className={`transition-transform ${showMobileDropdown ? 'rotate-180' : ''}`} />
@@ -122,10 +122,10 @@ export default function Navigation() {
                       onClick={() => setShowMobileMenu(false)}
                       className="block py-2 no-underline transition-colors"
                     >
-                      <span className="block font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--warm)]">
+                      <span className="block font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--warm)]">
                         {cat.label}
                       </span>
-                      <span className="block font-['Jost'] font-light text-[10px] tracking-[0.5px] uppercase text-[var(--warm)] opacity-55 mt-[1px]">
+                      <span className="block font-['MaisonNeue'] font-light text-[10px] tracking-[0.5px] uppercase text-[var(--warm)] opacity-55 mt-[1px]">
                         {cat.subtitle}
                       </span>
                     </Link>
@@ -138,7 +138,7 @@ export default function Navigation() {
               <Link
                 to="/showroom"
                 onClick={() => setShowMobileMenu(false)}
-                className="block py-2 font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
+                className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
               >
                 Notre showroom
               </Link>
@@ -148,7 +148,7 @@ export default function Navigation() {
               <Link
                 to="/histoire"
                 onClick={() => setShowMobileMenu(false)}
-                className="block py-2 font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
+                className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
               >
                 Notre histoire
               </Link>
@@ -158,7 +158,7 @@ export default function Navigation() {
               <Link
                 to="/contact"
                 onClick={() => setShowMobileMenu(false)}
-                className="block py-2 font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
+                className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
               >
                 Contact
               </Link>
@@ -168,7 +168,7 @@ export default function Navigation() {
               <Link
                 to="/contact"
                 onClick={() => setShowMobileMenu(false)}
-                className="block text-center font-['Lato'] font-light text-[11px] tracking-[2px] uppercase text-[var(--linen)] bg-[var(--moka)] border-none py-3 px-6 cursor-pointer no-underline transition-colors"
+                className="block text-center font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--linen)] bg-[var(--moka)] border-none py-3 px-6 cursor-pointer no-underline transition-colors"
               >
                 Prendre rendez-vous
               </Link>
