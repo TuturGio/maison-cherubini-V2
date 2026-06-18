@@ -21,7 +21,7 @@ export default function Navigation() {
       <div className="flex items-center justify-between px-4 md:px-12 py-4 md:py-6">
         <Link to="/" className="no-underline" onClick={() => setShowMobileMenu(false)}>
           <img
-            src={`${import.meta.env.BASE_URL}nuances_logo-V2.jpg`}
+            src={`${import.meta.env.BASE_URL}logo.svg`}
             alt="Nuances"
             className="h-14 md:h-16 w-auto"
           />
