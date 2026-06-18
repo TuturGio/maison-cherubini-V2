@@ -43,59 +43,69 @@ export default function Rideaux() {
         (c) => drawWeave(c, '#B0A090', '#907060'),
       ]}
       extraContent={
-        <section className="bg-[var(--grege-p)] px-8 md:px-12 py-14 md:py-20">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px]">
-
-              {/* Nos matières */}
-              <div className="bg-white px-8 md:px-10 py-10 md:py-12">
-                <span className="font-['Lato'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-4 block">
-                  Sélection
-                </span>
-                <h2 className="font-['Playfair_Display'] font-black text-[26px] md:text-[32px] text-[var(--moka)] leading-[1.1] mb-2">
-                  Nos matières
-                </h2>
-                <div className="w-8 h-[1px] bg-[var(--primary)] mb-8"></div>
-                <ul className="space-y-5">
-                  {matieres.map((m) => (
-                    <li key={m.name} className="border-b border-[var(--pale)] pb-5 last:border-0 last:pb-0">
-                      <p className="font-['Playfair_Display'] font-bold text-[15px] text-[var(--moka)] mb-1">
-                        {m.name}
-                      </p>
-                      <p className="font-['Jost'] font-light text-[12px] text-[var(--warm)] leading-[1.8]">
-                        {m.detail}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Nos finitions */}
-              <div className="bg-white px-8 md:px-10 py-10 md:py-12">
-                <span className="font-['Lato'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-4 block">
-                  Savoir-faire
-                </span>
-                <h2 className="font-['Playfair_Display'] font-black text-[26px] md:text-[32px] text-[var(--moka)] leading-[1.1] mb-2">
-                  Nos finitions
-                </h2>
-                <div className="w-8 h-[1px] bg-[var(--primary)] mb-8"></div>
-                <ul className="space-y-5">
-                  {finitions.map((f) => (
-                    <li key={f.name} className="border-b border-[var(--pale)] pb-5 last:border-0 last:pb-0">
-                      <p className="font-['Playfair_Display'] font-bold text-[15px] text-[var(--moka)] mb-1">
-                        {f.name}
-                      </p>
-                      <p className="font-['Jost'] font-light text-[12px] text-[var(--warm)] leading-[1.8]">
-                        {f.detail}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
+        <div>
+          {/* 500 références de tissus */}
+          <section className="grid grid-cols-1 md:grid-cols-2 bg-white">
+            <div className="aspect-[4/3] md:aspect-auto relative overflow-hidden">
+              <img
+                src={`${import.meta.env.BASE_URL}500-references.jpg`}
+                alt="Plus de 500 références de tissus"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
-          </div>
-        </section>
+            <div className="px-8 py-10 md:px-14 md:py-16 flex flex-col justify-center">
+              <span className="font-['Lato'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-4 block">
+                Sélection
+              </span>
+              <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
+                Plus de 500 références de tissus
+              </h2>
+              <div className="w-8 h-[1px] bg-[var(--primary)] mb-6"></div>
+              <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-8">
+                Lin, velours, tweed, coton, doublures thermiques et occultantes... Trouvez la matière qui saura répondre à vos envies !
+              </p>
+              <ul className="space-y-4">
+                {matieres.map((m) => (
+                  <li key={m.name} className="border-b border-[var(--pale)] pb-4 last:border-0 last:pb-0">
+                    <p className="font-['Playfair_Display'] font-bold text-[14px] text-[var(--moka)] mb-1">{m.name}</p>
+                    <p className="font-['Jost'] font-light text-[12px] text-[var(--warm)] leading-[1.8]">{m.detail}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          {/* Finitions */}
+          <section className="grid grid-cols-1 md:grid-cols-2 bg-[var(--grege-p)]">
+            <div className="aspect-[4/3] md:aspect-auto relative overflow-hidden md:order-2">
+              <img
+                src={`${import.meta.env.BASE_URL}finissions.jpg`}
+                alt="De nombreuses finitions disponibles"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+            <div className="px-8 py-10 md:px-14 md:py-16 flex flex-col justify-center md:order-1">
+              <span className="font-['Lato'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-4 block">
+                Savoir-faire
+              </span>
+              <h2 className="font-['Playfair_Display'] font-black text-[28px] md:text-[36px] text-[var(--moka)] leading-[1.1] mb-4">
+                De nombreuses finitions disponibles
+              </h2>
+              <div className="w-8 h-[1px] bg-[var(--primary)] mb-6"></div>
+              <p className="font-['Jost'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-8">
+                Wave, œillets, plis flamands, pince plate, galon fronceur... Chaque finition est réalisée avec soin dans notre atelier marseillais.
+              </p>
+              <ul className="space-y-4">
+                {finitions.map((f) => (
+                  <li key={f.name} className="border-b border-[var(--pale)] pb-4 last:border-0 last:pb-0">
+                    <p className="font-['Playfair_Display'] font-bold text-[14px] text-[var(--moka)] mb-1">{f.name}</p>
+                    <p className="font-['Jost'] font-light text-[12px] text-[var(--warm)] leading-[1.8]">{f.detail}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        </div>
       }
     />
   );
