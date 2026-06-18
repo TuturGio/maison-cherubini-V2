@@ -148,8 +148,8 @@ function StepsCarousel() {
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`h-[3px] rounded-full transition-all ${
-                current === i ? 'w-8 bg-[var(--moka)]' : 'w-3 bg-[var(--warm)] opacity-30'
+              className={`h-2 w-2 rounded-full transition-all ${
+                current === i ? 'bg-[var(--moka)]' : 'bg-[var(--warm)] opacity-30'
               }`}
               aria-label={`Étape ${i + 1}`}
             />
