@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Clock, Phone } from 'lucide-react';
-import CanvasImage from '../components/CanvasImage';
-import { drawShowroom, drawFolds, drawWeave } from '../utils/canvasDrawing';
 
 export default function Showroom() {
   return (
@@ -23,7 +21,11 @@ export default function Showroom() {
           </p>
         </div>
         <div className="relative overflow-hidden aspect-[4/3] md:aspect-auto order-1 md:order-2">
-          <CanvasImage draw={drawShowroom} className="absolute inset-0 w-full h-full block" />
+          <img
+            src={`${import.meta.env.BASE_URL}showroom1.jpg`}
+            alt="Notre showroom"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
         </div>
       </section>
 
@@ -117,9 +119,10 @@ export default function Showroom() {
           <div className="grid grid-cols-3 gap-8 mb-16">
             <div className="text-center">
               <div className="aspect-square relative overflow-hidden mb-6">
-                <CanvasImage
-                  draw={(c) => drawFolds(c, '#C0B4A4', '#D4CAB8', '#A89888', 5)}
-                  className="absolute inset-0 w-full h-full block"
+                <img
+                  src={`${import.meta.env.BASE_URL}showroom1.jpg`}
+                  alt="Collections de tissus"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
               <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
@@ -132,9 +135,10 @@ export default function Showroom() {
 
             <div className="text-center">
               <div className="aspect-square relative overflow-hidden mb-6">
-                <CanvasImage
-                  draw={(c) => drawWeave(c, '#B8A898', '#90786A')}
-                  className="absolute inset-0 w-full h-full block"
+                <img
+                  src={`${import.meta.env.BASE_URL}showroom2.jpg`}
+                  alt="Réalisations finies"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
               <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
@@ -147,7 +151,11 @@ export default function Showroom() {
 
             <div className="text-center">
               <div className="aspect-square relative overflow-hidden mb-6">
-                <CanvasImage draw={drawShowroom} className="absolute inset-0 w-full h-full block" />
+                <img
+                  src={`${import.meta.env.BASE_URL}showroom3.jpg`}
+                  alt="Conseil personnalisé"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
                 Conseil personnalisé
