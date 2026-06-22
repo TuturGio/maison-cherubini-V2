@@ -152,7 +152,7 @@ export default function Showroom() {
             <div className="text-center">
               <div className="aspect-square relative overflow-hidden mb-6">
                 <img
-                  src={`${import.meta.env.BASE_URL}revetement_interieur copy.jpg`}
+                  src={`${import.meta.env.BASE_URL}showroom2.jpg`}
                   alt="Conseil personnalisé"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
