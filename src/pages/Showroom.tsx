@@ -136,7 +136,7 @@ export default function Showroom() {
             <div className="text-center">
               <div className="aspect-square relative overflow-hidden mb-6">
                 <img
-                  src={`${import.meta.env.BASE_URL}showroom3.jpg`}
+                  src={`${import.meta.env.BASE_URL}revetement_interieur.jpg`}
                   alt="Réalisations finies"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
