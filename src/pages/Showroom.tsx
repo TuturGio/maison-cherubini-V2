@@ -120,7 +120,7 @@ export default function Showroom() {
             <div className="text-center">
               <div className="aspect-square relative overflow-hidden mb-6">
                 <img
-                  src={`${import.meta.env.BASE_URL}showroom1.jpg`}
+                  src={`${import.meta.env.BASE_URL}500-references.jpg`}
                   alt="Collections de tissus"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
