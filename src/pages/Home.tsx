@@ -194,12 +194,6 @@ export default function Home() {
       image: `${import.meta.env.BASE_URL}revetement_exterieur.jpg`,
       link: '/realisations/revetement-exterieur',
     },
-    {
-      title: 'Linge de maison',
-      subtitle: 'Textiles & art de vivre',
-      image: `${import.meta.env.BASE_URL}linge_maison.jpg`,
-      link: '/realisations/linge-de-maison',
-    },
   ];
   const total = slides.length;
   const touchStartX = useRef(0);

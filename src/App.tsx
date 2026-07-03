@@ -14,7 +14,6 @@ import Bateaux from './pages/Bateaux';
 import Histoire from './pages/Histoire';
 import Contact from './pages/Contact';
 import Showroom from './pages/Showroom';
-import LingedeMaison from './pages/LingedeMaison';
 import CGV from './pages/CGV';
 
 function ScrollToTop() {
@@ -48,7 +47,6 @@ function App() {
             <Route path="/histoire" element={<Histoire />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/showroom" element={<Showroom />} />
-            <Route path="/realisations/linge-de-maison" element={<LingedeMaison />} />
             <Route path="/cgv" element={<CGV />} />
           </Routes>
         </main>

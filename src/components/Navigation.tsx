@@ -5,10 +5,9 @@ import { ChevronDown, Menu, X } from 'lucide-react';
 const categories = [
   { label: 'Rideaux', subtitle: 'Décoratifs & occultants', link: '/realisations/rideaux' },
   { label: 'Voilages', subtitle: 'Transparents & légers', link: '/realisations/voilages' },
-  { label: 'Stores', subtitle: 'Bateau, romain & californien', link: '/realisations/stores' },
-  { label: 'Ameublement intérieur', subtitle: 'Banquettes, assises & dossiers', link: '/realisations/banquettes' },
-  { label: 'Outdoor & bateaux', subtitle: 'Banquettes, transats', link: '/realisations/bateaux' },
-  { label: 'Linge de maison', subtitle: 'Coussins & édredon', link: '/realisations/linge-de-maison' },
+  { label: 'Stores', subtitle: 'Bateau & romain', link: '/realisations/stores' },
+  { label: 'Indoor', subtitle: 'Assises & linge de maison', link: '/realisations/banquettes' },
+  { label: 'Outdoor & bateaux', subtitle: 'Banquettes, coussins & transats', link: '/realisations/bateaux' },
 ];
 
 export default function Navigation() {
