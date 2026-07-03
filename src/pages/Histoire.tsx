@@ -130,10 +130,6 @@ export default function Histoire() {
               Parce que chaque lieu raconte une histoire, nous mettons notre savoir-faire au service de ceux qui souhaitent créer un intérieur singulier, pensé dans les moindres détails.
             </p>
           </div>
-          <div className="w-16 h-[1px] bg-[var(--primary)] my-12 mx-auto"></div>
-          <p className="font-['FreeSerif'] italic font-normal text-[22px] text-[var(--moka)] leading-[1.65] text-center">
-            Nous ne sommes pas une. Nous sommes deux. Et c'est de cet espace entre nous que naît Nuance.
-          </p>
         </div>
       </section>
 
