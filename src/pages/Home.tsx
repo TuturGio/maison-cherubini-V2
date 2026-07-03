@@ -77,7 +77,7 @@ function StepsCarousel() {
       {/* Desktop: 4 cards static */}
       <div className="hidden md:grid md:grid-cols-4 gap-[2px] px-0">
         {steps.map((step, i) => (
-          <div key={i} className="bg-white flex flex-col">
+          <div key={i} className="bg-[var(--grege-p)] flex flex-col">
             <div className="relative overflow-hidden aspect-[3/4]">
               <img
                 src={step.image}
@@ -86,7 +86,7 @@ function StepsCarousel() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.45)] to-transparent" />
             </div>
-            <div className="px-8 py-8 flex flex-col flex-1">
+            <div className="px-8 py-8 flex flex-col flex-1 bg-[var(--grege-p)]">
               <div className="w-6 h-[1px] bg-[var(--primary)] mb-4"></div>
               <h3 className="font-['FreeSerif'] font-black text-[18px] text-[var(--moka)] mb-3 leading-tight">
                 {step.label}
@@ -118,7 +118,7 @@ function StepsCarousel() {
           {steps.map((step, i) => (
             <div
               key={i}
-              className="bg-white flex flex-col flex-shrink-0"
+              className="bg-[var(--grege-p)] flex flex-col flex-shrink-0"
               style={{ width: cardWidth || 'calc(50% - 20px)' }}
             >
               <div className="relative overflow-hidden aspect-[2/3]">
@@ -129,7 +129,7 @@ function StepsCarousel() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.5)] to-transparent" />
               </div>
-              <div className="px-4 py-5 flex flex-col">
+              <div className="px-4 py-5 flex flex-col bg-[var(--grege-p)]">
                 <div className="w-5 h-[1px] bg-[var(--primary)] mb-3"></div>
                 <h3 className="font-['FreeSerif'] font-black text-[14px] text-[var(--moka)] mb-2 leading-tight">
                   {step.label}
