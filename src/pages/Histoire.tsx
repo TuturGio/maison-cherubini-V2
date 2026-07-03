@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom';
-import CanvasImage from '../components/CanvasImage';
-import { drawFolds } from '../utils/canvasDrawing';
 
 export default function Histoire() {
   return (
@@ -104,14 +102,12 @@ export default function Histoire() {
             La question s'est imposée : et si on créait quelque chose ensemble ?
           </p>
         </div>
-        <div className="max-w-5xl mx-auto aspect-[16/7] relative overflow-hidden bg-[var(--grege-p)]">
-          <CanvasImage
-            draw={(c) => drawFolds(c, '#C8B4A4', '#DCCCC0', '#B0988A', 9)}
-            className="absolute inset-0 w-full h-full block"
+        <div className="max-w-5xl mx-auto aspect-[16/7] relative overflow-hidden">
+          <img
+            src={`${import.meta.env.BASE_URL}notre-histoire.jpg`}
+            alt="Nuances Décoration"
+            className="absolute inset-0 w-full h-full object-cover object-top"
           />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase text-[var(--muted)]">Photo ou vidéo</span>
-          </div>
         </div>
       </section>
 
@@ -122,28 +118,7 @@ export default function Histoire() {
           </h2>
           <div className="space-y-7">
             <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.9]">
-              Parce qu'il dit tout de ce que nous sommes, et de ce que nous faisons.
-            </p>
-            <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.9]">
-              Il y a la nuance des matières — ce moment où un lin change de visage selon la lumière, où un tissu révèle sa profondeur au toucher. Nous le savons : c'est dans l'infime différence qu'une matière devient inoubliable.
-            </p>
-            <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.9]">
-              Il y a la nuance des espaces — cette façon qu'ont les couleurs, les textures et les volumes de raconter quelque chose de subtil, de juste, d'unique. Nous avons appris à la lire, à la cultiver, à en faire notre signature.
-            </p>
-            <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.9]">
-              Mais Nuance, c'est aussi ce que nous sommes l'une pour l'autre.
-            </p>
-            <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.9]">
-              Nous ne voyons pas toujours les choses de la même façon. Et c'est précisément là que naît quelque chose d'intéressant. Entre la main et la vision. Entre le geste et l'intuition. Entre deux lectures d'un même espace.
-            </p>
-            <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.9]">
-              Ce n'est pas le consensus qui nous guide. C'est la nuance.
-            </p>
-            <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.9]">
-              Celle qui refuse le noir absolu et le blanc trop propre. Celle qui préfère les entre-deux, les contrastes maîtrisés, les tensions fécondes. Celle qui croit qu'un bel espace, comme une belle rencontre, ne se résume jamais à une seule note.
-            </p>
-            <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.9]">
-              Nuance, parce que rien de ce que nous créons ne ressemble à autre chose. Parce que chaque client mérite une réponse qui lui appartient. Parce que le beau, le vrai, se loge toujours dans les détails — dans ce léger écart qui fait qu'une pièce devient un endroit où l'on veut rester.
+              Née de la rencontre entre deux passionnées de création, de décoration et de belles matières, Nuances Décoration est une maison marseillaise dédiée au textile sur mesure. Rideaux, voilages, banquettes d'intérieur et d'extérieur, coussins et aménagements personnalisés prennent vie dans notre atelier, où chaque pièce est confectionnée avec soin. De la première inspiration à la pose finale, nous accompagnons chaque projet pour créer des espaces uniques.
             </p>
           </div>
           <div className="w-16 h-[1px] bg-[var(--primary)] my-12 mx-auto"></div>
