@@ -337,9 +337,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-10 md:py-14 px-6 md:px-12 bg-white text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
+      <section className="py-7 md:py-10 px-6 md:px-12 bg-white text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
         <div className="max-w-xl mx-auto">
-          <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-8"></div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -418,8 +417,7 @@ export default function Home() {
         </Link>
       </section>
 
-      <section className="py-12 md:py-[88px] px-4 md:px-12 bg-[var(--grege-p)] text-center border-t border-b border-[var(--pale)]">
-        <div className="w-10 h-[1px] bg-[var(--primary)] mx-auto mb-8"></div>
+      <section className="py-10 md:py-16 px-4 md:px-12 bg-[var(--grege-p)] text-center">
         <p className="font-['FreeSerif'] italic font-normal text-[20px] md:text-[30px] text-[var(--moka)] leading-[1.5] max-w-[680px] mx-auto px-4">
           L'art du sur-mesure, au fil du détail.
         </p>
