@@ -102,11 +102,11 @@ export default function Histoire() {
             La question s'est imposée : et si on créait quelque chose ensemble ?
           </p>
         </div>
-        <div className="max-w-5xl mx-auto aspect-[16/7] relative overflow-hidden">
+        <div className="max-w-xl mx-auto aspect-[3/4] relative overflow-hidden">
           <img
             src={`${import.meta.env.BASE_URL}notre-histoire.jpg`}
             alt="Nuances Décoration"
-            className="absolute inset-0 w-full h-full object-cover object-top"
+            className="absolute inset-0 w-full h-full object-cover object-center"
           />
         </div>
       </section>
