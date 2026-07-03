@@ -23,7 +23,7 @@ export default function Histoire() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-28">
             <div className="aspect-[4/5] relative overflow-hidden">
               <img
-                src={`${import.meta.env.BASE_URL}jeanne-portrait.jpg`}
+                src={`${import.meta.env.BASE_URL}jeanne.jpg`}
                 alt="Jeanne"
                 className="absolute inset-0 w-full h-full object-cover object-top"
               />
@@ -113,9 +113,6 @@ export default function Histoire() {
 
       <section className="px-8 md:px-16 py-28 bg-white">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-['FreeSerif'] font-black text-[52px] md:text-[64px] text-[var(--moka)] leading-none mb-12 text-center tracking-tight">
-            Nuance
-          </h2>
           <div className="space-y-7">
             <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.9]">
               Née de la rencontre entre deux passionnées de création, de décoration et de belles matières, Nuances Décoration est une maison marseillaise dédiée au textile sur mesure. Rideaux, voilages, banquettes d'intérieur et d'extérieur, coussins et aménagements personnalisés prennent vie dans notre atelier, où chaque pièce est confectionnée avec soin. De la première inspiration à la pose finale, nous accompagnons chaque projet pour créer des espaces uniques.
