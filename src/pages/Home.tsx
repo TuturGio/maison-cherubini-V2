@@ -416,7 +416,7 @@ export default function Home() {
         </Link>
       </section>
 
-      <section className="py-10 md:py-16 px-4 md:px-12 bg-[var(--grege-p)] text-center">
+      <section className="py-10 md:py-16 px-4 md:px-12 bg-white text-center">
         <p className="font-['FreeSerif'] italic font-normal text-[20px] md:text-[30px] text-[var(--moka)] leading-[1.5] max-w-[680px] mx-auto px-4">
           L'art du sur-mesure, au fil du détail.
         </p>
