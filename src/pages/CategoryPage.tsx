@@ -7,7 +7,7 @@ interface CategoryPageProps {
   description: string;
   features: string[];
   heroDraw: (canvas: HTMLCanvasElement) => void;
-  galleryDraws: Array<(canvas: HTMLCanvasElement) => void>;
+  galleryDraws?: Array<(canvas: HTMLCanvasElement) => void>;
   extraContent?: React.ReactNode;
 }
 
@@ -17,7 +17,6 @@ export default function CategoryPage({
   description,
   features,
   heroDraw,
-  galleryDraws,
   extraContent,
 }: CategoryPageProps) {
   return (
@@ -79,98 +78,9 @@ export default function CategoryPage({
 
       {extraContent}
 
-      <section className="bg-[var(--linen)] px-6 md:px-12 py-16 md:py-24">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="font-['FreeSerif'] font-black text-[36px] md:text-[40px] text-[var(--moka)] leading-[1.1] mb-4">
-              Nos réalisations
-            </h2>
-            <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
-          </div>
-
-          {galleryDraws.length > 0 && (
-            <div className="flex flex-col gap-4">
-
-              {galleryDraws[0] && (
-                <div className="relative overflow-hidden aspect-[16/7] group cursor-pointer w-full">
-                  <div className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.03]">
-                    <CanvasImage draw={galleryDraws[0]} className="absolute inset-0 w-full h-full block" />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.35)] to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
-                </div>
-              )}
-
-              {galleryDraws.length > 1 && (
-                <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr_1fr] gap-4">
-                  {galleryDraws[1] && (
-                    <div className="relative overflow-hidden aspect-[3/4] group cursor-pointer">
-                      <div className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.03]">
-                        <CanvasImage draw={galleryDraws[1]} className="absolute inset-0 w-full h-full block" />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.35)] to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
-                    </div>
-                  )}
-                  {galleryDraws[2] && (
-                    <div className="relative overflow-hidden aspect-[4/5] md:aspect-auto group cursor-pointer">
-                      <div className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.03]">
-                        <CanvasImage draw={galleryDraws[2]} className="absolute inset-0 w-full h-full block" />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.35)] to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
-                    </div>
-                  )}
-                  {galleryDraws[3] && (
-                    <div className="relative overflow-hidden aspect-[3/4] group cursor-pointer">
-                      <div className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.03]">
-                        <CanvasImage draw={galleryDraws[3]} className="absolute inset-0 w-full h-full block" />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.35)] to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {galleryDraws.length > 4 && (
-                <div className="grid grid-cols-1 md:grid-cols-[1.6fr_1fr] gap-4">
-                  {galleryDraws[4] && (
-                    <div className="relative overflow-hidden aspect-[16/9] group cursor-pointer">
-                      <div className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.03]">
-                        <CanvasImage draw={galleryDraws[4]} className="absolute inset-0 w-full h-full block" />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.35)] to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
-                    </div>
-                  )}
-                  {galleryDraws[5] && (
-                    <div className="relative overflow-hidden aspect-[3/4] md:aspect-auto group cursor-pointer">
-                      <div className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.03]">
-                        <CanvasImage draw={galleryDraws[5]} className="absolute inset-0 w-full h-full block" />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.35)] to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {galleryDraws.length > 6 && (
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {galleryDraws.slice(6).map((draw, i) => (
-                    <div key={i + 6} className="relative overflow-hidden aspect-square group cursor-pointer">
-                      <div className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.03]">
-                        <CanvasImage draw={draw} className="absolute inset-0 w-full h-full block" />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.35)] to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-            </div>
-          )}
-        </div>
-      </section>
-
       <section className="px-12 py-16 bg-[var(--moka)] text-center">
         <h2 className="font-['FreeSerif'] italic font-normal text-[32px] text-[var(--linen)] leading-[1.5] mb-8">
-          Prêt à donner vie à votre projet ?
+          Concrétisons votre projet ensemble
         </h2>
         <Link
           to="/contact"
