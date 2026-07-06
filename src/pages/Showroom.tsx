@@ -16,7 +16,7 @@ export default function Showroom() {
           </h1>
           <div className="w-16 h-[2px] bg-[var(--primary)] mb-8"></div>
           <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.9] max-w-md">
-            200&nbsp;m² de tissus nobles, d'échantillons et de réalisations finies pour vous aider
+            100&nbsp;m² de tissus nobles, d'échantillons et de réalisations finies pour vous aider
             à visualiser et concrétiser votre projet sur mesure.
           </p>
         </div>
@@ -41,9 +41,9 @@ export default function Showroom() {
                   Adresse
                 </p>
                 <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.7]">
-                  15 Rue de la République
+                  63 Av. de Montredon
                   <br />
-                  13001 Marseille, France
+                  13008 Marseille, France
                 </p>
               </div>
             </div>
@@ -57,7 +57,7 @@ export default function Showroom() {
                 <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.7]">
                   Lundi – Vendredi : 9h00 – 18h00
                   <br />
-                  Samedi : 10h00 – 17h00
+                  Samedi : sur rendez-vous
                   <br />
                   Dimanche : Fermé
                 </p>
@@ -71,7 +71,7 @@ export default function Showroom() {
                   Téléphone
                 </p>
                 <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.7]">
-                  04 91 XX XX XX
+                  06 43 58 51 62
                 </p>
               </div>
             </div>
