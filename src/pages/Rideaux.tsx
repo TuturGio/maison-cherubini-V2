@@ -44,6 +44,68 @@ export default function Rideaux() {
       ]}
       extraContent={
         <div>
+          {/* Ce que vous découvrirez */}
+          <section className="bg-[var(--linen)] px-8 md:px-12 py-16 md:py-20">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="font-['FreeSerif'] font-black text-[40px] text-[var(--moka)] leading-[1.1] mb-4">
+                  Ce que vous découvrirez
+                </h2>
+                <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="aspect-square relative overflow-hidden mb-6">
+                    <img
+                      src={`${import.meta.env.BASE_URL}500-references.jpg`}
+                      alt="Plus de 500 références de tissus"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
+                    Plus de 500 références de tissus
+                  </h3>
+                  <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
+                    Lin, velours, tweed, coton, doublures thermiques, occultants, outdoor... Trouvez la matière qui saura répondre à vos envies !
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <div className="aspect-square relative overflow-hidden mb-6">
+                    <img
+                      src={`${import.meta.env.BASE_URL}finissions.jpg`}
+                      alt="De nombreuses finitions disponibles"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
+                    De nombreuses finitions disponibles
+                  </h3>
+                  <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
+                    Wave, œillets, plis flamands, pince plate, galon fronceur... Chaque finition est réalisée avec soin pour correspondre au rendu souhaité.
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <div className="aspect-square relative overflow-hidden mb-6">
+                    <img
+                      src={`${import.meta.env.BASE_URL}supports.jpg`}
+                      alt="Nos supports d'accroche"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
+                    Nos supports d'accroche
+                  </h3>
+                  <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
+                    Tringle ou rails — chaque support est sélectionné pour sa robustesse et son harmonie avec le tissu et la finition choisis. Nous proposons une gamme complète en laiton, nickel satiné, noir ou blanc, brillant ou mat, pour un résultat cohérent du sol au plafond. Le détail qui fait toute la différence.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* 500 références de tissus */}
           <section className="grid grid-cols-1 md:grid-cols-2 bg-white">
             <div className="aspect-[4/3] md:aspect-auto relative overflow-hidden">
