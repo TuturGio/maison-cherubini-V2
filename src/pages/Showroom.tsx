@@ -126,7 +126,7 @@ export default function Showroom() {
                 />
               </div>
               <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
-                Collections de tissus
+                Collection de tissus
               </h3>
               <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
                 Plus de 500 références de tissus d'ameublement, voilages et matières techniques
@@ -158,7 +158,7 @@ export default function Showroom() {
                 />
               </div>
               <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
-                Conseil personnalisé
+                Conseils personnalisés
               </h3>
               <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
                 Nos experts vous accompagnent pour définir le projet qui vous correspond
