@@ -137,7 +137,7 @@ export default function Contact() {
                     <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.7]">
                       Lun – Ven : 9h00 – 18h00
                       <br />
-                      Samedi : 10h00 – 17h00
+                      Samedi : sur rendez-vous
                       <br />
                       Dimanche : Fermé
                     </p>
@@ -163,7 +163,7 @@ export default function Contact() {
                       Email
                     </p>
                     <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.7]">
-                      contact@nuances.com
+                      contact@nuancesdecoration.com
                     </p>
                   </div>
                 </div>
