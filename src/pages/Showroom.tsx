@@ -170,7 +170,7 @@ export default function Showroom() {
 
       <section className="px-12 py-16 bg-[var(--moka)] text-center">
         <h2 className="font-['FreeSerif'] italic font-normal text-[32px] text-[var(--linen)] leading-[1.5] mb-8">
-          Venez nous rencontrer
+          Concrétisons votre projet ensemble
         </h2>
         <p className="font-['MaisonNeue'] font-light text-[14px] text-[rgba(248,244,240,0.8)] leading-[1.9] max-w-2xl mx-auto mb-8">
           Notre équipe vous accueille avec plaisir pour échanger sur votre projet et vous faire découvrir
