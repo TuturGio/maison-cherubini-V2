@@ -135,7 +135,7 @@ export default function Histoire() {
 
       <section className="px-8 md:px-16 py-20 bg-[var(--moka)] text-center">
         <p className="font-['FreeSerif'] italic font-normal text-[22px] text-[var(--linen)] leading-[1.65] max-w-3xl mx-auto mb-10">
-          Venez nous rencontrer dans notre showroom ou contactez-nous pour discuter de votre projet.
+          Concrétisons votre projet ensemble
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
