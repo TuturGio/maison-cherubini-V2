@@ -166,7 +166,7 @@ export default function Home() {
     {
       title: 'Rideaux',
       subtitle: 'Collections sur mesure',
-      image: `${import.meta.env.BASE_URL}nos_voilages_-_177.jpg`,
+      image: `${import.meta.env.BASE_URL}header-rideaux.jpg`,
       link: '/realisations/rideaux',
     },
     {
