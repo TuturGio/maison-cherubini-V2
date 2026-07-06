@@ -137,12 +137,20 @@ export default function Histoire() {
         <p className="font-['FreeSerif'] italic font-normal text-[22px] text-[var(--linen)] leading-[1.65] max-w-3xl mx-auto mb-10">
           Venez nous rencontrer dans notre showroom ou contactez-nous pour discuter de votre projet.
         </p>
-        <Link
-          to="/contact"
-          className="inline-block font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase text-[var(--moka)] bg-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-white"
-        >
-          Prendre rendez-vous
-        </Link>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link
+            to="/contact"
+            className="inline-block font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase text-[var(--moka)] bg-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-white"
+          >
+            Prendre rendez-vous
+          </Link>
+          <Link
+            to="/contact"
+            className="inline-block font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase text-[var(--linen)] border border-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-[var(--linen)] hover:text-[var(--moka)]"
+          >
+            Nous contacter
+          </Link>
+        </div>
       </section>
     </div>
   );
