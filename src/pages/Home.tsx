@@ -190,7 +190,7 @@ export default function Home() {
     {
       title: 'Outdoor & bateaux',
       subtitle: 'Banquettes, coussins & transats',
-      image: `${import.meta.env.BASE_URL}yachting.jpg`,
+      image: `${import.meta.env.BASE_URL}outdoor-home.jpg`,
       link: '/realisations/bateaux',
     },
   ];
