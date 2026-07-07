@@ -71,7 +71,7 @@ export default function Showroom() {
                   Téléphone
                 </p>
                 <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.7]">
-                  06 43 58 51 62
+                  07 59 57 40 98<br />06 03 65 79 97
                 </p>
               </div>
             </div>
