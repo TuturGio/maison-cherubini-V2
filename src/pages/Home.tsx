@@ -429,11 +429,11 @@ export default function Home() {
           </h2>
           <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
           <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-8">
-            Depuis plus de vingt ans, Nuance façonne des intérieurs d'exception. Chaque création naît
-            d'une écoute attentive, d'un choix minutieux des matières et d'un artisanat ancré dans la
-            tradition. Rideaux, voilages, banquettes, revêtements — chaque pièce est pensée pour vous,
-            unique et sur mesure. Notre atelier, basé à Marseille, accueille une équipe de passionnés
-            qui donnent vie à vos espaces avec précision et sensibilité.
+            L'opportunité d'un local a été le déclic. Nous avons quitté nos emplois respectifs, réunissant nos expertises et nos sensibilités pour donner naissance à Nuances Décoration.
+            Aujourd'hui, nous proposons bien plus que la confection de textiles sur mesure : nous accompagnons nos clients dans la création d'espaces qui leur ressemblent. Chaque projet débute par une écoute attentive de leurs envies, de leurs contraintes et de leur mode de vie. Nous les guidons ensuite dans le choix des matières, des couleurs, des finitions et des solutions les plus adaptées à leur intérieur ou à leur extérieur.
+            Rideaux, voilages, banquettes, coussins, têtes de lit, matelas ou aménagements spécifiques : chaque réalisation est pensée sur mesure et confectionnée dans notre atelier marseillais. Cette maîtrise de la fabrication nous permet d'offrir une grande liberté de création, une qualité exigeante et une attention particulière portée aux moindres détails.
+            Notre valeur ajoutée réside dans cette approche globale : imaginer, conseiller, fabriquer et installer. Nous aimons donner vie à des projets uniques, où l'esthétique rencontre la fonctionnalité, et où chaque textile contribue à créer une atmosphère chaleureuse, harmonieuse et durable.
+            Parce que chaque lieu raconte une histoire, nous mettons notre savoir-faire au service de ceux qui souhaitent créer un intérieur singulier, pensé dans les moindres détails.
           </p>
           <Link
             to="/histoire"
@@ -444,7 +444,7 @@ export default function Home() {
         </div>
         <div className="aspect-square md:aspect-auto relative overflow-hidden order-1 md:order-2">
           <img
-            src={`${import.meta.env.BASE_URL}tapis_de_sol_ANDREI_009531_Z5_2.webp`}
+            src={`${import.meta.env.BASE_URL}HISTOIRE_HOME.jpg`}
             alt="Notre histoire"
             className="absolute inset-0 w-full h-full object-cover"
           />
