@@ -102,7 +102,7 @@ export default function Navigation() {
       </div>
 
       {showMobileMenu && (
-        <div className="md:hidden bg-white border-t border-[var(--pale)] px-4 py-4">
+        <div className="md:hidden bg-white px-4 py-4">
           <ul className="list-none space-y-4">
             <li>
               <button
