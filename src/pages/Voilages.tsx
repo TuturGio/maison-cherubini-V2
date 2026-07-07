@@ -15,6 +15,7 @@ export default function Voilages() {
         'Finitions soignées et discrètes',
         'Entretien facile et durable',
       ]}
+      heroImage={`${import.meta.env.BASE_URL}voilage-cat.jpg`}
       heroDraw={drawSheer}
       galleryDraws={[
         drawSheer,
