@@ -15,6 +15,7 @@ export default function Stores() {
         'Pose professionnelle incluse',
         'Entretien et réparation assurés',
       ]}
+      heroImage={`${import.meta.env.BASE_URL}stores-cat.jpg`}
       heroDraw={(c) => drawWeave(c, '#B8A898', '#9A8878')}
       galleryDraws={[
         (c) => drawWeave(c, '#C0B0A0', '#A09080'),
