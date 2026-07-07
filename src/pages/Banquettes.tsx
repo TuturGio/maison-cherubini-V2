@@ -4,7 +4,7 @@ import { drawWeave, drawFolds } from '../utils/canvasDrawing';
 export default function Banquettes() {
   return (
     <CategoryPage
-      title="Banquettes"
+      title="Indoor"
       subtitle="Assises & mobilier"
       description="Nos banquettes et assises sur mesure transforment chaque coin de votre intérieur en espace de confort et d'élégance. Créées avec des matériaux nobles et un rembourrage de qualité supérieure, elles allient esthétique raffinée et durabilité. Chaque pièce est unique, pensée pour s'intégrer harmonieusement à votre décoration."
       features={[
@@ -15,6 +15,7 @@ export default function Banquettes() {
         'Coussins et garnitures personnalisables',
         'Finitions soignées et détails artisanaux',
       ]}
+      heroImage={`${import.meta.env.BASE_URL}indoor-cat.jpg`}
       heroDraw={(c) => drawWeave(c, '#B0A090', '#907060')}
       galleryDraws={[
         (c) => drawWeave(c, '#B8A898', '#90786A'),
