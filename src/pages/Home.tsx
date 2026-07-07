@@ -183,7 +183,7 @@ export default function Home() {
     },
     {
       title: 'Indoor',
-      subtitle: 'Assises & linge de maison',
+      subtitle: 'Banquettes & linge de maison',
       image: `${import.meta.env.BASE_URL}linge_maison.jpg`,
       link: '/realisations/banquettes',
     },

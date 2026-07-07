@@ -6,7 +6,7 @@ const categories = [
   { label: 'Rideaux', subtitle: 'Décoratifs & occultants', link: '/realisations/rideaux' },
   { label: 'Voilages', subtitle: 'Transparents & légers', link: '/realisations/voilages' },
   { label: 'Stores', subtitle: 'Bateau & romain', link: '/realisations/stores' },
-  { label: 'Indoor', subtitle: 'Assises & linge de maison', link: '/realisations/banquettes' },
+  { label: 'Indoor', subtitle: 'Banquettes & linge de maison', link: '/realisations/banquettes' },
   { label: 'Outdoor & bateaux', subtitle: 'Banquettes, coussins & transats', link: '/realisations/bateaux' },
 ];
 
