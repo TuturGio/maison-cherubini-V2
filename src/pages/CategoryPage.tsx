@@ -9,6 +9,7 @@ interface CategoryPageProps {
   heroDraw: (canvas: HTMLCanvasElement) => void;
   galleryDraws?: Array<(canvas: HTMLCanvasElement) => void>;
   extraContent?: React.ReactNode;
+  sideContent?: React.ReactNode;
 }
 
 export default function CategoryPage({
@@ -18,6 +19,7 @@ export default function CategoryPage({
   features,
   heroDraw,
   extraContent,
+  sideContent,
 }: CategoryPageProps) {
   return (
     <div className="min-h-screen">
@@ -59,18 +61,22 @@ export default function CategoryPage({
               </ul>
             </div>
             <div className="flex-none md:w-64 flex flex-col gap-4 md:pt-10">
-              <Link
-                to="/contact"
-                className="text-center font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-8 no-underline transition-colors hover:bg-[var(--charcoal)]"
-              >
-                Prendre rendez-vous
-              </Link>
-              <Link
-                to="/contact"
-                className="text-center font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase border border-[var(--moka)] text-[var(--moka)] py-4 px-8 no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
-              >
-                Nous contacter
-              </Link>
+              {sideContent ?? (
+                <>
+                  <Link
+                    to="/contact"
+                    className="text-center font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-8 no-underline transition-colors hover:bg-[var(--charcoal)]"
+                  >
+                    Prendre rendez-vous
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="text-center font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase border border-[var(--moka)] text-[var(--moka)] py-4 px-8 no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
+                  >
+                    Nous contacter
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>

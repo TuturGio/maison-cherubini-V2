@@ -16,6 +16,15 @@ export default function Rideaux() {
         'Service de retouches et d\'entretien',
       ]}
       heroDraw={(c) => drawFolds(c, '#C0A890', '#D8C8B4', '#A89070', 8)}
+      sideContent={
+        <div className="flex-none md:w-64 overflow-hidden">
+          <img
+            src={`${import.meta.env.BASE_URL}rideaux-cat.jpg`}
+            alt="Rideaux sur mesure"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      }
       galleryDraws={[
         (c) => drawFolds(c, '#C8B4A0', '#D8C8B4', '#A89078', 6),
         (c) => drawFolds(c, '#B8A090', '#CCBCAC', '#988078', 7),
