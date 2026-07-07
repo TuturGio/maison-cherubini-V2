@@ -442,11 +442,11 @@ export default function Home() {
             Découvrir notre histoire
           </Link>
         </div>
-        <div className="aspect-square md:aspect-auto relative overflow-hidden order-1 md:order-2">
+        <div className="relative overflow-hidden order-1 md:order-2 bg-[var(--linen)]">
           <img
             src={`${import.meta.env.BASE_URL}HISTOIRE_HOME.jpg`}
             alt="Notre histoire"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
       </section>
