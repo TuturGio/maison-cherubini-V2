@@ -16,7 +16,7 @@ export default function Navigation() {
   const [showMobileDropdown, setShowMobileDropdown] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[100] bg-white border-b border-[var(--pale)] animate-[fadeUp_0.5s_ease_both]">
+    <nav className="fixed top-0 left-0 right-0 z-[100] bg-white animate-[fadeUp_0.5s_ease_both]">
       <div className="flex items-center justify-between px-4 md:px-12 py-4 md:py-6">
         <Link to="/" className="no-underline" onClick={() => setShowMobileMenu(false)}>
           <img
