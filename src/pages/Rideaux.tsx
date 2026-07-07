@@ -16,6 +16,7 @@ export default function Rideaux() {
         'Service de retouches et d\'entretien',
       ]}
       heroDraw={(c) => drawFolds(c, '#C0A890', '#D8C8B4', '#A89070', 8)}
+      heroImage={`${import.meta.env.BASE_URL}rideaux-cat copy.jpg`}
       galleryDraws={[
         (c) => drawFolds(c, '#C8B4A0', '#D8C8B4', '#A89078', 6),
         (c) => drawFolds(c, '#B8A090', '#CCBCAC', '#988078', 7),

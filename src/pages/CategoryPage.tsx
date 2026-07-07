@@ -7,6 +7,7 @@ interface CategoryPageProps {
   description: string;
   features: string[];
   heroDraw: (canvas: HTMLCanvasElement) => void;
+  heroImage?: string;
   galleryDraws?: Array<(canvas: HTMLCanvasElement) => void>;
   extraContent?: React.ReactNode;
 }
@@ -17,6 +18,7 @@ export default function CategoryPage({
   description,
   features,
   heroDraw,
+  heroImage,
   extraContent,
 }: CategoryPageProps) {
   return (
@@ -35,7 +37,11 @@ export default function CategoryPage({
           </p>
         </div>
         <div className="relative overflow-hidden aspect-[4/3] md:aspect-auto order-1 md:order-2">
-          <CanvasImage draw={heroDraw} className="absolute inset-0 w-full h-full block" />
+          {heroImage ? (
+            <img src={heroImage} alt={title} className="absolute inset-0 w-full h-full object-cover" />
+          ) : (
+            <CanvasImage draw={heroDraw} className="absolute inset-0 w-full h-full block" />
+          )}
         </div>
       </section>
 
