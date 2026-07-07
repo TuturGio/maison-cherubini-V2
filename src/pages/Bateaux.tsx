@@ -4,7 +4,7 @@ import { drawNautical, drawWeave } from '../utils/canvasDrawing';
 export default function Bateaux() {
   return (
     <CategoryPage
-      title="Bateaux"
+      title="Outdoor & Bateaux"
       subtitle="Sellerie nautique"
       description="Notre expertise en sellerie nautique répond aux exigences les plus élevées du yachting. Nous créons des revêtements et aménagements sur mesure qui résistent aux conditions marines tout en offrant un confort et une élégance exceptionnels. Chaque création est pensée pour allier technicité, durabilité et raffinement."
       features={[
@@ -15,6 +15,7 @@ export default function Bateaux() {
         'Rideaux et voilages pour cabines',
         'Rénovation et réfection complète de sellerie',
       ]}
+      heroImage={`${import.meta.env.BASE_URL}outdoor-cat.jpg`}
       heroDraw={drawNautical}
       galleryDraws={[
         drawNautical,
