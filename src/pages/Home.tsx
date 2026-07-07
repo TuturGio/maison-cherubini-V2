@@ -428,7 +428,7 @@ export default function Home() {
             Notre Histoire
           </h2>
           <div className="w-8 h-[1px] bg-[var(--primary)] mb-5"></div>
-          <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-8">
+          <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.9] mb-8 text-justify">
             L'opportunité d'un local a été le déclic. Nous avons quitté nos emplois respectifs, réunissant nos expertises et nos sensibilités pour donner naissance à Nuances Décoration.
             Aujourd'hui, nous proposons bien plus que la confection de textiles sur mesure : nous accompagnons nos clients dans la création d'espaces qui leur ressemblent. Chaque projet débute par une écoute attentive de leurs envies, de leurs contraintes et de leur mode de vie. Nous les guidons ensuite dans le choix des matières, des couleurs, des finitions et des solutions les plus adaptées à leur intérieur ou à leur extérieur.
             Rideaux, voilages, banquettes, coussins, têtes de lit, matelas ou aménagements spécifiques : chaque réalisation est pensée sur mesure et confectionnée dans notre atelier marseillais. Cette maîtrise de la fabrication nous permet d'offrir une grande liberté de création, une qualité exigeante et une attention particulière portée aux moindres détails.
