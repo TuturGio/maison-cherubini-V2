@@ -15,6 +15,7 @@ export default function RevetementInterieur() {
         'Matières naturelles et durables disponibles',
         'Service de rénovation et remplacement',
       ]}
+      heroImage={`${import.meta.env.BASE_URL}indoor-cat.jpg`}
       heroDraw={(c) => drawWeave(c, '#C4B8AC', '#A8A098')}
       galleryDraws={[
         (c) => drawWeave(c, '#C8BEB4', '#ACA8A0'),
