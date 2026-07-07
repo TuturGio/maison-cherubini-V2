@@ -165,33 +165,33 @@ export default function Home() {
   const slides = [
     {
       title: 'Rideaux',
-      subtitle: 'Collections sur mesure',
+      subtitle: 'Décoratifs & occultants',
       image: `${import.meta.env.BASE_URL}header-rideaux.jpg`,
       link: '/realisations/rideaux',
     },
     {
       title: 'Voilages',
-      subtitle: 'Légèreté & lumière',
-      image: `${import.meta.env.BASE_URL}nos_rideaux.jpg`,
+      subtitle: 'Transparents & légers',
+      image: `${import.meta.env.BASE_URL}nos_voilages_-_177.jpg`,
       link: '/realisations/voilages',
     },
     {
       title: 'Stores',
-      subtitle: 'Occultation & lumière',
+      subtitle: 'Bateau & romain',
       image: `${import.meta.env.BASE_URL}nos_stores.jpg`,
       link: '/realisations/stores',
     },
     {
-      title: 'Revêtement intérieur',
-      subtitle: 'Murs & sols d\'exception',
-      image: `${import.meta.env.BASE_URL}revetement_interieur.jpg`,
-      link: '/realisations/revetement-interieur',
+      title: 'Indoor',
+      subtitle: 'Assises & linge de maison',
+      image: `${import.meta.env.BASE_URL}linge_maison.jpg`,
+      link: '/realisations/banquettes',
     },
     {
-      title: 'Revêtement extérieur',
-      subtitle: 'Terrasses & outdoor',
-      image: `${import.meta.env.BASE_URL}revetement_exterieur.jpg`,
-      link: '/realisations/revetement-exterieur',
+      title: 'Outdoor & bateaux',
+      subtitle: 'Banquettes, coussins & transats',
+      image: `${import.meta.env.BASE_URL}yachting.jpg`,
+      link: '/realisations/bateaux',
     },
   ];
   const total = slides.length;
