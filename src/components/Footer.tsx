@@ -15,7 +15,7 @@ export default function Footer() {
         <li>
           <Link
             to="/realisations/rideaux"
-            className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-[var(--grege-l)] no-underline transition-colors hover:text-[var(--primary)]"
+            className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-white no-underline transition-colors hover:text-white/70"
           >
             Nos réalisations
           </Link>
@@ -23,7 +23,7 @@ export default function Footer() {
         <li>
           <Link
             to="/showroom"
-            className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-[var(--grege-l)] no-underline transition-colors hover:text-[var(--primary)]"
+            className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-white no-underline transition-colors hover:text-white/70"
           >
             Notre showroom
           </Link>
@@ -31,7 +31,7 @@ export default function Footer() {
         <li>
           <Link
             to="/histoire"
-            className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-[var(--grege-l)] no-underline transition-colors hover:text-[var(--primary)]"
+            className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-white no-underline transition-colors hover:text-white/70"
           >
             Notre histoire
           </Link>
@@ -39,7 +39,7 @@ export default function Footer() {
         <li>
           <Link
             to="/contact"
-            className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-[var(--grege-l)] no-underline transition-colors hover:text-[var(--primary)]"
+            className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-white no-underline transition-colors hover:text-white/70"
           >
             Contact
           </Link>
@@ -47,14 +47,14 @@ export default function Footer() {
         <li>
           <Link
             to="/cgv"
-            className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-[var(--grege-l)] no-underline transition-colors hover:text-[var(--primary)]"
+            className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-white no-underline transition-colors hover:text-white/70"
           >
             CGV
           </Link>
         </li>
       </ul>
 
-      <span className="font-['MaisonNeue'] font-thin text-[10px] md:text-[8px] tracking-[1.5px] text-[var(--muted)]">
+      <span className="font-['MaisonNeue'] font-thin text-[10px] md:text-[8px] tracking-[1.5px] text-white/70">
         © 2026 Nuance Décoration
       </span>
     </footer>
