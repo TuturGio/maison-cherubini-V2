@@ -107,62 +107,69 @@ export default function Showroom() {
         </div>
       </section>
 
-      <section className="bg-[var(--linen)] px-12 py-20">
+      <section className="bg-[var(--linen)] px-6 md:px-12 py-16 md:py-20">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-['FreeSerif'] font-black text-[40px] text-[var(--moka)] leading-[1.1] mb-4">
+          <div className="text-center mb-10 md:mb-12">
+            <h2 className="font-['FreeSerif'] font-black text-[32px] md:text-[40px] text-[var(--moka)] leading-[1.1] mb-4">
               Ce que vous découvrirez
             </h2>
             <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-3 gap-8 mb-16">
-            <div className="text-center">
-              <div className="aspect-square relative overflow-hidden mb-6">
+          {/* Mobile: cartes horizontales — Desktop: grille 3 colonnes verticales */}
+          <div className="flex flex-col gap-6 md:grid md:grid-cols-3 md:gap-8 mb-16">
+            <div className="flex gap-4 md:flex-col md:gap-0 md:text-center bg-white md:bg-transparent p-4 md:p-0">
+              <div className="w-24 h-24 flex-shrink-0 relative overflow-hidden md:w-full md:h-auto md:aspect-square md:mb-6">
                 <img
                   src={`${import.meta.env.BASE_URL}500-references.jpg`}
                   alt="Collections de tissus"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
-              <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
-                Collection de tissus
-              </h3>
-              <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
-                Plus de 500 références de tissus d'ameublement, voilages et matières techniques
-              </p>
+              <div className="flex flex-col justify-center md:block">
+                <h3 className="font-['FreeSerif'] font-black text-[18px] md:text-[22px] text-[var(--moka)] leading-[1.1] mb-2 md:mb-3">
+                  Collection de tissus
+                </h3>
+                <p className="font-['MaisonNeue'] font-light text-[12px] md:text-[13px] text-[var(--warm)] leading-[1.8]">
+                  Plus de 500 références de tissus d'ameublement, voilages et matières techniques
+                </p>
+              </div>
             </div>
 
-            <div className="text-center">
-              <div className="aspect-square relative overflow-hidden mb-6">
+            <div className="flex gap-4 md:flex-col md:gap-0 md:text-center bg-white md:bg-transparent p-4 md:p-0">
+              <div className="w-24 h-24 flex-shrink-0 relative overflow-hidden md:w-full md:h-auto md:aspect-square md:mb-6">
                 <img
                   src={`${import.meta.env.BASE_URL}revetement_interieur.jpg`}
                   alt="Réalisations finies"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
-              <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
-                Réalisations finies
-              </h3>
-              <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
-                Exemples de nos créations pour vous inspirer et visualiser les possibilités
-              </p>
+              <div className="flex flex-col justify-center md:block">
+                <h3 className="font-['FreeSerif'] font-black text-[18px] md:text-[22px] text-[var(--moka)] leading-[1.1] mb-2 md:mb-3">
+                  Réalisations finies
+                </h3>
+                <p className="font-['MaisonNeue'] font-light text-[12px] md:text-[13px] text-[var(--warm)] leading-[1.8]">
+                  Exemples de nos créations pour vous inspirer et visualiser les possibilités
+                </p>
+              </div>
             </div>
 
-            <div className="text-center">
-              <div className="aspect-square relative overflow-hidden mb-6">
+            <div className="flex gap-4 md:flex-col md:gap-0 md:text-center bg-white md:bg-transparent p-4 md:p-0">
+              <div className="w-24 h-24 flex-shrink-0 relative overflow-hidden md:w-full md:h-auto md:aspect-square md:mb-6">
                 <img
                   src={`${import.meta.env.BASE_URL}showroom2.jpg`}
                   alt="Conseil personnalisé"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
-              <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
-                Conseils personnalisés
-              </h3>
-              <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
-                Nos experts vous accompagnent pour définir le projet qui vous correspond
-              </p>
+              <div className="flex flex-col justify-center md:block">
+                <h3 className="font-['FreeSerif'] font-black text-[18px] md:text-[22px] text-[var(--moka)] leading-[1.1] mb-2 md:mb-3">
+                  Conseils personnalisés
+                </h3>
+                <p className="font-['MaisonNeue'] font-light text-[12px] md:text-[13px] text-[var(--warm)] leading-[1.8]">
+                  Nos experts vous accompagnent pour définir le projet qui vous correspond
+                </p>
+              </div>
             </div>
           </div>
         </div>
