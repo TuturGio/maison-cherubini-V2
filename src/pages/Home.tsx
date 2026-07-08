@@ -172,7 +172,7 @@ export default function Home() {
     {
       title: 'Voilages',
       subtitle: 'Transparents & légers',
-      image: `${import.meta.env.BASE_URL}nos_voilages_-_177.jpg`,
+      image: `${import.meta.env.BASE_URL}voilages-home.jpg`,
       link: '/realisations/voilages',
     },
     {
