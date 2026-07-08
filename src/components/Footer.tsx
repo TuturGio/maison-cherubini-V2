@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--charcoal)] px-4 md:px-12 py-8 md:py-12 flex flex-col md:flex-row gap-8 md:gap-0 justify-between items-center border-t-[3px] border-[var(--primary)]">
+    <footer className="bg-[#8d6963] px-4 md:px-12 py-8 md:py-12 flex flex-col md:flex-row gap-8 md:gap-0 justify-between items-center border-t-[3px] border-[var(--primary)]">
       <div>
         <img
           src={`${import.meta.env.BASE_URL}logo_blanc.png`}
