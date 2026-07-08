@@ -142,7 +142,7 @@ function StepsCarousel() {
           ))}
         </div>
 
-        <div className="flex justify-center gap-2 mt-5">
+        <div className="flex justify-center gap-2 mt-5 mb-6">
           {steps.map((_, i) => (
             <button
               key={i}
