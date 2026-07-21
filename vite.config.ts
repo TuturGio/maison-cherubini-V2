@@ -24,6 +24,12 @@ function safeCopyPublicDir(): import('vite').Plugin {
       } catch {
         // no public dir
       }
+      // GitHub Pages SPA fallback: serve index.html on 404 so client routing works on reload
+      try {
+        cpSync(join(outDir, 'index.html'), join(outDir, '404.html'));
+      } catch {
+        // index.html not yet written
+      }
     },
   };
 }
