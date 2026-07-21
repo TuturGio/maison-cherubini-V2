@@ -22,7 +22,7 @@ export default function Showroom() {
         </div>
         <div className="relative overflow-hidden aspect-[4/3] md:aspect-auto order-1 md:order-2">
           <img
-            src={`${import.meta.env.BASE_URL}showroom1.jpg`}
+            src={`${import.meta.env.BASE_URL}header-showroom.jpg`}
             alt="Notre showroom"
             className="absolute inset-0 w-full h-full object-cover"
           />
