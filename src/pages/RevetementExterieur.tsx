@@ -1,5 +1,6 @@
 import CategoryPage from './CategoryPage';
 import { drawWeave, drawFolds } from '../utils/canvasDrawing';
+import RealisationsOutdoor from '../components/RealisationsOutdoor';
 
 export default function RevetementExterieur() {
   return (
@@ -24,6 +25,7 @@ export default function RevetementExterieur() {
         (c) => drawWeave(c, '#A4ACA0', '#848C80'),
         (c) => drawFolds(c, '#9CA498', '#B0B8AC', '#7C8478', 6),
       ]}
+      extraContent={<RealisationsOutdoor />}
     />
   );
 }
