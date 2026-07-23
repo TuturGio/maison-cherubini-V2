@@ -33,36 +33,42 @@ export default function RealisationsSection() {
           <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
         </div>
 
-        {/* Block 1 — grand portrait gauche + vidéo droite + panoramique */}
-        <div className="grid grid-cols-[3fr_2fr] gap-3 items-start">
-          <div className="aspect-[3/4]">
+        {/* Ligne 1 — photo portrait + vidéo, même hauteur */}
+        <div className="flex gap-3 h-[460px]">
+          <div className="flex-[3] min-w-0">
             <ImageSlot label="Photo" />
           </div>
-          <div className="aspect-[4/3]">
+          <div className="flex-[2] min-w-0">
             <VideoSlot label="Vidéo" />
           </div>
         </div>
+
+        {/* Ligne 2 — panoramique */}
         <div className="mt-3 aspect-[21/9]">
           <ImageSlot label="Photo" />
         </div>
 
-        {/* Block 2 — vidéo + portrait / deux photos / panoramique */}
-        <div className="grid grid-cols-2 gap-3 mt-3 items-start">
-          <div className="aspect-square">
+        {/* Ligne 3 — vidéo + photo portrait, même hauteur */}
+        <div className="flex gap-3 mt-3 h-[460px]">
+          <div className="flex-1 min-w-0">
             <VideoSlot label="Vidéo" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <ImageSlot label="Photo" />
+          </div>
+        </div>
+
+        {/* Ligne 4 — deux photos portrait */}
+        <div className="grid grid-cols-2 gap-3 mt-3">
+          <div className="aspect-[3/4]">
+            <ImageSlot label="Photo" />
           </div>
           <div className="aspect-[3/4]">
             <ImageSlot label="Photo" />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-3 mt-3">
-          <div className="aspect-[4/3]">
-            <ImageSlot label="Photo" />
-          </div>
-          <div className="aspect-[4/3]">
-            <ImageSlot label="Photo" />
-          </div>
-        </div>
+
+        {/* Ligne 5 — panoramique */}
         <div className="mt-3 aspect-[21/9]">
           <ImageSlot label="Photo" />
         </div>
