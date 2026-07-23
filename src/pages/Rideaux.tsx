@@ -1,5 +1,6 @@
 import CategoryPage from './CategoryPage';
 import { drawFolds, drawWeave } from '../utils/canvasDrawing';
+import RealisationsSection from '../components/RealisationsSection';
 
 export default function Rideaux() {
   return (
@@ -88,6 +89,7 @@ export default function Rideaux() {
               </div>
             </div>
           </section>
+          <RealisationsSection />
         </div>
       }
     />

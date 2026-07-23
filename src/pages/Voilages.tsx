@@ -1,5 +1,6 @@
 import CategoryPage from './CategoryPage';
 import { drawSheer, drawWeave } from '../utils/canvasDrawing';
+import RealisationsSection from '../components/RealisationsSection';
 
 export default function Voilages() {
   return (
@@ -25,6 +26,7 @@ export default function Voilages() {
         drawSheer,
         (c) => drawWeave(c, '#E4E0D8', '#D4D0C8'),
       ]}
+      extraContent={<RealisationsSection />}
     />
   );
 }
