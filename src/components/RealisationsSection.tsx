@@ -33,8 +33,8 @@ export default function RealisationsSection() {
           <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
         </div>
 
-        {/* Ligne 1 — photo portrait + vidéo, même hauteur */}
-        <div className="flex gap-3 h-[460px]">
+        {/* Ligne 1 — photo + vidéo, même hauteur que ligne 4 */}
+        <div className="flex gap-3 aspect-[3/2]">
           <div className="flex-[3] min-w-0">
             <ImageSlot label="Photo" />
           </div>
@@ -48,22 +48,22 @@ export default function RealisationsSection() {
           <ImageSlot label="Photo" />
         </div>
 
-        {/* Ligne 3 — vidéo + photo portrait, même hauteur */}
-        <div className="flex gap-3 mt-3 h-[460px]">
-          <div className="flex-1 min-w-0">
+        {/* Ligne 3 — vidéo + photo, même hauteur que ligne 4 */}
+        <div className="grid grid-cols-2 gap-3 mt-3 aspect-[3/2]">
+          <div className="h-full">
             <VideoSlot label="Vidéo" />
           </div>
-          <div className="flex-1 min-w-0">
+          <div className="h-full">
             <ImageSlot label="Photo" />
           </div>
         </div>
 
-        {/* Ligne 4 — deux photos portrait */}
-        <div className="grid grid-cols-2 gap-3 mt-3">
-          <div className="aspect-[3/4]">
+        {/* Ligne 4 — deux photos portrait (référence de hauteur) */}
+        <div className="grid grid-cols-2 gap-3 mt-3 aspect-[3/2]">
+          <div className="h-full">
             <ImageSlot label="Photo" />
           </div>
-          <div className="aspect-[3/4]">
+          <div className="h-full">
             <ImageSlot label="Photo" />
           </div>
         </div>
