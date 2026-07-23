@@ -1,5 +1,6 @@
 import CategoryPage from './CategoryPage';
 import { drawWeave, drawFolds } from '../utils/canvasDrawing';
+import RealisationsStores from '../components/RealisationsStores';
 
 export default function Stores() {
   return (
@@ -25,6 +26,7 @@ export default function Stores() {
         (c) => drawWeave(c, '#B8ACA0', '#988880'),
         (c) => drawFolds(c, '#A89888', '#C0B0A0', '#887868', 6),
       ]}
+      extraContent={<RealisationsStores />}
     />
   );
 }
