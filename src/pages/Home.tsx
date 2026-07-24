@@ -243,8 +243,10 @@ export default function Home() {
                 <div className="w-full h-[520px] block relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-t after:from-[rgba(40,20,10,0.65)] after:via-[rgba(40,20,10,0.1)] after:to-transparent after:pointer-events-none">
                   <img src={s.image} alt={s.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110" />
                   <div className="absolute bottom-7 left-7 right-7 z-[2]">
-                    <h3 className="font-['FreeSerif'] font-black text-[30px] text-[var(--linen)] leading-none mb-[5px]">
-                      {s.title}
+                    <h3 className="font-['FreeSerif'] font-black text-[30px] text-[var(--linen)] leading-[1.1] mb-[5px]">
+                      {['Rideaux', 'Voilages', 'Stores'].includes(s.title) ? (
+                        <>Nos<br />{s.title}</>
+                      ) : s.title}
                     </h3>
                     <p className="font-['MaisonNeue'] font-normal text-[8px] tracking-[3px] uppercase text-[var(--linen)]">
                       {s.subtitle}
