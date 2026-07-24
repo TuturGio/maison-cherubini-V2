@@ -1,5 +1,6 @@
 import CategoryPage from './CategoryPage';
 import { drawWeave, drawFolds } from '../utils/canvasDrawing';
+import RealisationsIndoor from '../components/RealisationsIndoor';
 
 export default function RevetementInterieur() {
   return (
@@ -25,6 +26,7 @@ export default function RevetementInterieur() {
         (c) => drawWeave(c, '#BAB2AC', '#9C9890'),
         (c) => drawFolds(c, '#B4ACA4', '#C8C0BA', '#989088', 6),
       ]}
+      extraContent={<RealisationsIndoor />}
     />
   );
 }
