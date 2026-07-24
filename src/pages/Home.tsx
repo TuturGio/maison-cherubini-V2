@@ -5,7 +5,7 @@ import InstagramFeed from '../components/InstagramFeed';
 const steps = [
   {
     number: '01',
-    label: 'Conseil & Expertise',
+    label: 'Conseils à domicile',
     description: 'En showroom ou à domicile, venez découvrir nos collections, parcourir nos échantillons et échanger sur votre projet. Sur rendez-vous ou en visite libre, nous vous guidons pour définir vos envies, votre style et les meilleures solutions pour votre intérieur.',
     image: `${import.meta.env.BASE_URL}conseil-domicile.jpg`,
   },
