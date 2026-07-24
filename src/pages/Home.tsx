@@ -244,7 +244,7 @@ export default function Home() {
                   <img src={s.image} alt={s.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110" />
                   <div className="absolute bottom-7 left-7 right-7 z-[2]">
                     <h3 className="font-['FreeSerif'] font-black text-[30px] text-[var(--linen)] leading-[1.1] mb-[5px]">
-                      {['Rideaux', 'Voilages', 'Stores'].includes(s.title) ? (
+                      {s.title === 'Rideaux' ? (
                         <>Nos<br />{s.title}</>
                       ) : s.title}
                     </h3>
