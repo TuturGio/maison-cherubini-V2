@@ -188,7 +188,7 @@ export default function Home() {
       link: '/realisations/banquettes',
     },
     {
-      title: 'Revêtements extérieurs',
+      title: 'Outdoor',
       subtitle: 'Banquettes, coussins & transats',
       image: `${import.meta.env.BASE_URL}outdoor-home.jpg`,
       link: '/realisations/bateaux',
