@@ -1,5 +1,6 @@
 import CategoryPage from './CategoryPage';
 import { drawNautical, drawWeave } from '../utils/canvasDrawing';
+import RealisationsOutdoor from '../components/RealisationsOutdoor';
 
 export default function Bateaux() {
   return (
@@ -25,6 +26,7 @@ export default function Bateaux() {
         drawNautical,
         (c) => drawWeave(c, '#9AAEB8', '#7B90A0'),
       ]}
+      extraContent={<RealisationsOutdoor />}
     />
   );
 }
