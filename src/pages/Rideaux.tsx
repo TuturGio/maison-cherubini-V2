@@ -100,6 +100,7 @@ export default function Rideaux() {
               { type: 'image', src: `${import.meta.env.BASE_URL}naunces-200.jpg`, alt: 'Réalisation rideaux' },
               { type: 'image', src: `${import.meta.env.BASE_URL}naunces-192.jpg`, alt: 'Réalisation rideaux' },
             ]}
+            layout={['half', 'half', 'full', 'half', 'half', 'half', 'half', 'full']}
           />
         </div>
       }

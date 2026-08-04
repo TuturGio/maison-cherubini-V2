@@ -9,17 +9,6 @@ type MediaItem = {
 
 type LayoutSpan = 'full' | 'half';
 
-const LAYOUT: LayoutSpan[] = [
-  'half',  // 0 — naunces-177 (portrait)
-  'half',  // 1 — video
-  'full',  // 2 — naunces-180 (landscape)
-  'half',  // 3 — video
-  'half',  // 4 — IMG_1555 (portrait)
-  'half',  // 5 — naunces-198 (portrait)
-  'half',  // 6 — naunces-200 (portrait)
-  'full',  // 7 — naunces-192 (landscape)
-];
-
 function VideoMedia({ src }: { src: string }) {
   const [started, setStarted] = useState(false);
 
@@ -65,14 +54,16 @@ function MediaView({ item }: { item: MediaItem }) {
 
 export default function RealisationsSection({
   media = [],
+  layout = [],
 }: {
   media?: MediaItem[];
+  layout?: LayoutSpan[];
 }) {
   const rows: { span: LayoutSpan; items: MediaItem[] }[] = [];
   let halfBuffer: MediaItem[] = [];
 
   media.forEach((item, i) => {
-    const span = LAYOUT[i] ?? 'half';
+    const span = layout[i] ?? 'half';
     if (span === 'full') {
       if (halfBuffer.length > 0) {
         rows.push({ span: 'half', items: halfBuffer });
