@@ -27,7 +27,36 @@
       if (el) {
         el.innerHTML = '<h1>JavaScript works!</h1><p>Inline JS executed. Now trying to load React...</p>';
       }
+      window.addEventListener('error', function(e) {
+        var dbg = document.getElementById('debug-html');
+        if (dbg) {
+          dbg.innerHTML += '<p style="color:red">ERROR: ' + (e.message || 'unknown') + ' at ' + (e.filename || '') + ':' + (e.lineno || '') + '</p>';
+        }
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        var dbg = document.getElementById('debug-html');
+        if (dbg) {
+          dbg.innerHTML += '<p style="color:red">PROMISE REJECTION: ' + (e.reason && e.reason.message ? e.reason.message : String(e.reason)) + '</p>';
+        }
+      });
     </script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module">
+      var el2 = document.getElementById('debug-html');
+      if (el2) {
+        el2.innerHTML = '<h1>Module loading...</h1><p>Importing React app...</p>';
+      }
+      import('/src/main.tsx').then(function() {
+        var el3 = document.getElementById('debug-html');
+        if (el3) {
+          el3.innerHTML += '<p style="color:green">Module imported successfully!</p>';
+        }
+      }).catch(function(err) {
+        var el4 = document.getElementById('debug-html');
+        if (el4) {
+          el4.innerHTML += '<p style="color:red">MODULE ERROR: ' + (err && err.message ? err.message : String(err)) + '</p>';
+          if (err && err.stack) el4.innerHTML += '<pre style="color:red;font-size:11px">' + err.stack + '</pre>';
+        }
+      });
+    </script>
   </body>
 </html>
