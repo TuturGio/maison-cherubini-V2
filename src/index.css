@@ -1,21 +1,21 @@
 /* FreeSerif — titres et headings */
 @font-face {
   font-family: 'FreeSerif';
-  src: url('/fonts/FreeSerifBold.ttf') format('truetype');
+  src: url('./assets/fonts/FreeSerifBold.ttf') format('truetype');
   font-weight: 400 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'FreeSerif';
-  src: url('/fonts/FreeSerifItalic.ttf') format('truetype');
+  src: url('./assets/fonts/FreeSerifItalic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'FreeSerif';
-  src: url('/fonts/FreeSerifBoldItalic.ttf') format('truetype');
+  src: url('./assets/fonts/FreeSerifBoldItalic.ttf') format('truetype');
   font-weight: 700 900;
   font-style: italic;
   font-display: swap;
@@ -24,42 +24,42 @@
 /* MaisonNeue — textes, boutons, menus */
 @font-face {
   font-family: 'MaisonNeue';
-  src: url('/fonts/MaisonNeue-Light.ttf') format('truetype');
+  src: url('./assets/fonts/MaisonNeue-Light.ttf') format('truetype');
   font-weight: 100 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'MaisonNeue';
-  src: url('/fonts/MaisonNeue-LightItalic.ttf') format('truetype');
+  src: url('./assets/fonts/MaisonNeue-LightItalic.ttf') format('truetype');
   font-weight: 100 300;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'MaisonNeue';
-  src: url('/fonts/MaisonNeue-Book.ttf') format('truetype');
+  src: url('./assets/fonts/MaisonNeue-Book.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'MaisonNeue';
-  src: url('/fonts/MaisonNeue-BookItalic.ttf') format('truetype');
+  src: url('./assets/fonts/MaisonNeue-BookItalic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'MaisonNeue';
-  src: url('/fonts/MaisonNeue-Demi.ttf') format('truetype');
+  src: url('./assets/fonts/MaisonNeue-Demi.ttf') format('truetype');
   font-weight: 600 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'MaisonNeue';
-  src: url('/fonts/MaisonNeue-DemiItalic.ttf') format('truetype');
+  src: url('./assets/fonts/MaisonNeue-DemiItalic.ttf') format('truetype');
   font-weight: 600 900;
   font-style: italic;
   font-display: swap;
