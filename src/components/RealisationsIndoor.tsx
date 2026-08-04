@@ -10,22 +10,22 @@ export default function RealisationsIndoor() {
         </div>
 
         {/* Ligne 1 — deux portraits */}
-        <div className="grid grid-cols-2 gap-3 aspect-[3/2]">
-          <div className="h-full overflow-hidden">
-            <img src="/naunces-177.jpg" alt="Réalisation indoor" className="w-full h-full object-cover block" />
+        <div className="flex gap-4 items-stretch">
+          <div className="flex-1">
+            <img src="/naunces-177.jpg" alt="Réalisation indoor" className="w-full h-auto block" />
           </div>
-          <div className="h-full overflow-hidden">
-            <img src="/naunces-189.jpg" alt="Réalisation indoor" className="w-full h-full object-cover block" />
+          <div className="flex-1">
+            <img src="/naunces-189.jpg" alt="Réalisation indoor" className="w-full h-auto block" />
           </div>
         </div>
 
         {/* Ligne 2 — deux portraits */}
-        <div className="grid grid-cols-2 gap-3 mt-3 aspect-[3/2]">
-          <div className="h-full overflow-hidden">
-            <img src="/naunces-202.jpg" alt="Réalisation indoor" className="w-full h-full object-cover block" />
+        <div className="flex gap-4 mt-4 items-stretch">
+          <div className="flex-1">
+            <img src="/naunces-202.jpg" alt="Réalisation indoor" className="w-full h-auto block" />
           </div>
-          <div className="h-full overflow-hidden">
-            <img src="/naunces-200.jpg" alt="Réalisation indoor" className="w-full h-full object-cover block" />
+          <div className="flex-1">
+            <img src="/naunces-200.jpg" alt="Réalisation indoor" className="w-full h-auto block" />
           </div>
         </div>
       </div>
