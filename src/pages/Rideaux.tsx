@@ -91,8 +91,10 @@ export default function Rideaux() {
           </section>
           <RealisationsSection
             media={[
-              { type: 'image', src: `${import.meta.env.BASE_URL}naunces-180.jpg`, alt: 'Réalisation rideaux' },
+              { type: 'image', src: `${import.meta.env.BASE_URL}naunces-177.jpg`, alt: 'Réalisation rideaux' },
               { type: 'video', src: `${import.meta.env.BASE_URL}IMG_1595.MOV` },
+              { type: 'image', src: `${import.meta.env.BASE_URL}naunces-180.jpg`, alt: 'Réalisation rideaux' },
+              { type: 'video', src: `${import.meta.env.BASE_URL}IMG_1595.MOV`, alt: 'Réalisation rideaux' },
               { type: 'image', src: `${import.meta.env.BASE_URL}IMG_1555.jpg`, alt: 'Réalisation rideaux' },
               { type: 'image', src: `${import.meta.env.BASE_URL}naunces-198.jpg`, alt: 'Réalisation rideaux' },
               { type: 'image', src: `${import.meta.env.BASE_URL}naunces-200.jpg`, alt: 'Réalisation rideaux' },
