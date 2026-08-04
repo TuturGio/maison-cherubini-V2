@@ -1,10 +1,25 @@
 import { useState } from 'react';
 import { Film, Image, Play } from 'lucide-react';
 
-function ImageSlot({ label }: { label: string }) {
+type MediaItem = {
+  type: 'image' | 'video';
+  src: string;
+  alt?: string;
+};
+
+function Placeholder({ label }: { label: string }) {
+  const isVideo = label === 'Vidéo';
   return (
-    <div className="w-full h-full bg-[#EDE9E3] border border-[#D8D0C4] flex flex-col items-center justify-center gap-3">
-      <Image className="w-7 h-7 text-[var(--primary)] opacity-50" strokeWidth={1.2} />
+    <div
+      className={`w-full h-full ${
+        isVideo ? 'bg-[#E8E4DC]' : 'bg-[#EDE9E3]'
+      } border border-[#D8D0C4] flex flex-col items-center justify-center gap-3`}
+    >
+      {isVideo ? (
+        <Film className="w-7 h-7 text-[var(--primary)] opacity-50" strokeWidth={1.2} />
+      ) : (
+        <Image className="w-7 h-7 text-[var(--primary)] opacity-50" strokeWidth={1.2} />
+      )}
       <span className="font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase text-[var(--warm)] opacity-60">
         {label}
       </span>
@@ -12,25 +27,57 @@ function ImageSlot({ label }: { label: string }) {
   );
 }
 
-function VideoSlot({ label }: { label: string }) {
+function MediaView({ item }: { item: MediaItem }) {
+  const [started, setStarted] = useState(false);
+
+  if (item.type === 'image') {
+    return (
+      <img
+        src={item.src}
+        alt={item.alt ?? 'Réalisation'}
+        className="w-full h-full object-cover"
+      />
+    );
+  }
+
+  if (!started) {
+    return (
+      <button
+        type="button"
+        onClick={() => setStarted(true)}
+        className="group relative w-full h-full bg-[var(--moka)]/10 flex items-center justify-center"
+      >
+        <span className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+          <Play className="w-6 h-6 text-[var(--moka)] ml-1" fill="currentColor" />
+        </span>
+        <span className="absolute bottom-3 left-3 text-xs font-['MaisonNeue-Book'] text-white/90 bg-black/30 px-2 py-1 rounded">
+          Vidéo
+        </span>
+      </button>
+    );
+  }
+
   return (
-    <div className="w-full h-full bg-[#E8E4DC] border border-[#D8D0C4] flex flex-col items-center justify-center gap-3">
-      <Film className="w-7 h-7 text-[var(--primary)] opacity-50" strokeWidth={1.2} />
-      <span className="font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase text-[var(--warm)] opacity-60">
-        {label}
-      </span>
-    </div>
+    <video
+      src={item.src}
+      controls
+      autoPlay
+      className="w-full h-full object-cover"
+    />
   );
+}
+
+function Slot({ item, label }: { item?: MediaItem; label: string }) {
+  return item ? <MediaView item={item} /> : <Placeholder label={label} />;
 }
 
 export default function RealisationsSection({
-  firstPhoto,
-  firstVideo,
+  media = [],
 }: {
-  firstPhoto?: string;
-  firstVideo?: string;
+  media?: MediaItem[];
 }) {
-  const [videoStarted, setVideoStarted] = useState(false);
+  const base = import.meta.env.BASE_URL;
+  const get = (i: number) => media[i];
 
   return (
     <section className="bg-white px-8 md:px-12 py-16 md:py-20">
@@ -42,78 +89,34 @@ export default function RealisationsSection({
           <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
         </div>
 
-        {/* Ligne 1 — photo + vidéo, même hauteur que ligne 4 */}
+        {/* Ligne 1 — photo + vidéo */}
         <div className="flex gap-3 aspect-[3/2]">
           <div className="flex-[3] min-w-0">
-            {firstPhoto ? (
-              <img
-                src={firstPhoto}
-                alt="Réalisation"
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <ImageSlot label="Photo" />
-            )}
+            <Slot item={get(0)} label="Photo" />
           </div>
           <div className="flex-[2] min-w-0">
-            {firstVideo ? (
-              videoStarted ? (
-                <video
-                  src={firstVideo}
-                  controls
-                  autoPlay
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => setVideoStarted(true)}
-                  className="group relative w-full h-full bg-[var(--moka)]/10 flex items-center justify-center"
-                >
-                  <span className="absolute inset-0 flex items-center justify-center">
-                    <span className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
-                      <Play className="w-6 h-6 text-[var(--moka)] ml-1" fill="currentColor" />
-                    </span>
-                  </span>
-                  <span className="absolute bottom-3 left-3 text-xs font-['MaisonNeue-Book'] text-white/90 bg-black/30 px-2 py-1 rounded">
-                    Vidéo
-                  </span>
-                </button>
-              )
-            ) : (
-              <VideoSlot label="Vidéo" />
-            )}
+            <Slot item={get(1)} label="Vidéo" />
           </div>
         </div>
 
         {/* Ligne 2 — panoramique */}
         <div className="mt-3 aspect-[21/9]">
-          <ImageSlot label="Photo" />
+          <Slot item={get(2)} label="Photo" />
         </div>
 
-        {/* Ligne 3 — vidéo + photo, même hauteur que ligne 4 */}
+        {/* Ligne 3 — deux photos */}
         <div className="grid grid-cols-2 gap-3 mt-3 aspect-[3/2]">
           <div className="h-full">
-            <VideoSlot label="Vidéo" />
+            <Slot item={get(3)} label="Photo" />
           </div>
           <div className="h-full">
-            <ImageSlot label="Photo" />
+            <Slot item={get(4)} label="Photo" />
           </div>
         </div>
 
-        {/* Ligne 4 — deux photos portrait (référence de hauteur) */}
-        <div className="grid grid-cols-2 gap-3 mt-3 aspect-[3/2]">
-          <div className="h-full">
-            <ImageSlot label="Photo" />
-          </div>
-          <div className="h-full">
-            <ImageSlot label="Photo" />
-          </div>
-        </div>
-
-        {/* Ligne 5 — panoramique */}
+        {/* Ligne 4 — panoramique */}
         <div className="mt-3 aspect-[21/9]">
-          <ImageSlot label="Photo" />
+          <Slot item={get(5)} label="Photo" />
         </div>
       </div>
     </section>
