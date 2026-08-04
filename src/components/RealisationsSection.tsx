@@ -1,4 +1,5 @@
-import { Film, Image } from 'lucide-react';
+import { useState } from 'react';
+import { Film, Image, Play } from 'lucide-react';
 
 function ImageSlot({ label }: { label: string }) {
   return (
@@ -22,7 +23,15 @@ function VideoSlot({ label }: { label: string }) {
   );
 }
 
-export default function RealisationsSection({ firstPhoto }: { firstPhoto?: string }) {
+export default function RealisationsSection({
+  firstPhoto,
+  firstVideo,
+}: {
+  firstPhoto?: string;
+  firstVideo?: string;
+}) {
+  const [videoStarted, setVideoStarted] = useState(false);
+
   return (
     <section className="bg-white px-8 md:px-12 py-16 md:py-20">
       <div className="max-w-6xl mx-auto">
@@ -47,7 +56,33 @@ export default function RealisationsSection({ firstPhoto }: { firstPhoto?: strin
             )}
           </div>
           <div className="flex-[2] min-w-0">
-            <VideoSlot label="Vidéo" />
+            {firstVideo ? (
+              videoStarted ? (
+                <video
+                  src={firstVideo}
+                  controls
+                  autoPlay
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setVideoStarted(true)}
+                  className="group relative w-full h-full bg-[var(--moka)]/10 flex items-center justify-center"
+                >
+                  <span className="absolute inset-0 flex items-center justify-center">
+                    <span className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+                      <Play className="w-6 h-6 text-[var(--moka)] ml-1" fill="currentColor" />
+                    </span>
+                  </span>
+                  <span className="absolute bottom-3 left-3 text-xs font-['MaisonNeue-Book'] text-white/90 bg-black/30 px-2 py-1 rounded">
+                    Vidéo
+                  </span>
+                </button>
+              )
+            ) : (
+              <VideoSlot label="Vidéo" />
+            )}
           </div>
         </div>
 
