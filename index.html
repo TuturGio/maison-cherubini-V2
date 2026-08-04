@@ -15,7 +15,19 @@
         <h1>HTML loaded successfully</h1>
         <p>If you see this, the page is being served. JavaScript should replace this shortly.</p>
       </div>
+      <noscript>
+        <div style="padding:40px;color:red">
+          <h1>JavaScript is DISABLED</h1>
+          <p>JavaScript must be enabled to view this site.</p>
+        </div>
+      </noscript>
     </div>
+    <script>
+      var el = document.getElementById('debug-html');
+      if (el) {
+        el.innerHTML = '<h1>JavaScript works!</h1><p>Inline JS executed. Now trying to load React...</p>';
+      }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
