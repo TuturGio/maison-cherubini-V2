@@ -28,8 +28,7 @@ function VideoMedia({ src }: { src: string }) {
       <button
         type="button"
         onClick={() => setStarted(true)}
-        className="group relative w-full block bg-[var(--moka)] overflow-hidden"
-        style={{ aspectRatio: '3 / 4' }}
+        className="group relative w-full h-full block bg-[var(--moka)] overflow-hidden"
       >
         <span className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110 absolute inset-0 m-auto">
           <Play className="w-6 h-6 text-[var(--moka)] ml-1" fill="currentColor" />
@@ -46,7 +45,7 @@ function VideoMedia({ src }: { src: string }) {
       src={src}
       controls
       autoPlay
-      className="w-full h-auto block"
+      className="w-full h-full block object-contain"
     />
   );
 }
@@ -69,6 +68,27 @@ export default function RealisationsSection({
 }: {
   media?: MediaItem[];
 }) {
+  const rows: { span: LayoutSpan; items: MediaItem[] }[] = [];
+  let halfBuffer: MediaItem[] = [];
+
+  media.forEach((item, i) => {
+    const span = LAYOUT[i] ?? 'half';
+    if (span === 'full') {
+      if (halfBuffer.length > 0) {
+        rows.push({ span: 'half', items: halfBuffer });
+        halfBuffer = [];
+      }
+      rows.push({ span: 'full', items: [item] });
+    } else {
+      halfBuffer.push(item);
+      if (halfBuffer.length === 2) {
+        rows.push({ span: 'half', items: halfBuffer });
+        halfBuffer = [];
+      }
+    }
+  });
+  if (halfBuffer.length > 0) rows.push({ span: 'half', items: halfBuffer });
+
   return (
     <section className="bg-white px-8 md:px-12 py-16 md:py-20">
       <div className="max-w-6xl mx-auto">
@@ -79,13 +99,20 @@ export default function RealisationsSection({
           <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
-          {media.map((item, i) => (
+        <div className="flex flex-col gap-4">
+          {rows.map((row, ri) => (
             <div
-              key={i}
-              className={LAYOUT[i] === 'full' ? 'col-span-2' : 'col-span-1'}
+              key={ri}
+              className={row.span === 'full' ? 'flex' : 'flex gap-4 items-stretch'}
             >
-              <MediaView item={item} />
+              {row.items.map((item, ii) => (
+                <div
+                  key={ii}
+                  className={row.span === 'half' ? 'flex-1 flex' : 'w-full'}
+                >
+                  <MediaView item={item} />
+                </div>
+              ))}
             </div>
           ))}
         </div>
