@@ -1,8 +1,62 @@
-import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Info } from 'lucide-react';
+import { useState, type FormEvent } from "react";
+import { MapPin, Phone, Mail, Clock, Info, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { supabase } from "../lib/supabase";
+
+type SubmitState = "idle" | "loading" | "success" | "error";
 
 export default function Contact() {
-  const [appointmentType, setAppointmentType] = useState('');
+  const [appointmentType, setAppointmentType] = useState("");
+  const [submitState, setSubmitState] = useState<SubmitState>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitState("loading");
+    setErrorMessage("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const name = String(formData.get("name") || "");
+    const email = String(formData.get("email") || "");
+    const phone = String(formData.get("phone") || "");
+    const message = String(formData.get("message") || "");
+
+    try {
+      const { error: dbError } = await supabase.from("contact_messages").insert({
+        name,
+        email,
+        phone,
+        appointment_type: appointmentType,
+        message,
+      });
+
+      if (dbError) throw dbError;
+
+      const functionUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`;
+      const response = await fetch(functionUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({ name, email, phone, appointment_type: appointmentType, message }),
+      });
+
+      if (!response.ok) {
+        const body = await response.json().catch(() => ({}));
+        throw new Error(body.error || "L'envoi de l'email a échoué.");
+      }
+
+      setSubmitState("success");
+      form.reset();
+      setAppointmentType("");
+    } catch (err) {
+      setSubmitState("error");
+      setErrorMessage(
+        err instanceof Error ? err.message : "Une erreur inattendue s'est produite.",
+      );
+    }
+  };
 
   return (
     <div className="min-h-screen">
@@ -25,15 +79,35 @@ export default function Contact() {
                 Prenez rendez-vous
               </h2>
 
-              <form className="space-y-6">
+              {submitState === "success" && (
+                <div className="mb-6 flex gap-3 bg-green-50 border border-green-200 px-4 py-4">
+                  <CheckCircle2 size={20} className="text-green-600 flex-shrink-0 mt-[2px]" />
+                  <p className="font-['MaisonNeue'] font-light text-[14px] text-green-800 leading-[1.6]">
+                    Votre demande a bien été envoyée. Nous vous répondrons dans les 24 heures.
+                  </p>
+                </div>
+              )}
+
+              {submitState === "error" && (
+                <div className="mb-6 flex gap-3 bg-red-50 border border-red-200 px-4 py-4">
+                  <AlertCircle size={20} className="text-red-600 flex-shrink-0 mt-[2px]" />
+                  <p className="font-['MaisonNeue'] font-light text-[14px] text-red-800 leading-[1.6]">
+                    {errorMessage || "L'envoi a échoué. Veuillez réessayer ou nous appeler directement."}
+                  </p>
+                </div>
+              )}
+
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label className="block font-['MaisonNeue'] font-light text-[10px] tracking-[2px] uppercase text-[var(--warm)] mb-2">
                     Nom complet
                   </label>
                   <input
                     type="text"
+                    name="name"
                     required
-                    className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['MaisonNeue'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)]"
+                    disabled={submitState === "loading"}
+                    className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['MaisonNeue'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)] disabled:opacity-60"
                     placeholder="Jean Dupont"
                   />
                 </div>
@@ -44,8 +118,10 @@ export default function Contact() {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     required
-                    className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['MaisonNeue'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)]"
+                    disabled={submitState === "loading"}
+                    className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['MaisonNeue'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)] disabled:opacity-60"
                     placeholder="jean.dupont@email.com"
                   />
                 </div>
@@ -56,8 +132,10 @@ export default function Contact() {
                   </label>
                   <input
                     type="tel"
+                    name="phone"
                     required
-                    className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['MaisonNeue'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)]"
+                    disabled={submitState === "loading"}
+                    className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['MaisonNeue'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)] disabled:opacity-60"
                     placeholder="06 12 34 56 78"
                   />
                 </div>
@@ -70,13 +148,14 @@ export default function Contact() {
                     value={appointmentType}
                     onChange={(e) => setAppointmentType(e.target.value)}
                     required
-                    className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['MaisonNeue'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)]"
+                    disabled={submitState === "loading"}
+                    className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['MaisonNeue'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)] disabled:opacity-60"
                   >
                     <option value="">Choisir un type de rendez-vous</option>
                     <option value="showroom">Au showroom</option>
                     <option value="domicile">À domicile</option>
                   </select>
-                  {appointmentType === 'domicile' && (
+                  {appointmentType === "domicile" && (
                     <div className="mt-3 flex gap-3 bg-[var(--grege-p)] border border-[var(--pale)] px-4 py-3">
                       <Info size={16} className="text-[var(--primary)] flex-shrink-0 mt-[2px]" />
                       <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.7]">
@@ -92,17 +171,27 @@ export default function Contact() {
                   </label>
                   <textarea
                     rows={5}
+                    name="message"
                     required
-                    className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['MaisonNeue'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)] resize-none"
+                    disabled={submitState === "loading"}
+                    className="w-full border border-[var(--pale)] bg-white px-4 py-3 font-['MaisonNeue'] font-light text-[14px] text-[var(--charcoal)] transition-colors focus:outline-none focus:border-[var(--primary)] resize-none disabled:opacity-60"
                     placeholder="Décrivez-nous votre projet..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase text-[var(--linen)] bg-[var(--moka)] py-4 px-8 cursor-pointer transition-colors hover:bg-[var(--charcoal)] border-none"
+                  disabled={submitState === "loading"}
+                  className="w-full font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase text-[var(--linen)] bg-[var(--moka)] py-4 px-8 cursor-pointer transition-colors hover:bg-[var(--charcoal)] border-none disabled:opacity-60 disabled:cursor-wait flex items-center justify-center gap-3"
                 >
-                  Envoyer ma demande
+                  {submitState === "loading" ? (
+                    <>
+                      <Loader2 size={16} className="animate-spin" />
+                      Envoi en cours...
+                    </>
+                  ) : (
+                    "Envoyer ma demande"
+                  )}
                 </button>
               </form>
             </div>
