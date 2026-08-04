@@ -7,6 +7,19 @@ type MediaItem = {
   alt?: string;
 };
 
+type LayoutSpan = 'full' | 'half';
+
+const LAYOUT: LayoutSpan[] = [
+  'half',  // 0 — naunces-177 (portrait)
+  'half',  // 1 — video
+  'full',  // 2 — naunces-180 (landscape)
+  'half',  // 3 — video
+  'half',  // 4 — IMG_1555 (portrait)
+  'half',  // 5 — naunces-198 (portrait)
+  'half',  // 6 — naunces-200 (portrait)
+  'full',  // 7 — naunces-192 (landscape)
+];
+
 function VideoMedia({ src }: { src: string }) {
   const [started, setStarted] = useState(false);
 
@@ -66,9 +79,14 @@ export default function RealisationsSection({
           <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
         </div>
 
-        <div className="columns-1 md:columns-2 gap-4 [&>*]:mb-4 [&>*]:break-inside-avoid">
+        <div className="grid grid-cols-2 gap-4">
           {media.map((item, i) => (
-            <MediaView key={i} item={item} />
+            <div
+              key={i}
+              className={LAYOUT[i] === 'full' ? 'col-span-2' : 'col-span-1'}
+            >
+              <MediaView item={item} />
+            </div>
           ))}
         </div>
       </div>
