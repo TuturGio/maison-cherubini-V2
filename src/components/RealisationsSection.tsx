@@ -22,7 +22,7 @@ function VideoSlot({ label }: { label: string }) {
   );
 }
 
-export default function RealisationsSection() {
+export default function RealisationsSection({ firstPhoto }: { firstPhoto?: string }) {
   return (
     <section className="bg-white px-8 md:px-12 py-16 md:py-20">
       <div className="max-w-6xl mx-auto">
@@ -36,7 +36,15 @@ export default function RealisationsSection() {
         {/* Ligne 1 — photo + vidéo, même hauteur que ligne 4 */}
         <div className="flex gap-3 aspect-[3/2]">
           <div className="flex-[3] min-w-0">
-            <ImageSlot label="Photo" />
+            {firstPhoto ? (
+              <img
+                src={firstPhoto}
+                alt="Réalisation"
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <ImageSlot label="Photo" />
+            )}
           </div>
           <div className="flex-[2] min-w-0">
             <VideoSlot label="Vidéo" />

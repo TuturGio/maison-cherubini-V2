@@ -89,7 +89,7 @@ export default function Rideaux() {
               </div>
             </div>
           </section>
-          <RealisationsSection />
+          <RealisationsSection firstPhoto={`${import.meta.env.BASE_URL}naunces-177.jpg`} />
         </div>
       }
     />
