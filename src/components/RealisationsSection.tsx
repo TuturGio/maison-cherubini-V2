@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Film, Image, Play } from 'lucide-react';
+import { Play } from 'lucide-react';
 
 type MediaItem = {
   type: 'image' | 'video';
@@ -7,50 +7,20 @@ type MediaItem = {
   alt?: string;
 };
 
-function Placeholder({ label }: { label: string }) {
-  const isVideo = label === 'Vidéo';
-  return (
-    <div
-      className={`absolute inset-0 ${
-        isVideo ? 'bg-[#E8E4DC]' : 'bg-[#EDE9E3]'
-      } border border-[#D8D0C4] flex flex-col items-center justify-center gap-3`}
-    >
-      {isVideo ? (
-        <Film className="w-7 h-7 text-[var(--primary)] opacity-50" strokeWidth={1.2} />
-      ) : (
-        <Image className="w-7 h-7 text-[var(--primary)] opacity-50" strokeWidth={1.2} />
-      )}
-      <span className="font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase text-[var(--warm)] opacity-60">
-        {label}
-      </span>
-    </div>
-  );
-}
-
-function MediaView({ item }: { item: MediaItem }) {
+function VideoMedia({ src }: { src: string }) {
   const [started, setStarted] = useState(false);
-
-  if (item.type === 'image') {
-    return (
-      <img
-        src={item.src}
-        alt={item.alt ?? 'Réalisation'}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-    );
-  }
 
   if (!started) {
     return (
       <button
         type="button"
         onClick={() => setStarted(true)}
-        className="group absolute inset-0 w-full h-full bg-[var(--moka)]/10 flex items-center justify-center"
+        className="group relative w-full aspect-[3/4] bg-[var(--moka)] flex items-center justify-center overflow-hidden"
       >
         <span className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
           <Play className="w-6 h-6 text-[var(--moka)] ml-1" fill="currentColor" />
         </span>
-        <span className="absolute bottom-3 left-3 text-xs font-['MaisonNeue-Book'] text-white/90 bg-black/30 px-2 py-1 rounded">
+        <span className="absolute bottom-3 left-3 text-xs font-['MaisonNeue'] font-light text-white/90 bg-black/30 px-2 py-1 rounded">
           Vidéo
         </span>
       </button>
@@ -59,20 +29,25 @@ function MediaView({ item }: { item: MediaItem }) {
 
   return (
     <video
-      src={item.src}
+      src={src}
       controls
       autoPlay
-      className="absolute inset-0 w-full h-full object-cover"
+      className="w-full h-auto block"
     />
   );
 }
 
-function Slot({ item, label }: { item?: MediaItem; label: string }) {
-  return (
-    <div className="relative w-full h-full overflow-hidden">
-      {item ? <MediaView item={item} /> : <Placeholder label={label} />}
-    </div>
-  );
+function MediaView({ item }: { item: MediaItem }) {
+  if (item.type === 'image') {
+    return (
+      <img
+        src={item.src}
+        alt={item.alt ?? 'Réalisation'}
+        className="w-full h-auto block"
+      />
+    );
+  }
+  return <VideoMedia src={item.src} />;
 }
 
 export default function RealisationsSection({
@@ -93,29 +68,29 @@ export default function RealisationsSection({
         </div>
 
         {/* Ligne 1 — photo + vidéo */}
-        <div className="flex gap-3 aspect-[3/2]">
+        <div className="flex gap-3 items-start">
           <div className="flex-[3] min-w-0">
-            <Slot item={get(0)} label="Photo" />
+            {get(0) && <MediaView item={get(0)!} />}
           </div>
           <div className="flex-[2] min-w-0">
-            <Slot item={get(1)} label="Vidéo" />
+            {get(1) && <MediaView item={get(1)!} />}
           </div>
         </div>
 
         {/* Ligne 2 — panoramique */}
-        <div className="mt-3 aspect-[21/9]">
-          <Slot item={get(2)} label="Photo" />
+        <div className="mt-3">
+          {get(2) && <MediaView item={get(2)!} />}
         </div>
 
         {/* Ligne 3 — deux photos */}
-        <div className="grid grid-cols-2 gap-3 mt-3 aspect-[3/2]">
-          <Slot item={get(3)} label="Photo" />
-          <Slot item={get(4)} label="Photo" />
+        <div className="grid grid-cols-2 gap-3 mt-3 items-start">
+          {get(3) && <MediaView item={get(3)!} />}
+          {get(4) && <MediaView item={get(4)!} />}
         </div>
 
         {/* Ligne 4 — panoramique */}
-        <div className="mt-3 aspect-[21/9]">
-          <Slot item={get(5)} label="Photo" />
+        <div className="mt-3">
+          {get(5) && <MediaView item={get(5)!} />}
         </div>
       </div>
     </section>
