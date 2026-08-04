@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { MapPin, Phone, Mail, Clock, Info, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
-import { supabase } from "../lib/supabase";
+import { supabase, isSupabaseConfigured } from "../lib/supabase";
 
 type SubmitState = "idle" | "loading" | "success" | "error";
 
@@ -20,6 +20,12 @@ export default function Contact() {
     const email = String(formData.get("email") || "");
     const phone = String(formData.get("phone") || "");
     const message = String(formData.get("message") || "");
+
+    if (!isSupabaseConfigured) {
+      setSubmitState("error");
+      setErrorMessage("Le formulaire de contact n'est pas disponible pour le moment. Veuillez nous appeler ou envoyer un email directement.");
+      return;
+    }
 
     try {
       const { error: dbError } = await supabase.from("contact_messages").insert({
