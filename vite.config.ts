@@ -39,6 +39,6 @@ export default defineConfig({
   base: process.env.GITHUB_ACTIONS ? '/maison-cherubini-V2/' : '/',
   plugins: [react(), safeCopyPublicDir()],
   optimizeDeps: {
-    exclude: ['lucide-react'],
+    exclude: [],
   },
 });
