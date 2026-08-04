@@ -11,7 +11,7 @@ function Placeholder({ label }: { label: string }) {
   const isVideo = label === 'Vidéo';
   return (
     <div
-      className={`w-full h-full ${
+      className={`absolute inset-0 ${
         isVideo ? 'bg-[#E8E4DC]' : 'bg-[#EDE9E3]'
       } border border-[#D8D0C4] flex flex-col items-center justify-center gap-3`}
     >
@@ -35,7 +35,7 @@ function MediaView({ item }: { item: MediaItem }) {
       <img
         src={item.src}
         alt={item.alt ?? 'Réalisation'}
-        className="w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
       />
     );
   }
@@ -45,7 +45,7 @@ function MediaView({ item }: { item: MediaItem }) {
       <button
         type="button"
         onClick={() => setStarted(true)}
-        className="group relative w-full h-full bg-[var(--moka)]/10 flex items-center justify-center"
+        className="group absolute inset-0 w-full h-full bg-[var(--moka)]/10 flex items-center justify-center"
       >
         <span className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
           <Play className="w-6 h-6 text-[var(--moka)] ml-1" fill="currentColor" />
@@ -62,13 +62,17 @@ function MediaView({ item }: { item: MediaItem }) {
       src={item.src}
       controls
       autoPlay
-      className="w-full h-full object-cover"
+      className="absolute inset-0 w-full h-full object-cover"
     />
   );
 }
 
 function Slot({ item, label }: { item?: MediaItem; label: string }) {
-  return item ? <MediaView item={item} /> : <Placeholder label={label} />;
+  return (
+    <div className="relative w-full h-full overflow-hidden">
+      {item ? <MediaView item={item} /> : <Placeholder label={label} />}
+    </div>
+  );
 }
 
 export default function RealisationsSection({
@@ -76,7 +80,6 @@ export default function RealisationsSection({
 }: {
   media?: MediaItem[];
 }) {
-  const base = import.meta.env.BASE_URL;
   const get = (i: number) => media[i];
 
   return (
@@ -106,12 +109,8 @@ export default function RealisationsSection({
 
         {/* Ligne 3 — deux photos */}
         <div className="grid grid-cols-2 gap-3 mt-3 aspect-[3/2]">
-          <div className="h-full">
-            <Slot item={get(3)} label="Photo" />
-          </div>
-          <div className="h-full">
-            <Slot item={get(4)} label="Photo" />
-          </div>
+          <Slot item={get(3)} label="Photo" />
+          <Slot item={get(4)} label="Photo" />
         </div>
 
         {/* Ligne 4 — panoramique */}
