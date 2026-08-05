@@ -36,7 +36,7 @@ function safeCopyPublicDir(): import('vite').Plugin {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.GITHUB_ACTIONS ? '/nuancesdecoration.com/' : '/',
+  base: '/',
   plugins: [react(), safeCopyPublicDir()],
   optimizeDeps: {
     exclude: [],
