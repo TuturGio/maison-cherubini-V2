@@ -36,7 +36,7 @@ function safeCopyPublicDir(): import('vite').Plugin {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.GITHUB_ACTIONS ? '/maison-cherubini-V2/' : '/',
+  base: process.env.GITHUB_ACTIONS ? '/nuancesdecoration.com/' : '/',
   plugins: [react(), safeCopyPublicDir()],
   optimizeDeps: {
     exclude: [],
